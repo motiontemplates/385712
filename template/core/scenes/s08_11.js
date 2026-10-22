@@ -15,8 +15,8 @@ window.CURRENT_UNIT="S08";
   
   const rail = mk(D, `<div style="position:relative;width:1000px;height:40px">
       <div style="position:absolute;left:0;top:20px;width:1000px;height:2px;background:rgba(233,236,239,.25)"></div>
-      ${['2025', '2026', RAW_TEXT("S08.text003")].map((y, i) => `<div style="position:absolute;left:${i * 480}px;top:0;${MONO(16, DIM, 3)}">${TEXT_GLOBAL(y)}</div><div style="position:absolute;left:${i * 480}px;top:15px;width:2px;height:12px;background:rgba(233,236,239,.5)"></div>`).join('')}</div>`, 1340, 820, { ax: .5, ay: .5 });
-  const SK = [['option_A', RAW_TEXT("S08.text004")], ['option_B', RAW_TEXT("S08.text004")], ['option_C', RAW_TEXT("S08.text004")], ['option_D', RAW_TEXT("S08.text004")], ['your-project', RAW_TEXT("S08.text005")]];
+      ${[RAW_TEXT("S08.year001"), RAW_TEXT("S08.year002"), RAW_TEXT("S08.text003")].map((y, i) => `<div style="position:absolute;left:${i * 480}px;top:0;${MONO(16, DIM, 3)}">${TEXT_GLOBAL(y)}</div><div style="position:absolute;left:${i * 480}px;top:15px;width:2px;height:12px;background:rgba(233,236,239,.5)"></div>`).join('')}</div>`, 1340, 820, { ax: .5, ay: .5 });
+  const SK = [[RAW_TEXT("S08.label001"), RAW_TEXT("S08.text004")], [RAW_TEXT("S08.label002"), RAW_TEXT("S08.text004")], [RAW_TEXT("S08.label003"), RAW_TEXT("S08.text004")], [RAW_TEXT("S08.label004"), RAW_TEXT("S08.text004")], [RAW_TEXT("S08.label005"), RAW_TEXT("S08.text005")]];
   const cards = SK.map(([n, s], i) => {
     const mine = i === 4;
     const e = mk(D, `<div style="position:relative;width:330px;height:190px;border-radius:14px;background:#181c22;border:${mine ? 2.5 : 1.5}px solid ${mine ? GOLD : 'rgba(233,236,239,.2)'};padding:22px 24px;overflow:hidden">
@@ -112,7 +112,7 @@ window.CURRENT_UNIT="S09";
     ll.style.transform = `translateY(${(-Math.max(0, t - tRight) * 46).toFixed(1)}px)`;
     show(heart, t, tHeart - .2, { k: 'mask', d: .45, out: tBut - .1 });
     show(commits, t, tUpd - .15, { k: 'up', d: .4, out: tBut - .1 });
-    setTxt(cn, String(Math.round(counter(t, tUpd - .1, tUpd + 1.3, 0, 286))));
+    setTxt(cn, String(Math.round(counter(t, tUpd - .1, tUpd + 1.3, 0, Number(RAW_TEXT("S09.text020"))))));
     show(curve, t, tFlow - .2, { k: 'up', d: .4, out: tBut - .1 });
     const L = 700; cv.style.strokeDasharray = `${L} ${L}`; cv.style.strokeDashoffset = (L * (1 - EZ.inout(pr(t, tFlow - .1, tFlow + .8)))).toFixed(1);
     

@@ -2,7 +2,7 @@
   "format": "motiongit.open-source/1",
   "repositoryId": "385712",
   "slug": "kinetic-tech",
-  "version": "0.2.7-open-beta",
+  "version": "0.2.31-open-beta",
   "title": {
     "en": "Kinetic Tech",
     "zh": "酷炫科技风"
@@ -14,46 +14,82 @@
   "source": "template/",
   "license": "MIT",
   "output": {
-    "width": 1920,
-    "height": 1080,
+    "width": 1080,
+    "height": 1920,
     "fps": 60
   },
   "coverageComplete": false,
-  "testedSystem": "macOS",
+  "testedSystem": "macOS; Windows 11 (scoped coarse fixed-centering normal entry in Chinese/spaces folders)",
   "fullEdition": {
     "url": "https://motiongit.com/@adunext/385712"
   },
   "downloadAliases": {
     "en": {
       "file": "downloads/kinetic-tech-en.motion",
-      "target": "downloads/kinetic-tech-0.2.7-open-beta-en.motion",
-      "sha256": "533320d081c578cb824dfbc6ce9d4ae3eb1ca190d67ae7185b4a32b02e236255",
-      "bytes": 17594444
+      "target": "downloads/kinetic-tech-0.2.31-open-beta-en.motion",
+      "sha256": "4bc28a4e684f288470b34211af0a9b9a8b6606b257d8fd6e2bf18d5dae0dab04",
+      "bytes": 17799614
     },
     "zh": {
       "file": "downloads/kinetic-tech-zh.motion",
-      "target": "downloads/kinetic-tech-0.2.7-open-beta-zh.motion",
-      "sha256": "472a95af35f8e0c09c0f7dc2ca0992b7c9a3405c5aa8063730c347fc4e015c21",
-      "bytes": 17596250
+      "target": "downloads/kinetic-tech-0.2.31-open-beta-zh.motion",
+      "sha256": "4bc28a4e684f288470b34211af0a9b9a8b6606b257d8fd6e2bf18d5dae0dab04",
+      "bytes": 17799614
     }
   },
   "container": "zip",
   "defaultLanguage": "zh-CN",
   "downloads": {
     "en": {
-      "file": "downloads/kinetic-tech-0.2.7-open-beta-en.motion",
-      "sha256": "533320d081c578cb824dfbc6ce9d4ae3eb1ca190d67ae7185b4a32b02e236255",
-      "bytes": 17594444,
-      "firstRead": "00-START-HERE.md"
+      "file": "downloads/kinetic-tech-0.2.31-open-beta-en.motion",
+      "sha256": "4bc28a4e684f288470b34211af0a9b9a8b6606b257d8fd6e2bf18d5dae0dab04",
+      "bytes": 17799614,
+      "firstRead": "PUBLIC-SOURCE.md",
+      "languageGuide": "guide.en.json"
     },
     "zh": {
-      "file": "downloads/kinetic-tech-0.2.7-open-beta-zh.motion",
-      "sha256": "472a95af35f8e0c09c0f7dc2ca0992b7c9a3405c5aa8063730c347fc4e015c21",
-      "bytes": 17596250,
-      "firstRead": "00-START-HERE.md"
+      "file": "downloads/kinetic-tech-0.2.31-open-beta-zh.motion",
+      "sha256": "4bc28a4e684f288470b34211af0a9b9a8b6606b257d8fd6e2bf18d5dae0dab04",
+      "bytes": 17799614,
+      "firstRead": "PUBLIC-SOURCE.md",
+      "languageGuide": "guide.json"
     }
   },
   "previousDownloads": [
+    {
+      "file": "downloads/kinetic-tech-0.2.30-open-beta-zh.motion",
+      "sha256": "9ca5073b47749de4a40dbfd0655cba7bedd4b582502913af454dfbd659b382c2",
+      "bytes": 17794206,
+      "firstRead": "PUBLIC-SOURCE.md",
+      "languageGuide": "guide.json",
+      "language": "zh",
+      "version": "0.2.30-open-beta"
+    },
+    {
+      "file": "downloads/kinetic-tech-0.2.30-open-beta-en.motion",
+      "sha256": "9ca5073b47749de4a40dbfd0655cba7bedd4b582502913af454dfbd659b382c2",
+      "bytes": 17794206,
+      "firstRead": "PUBLIC-SOURCE.md",
+      "languageGuide": "guide.en.json",
+      "language": "en",
+      "version": "0.2.30-open-beta"
+    },
+    {
+      "file": "downloads/kinetic-tech-0.2.7-open-beta-zh.motion",
+      "sha256": "472a95af35f8e0c09c0f7dc2ca0992b7c9a3405c5aa8063730c347fc4e015c21",
+      "bytes": 17596250,
+      "firstRead": "00-START-HERE.md",
+      "language": "zh",
+      "version": "0.2.7-open-beta"
+    },
+    {
+      "file": "downloads/kinetic-tech-0.2.7-open-beta-en.motion",
+      "sha256": "533320d081c578cb824dfbc6ce9d4ae3eb1ca190d67ae7185b4a32b02e236255",
+      "bytes": 17594444,
+      "firstRead": "00-START-HERE.md",
+      "language": "en",
+      "version": "0.2.7-open-beta"
+    },
     {
       "file": "downloads/kinetic-tech-0.2.6-open-beta-en.motion",
       "sha256": "227c905a1bf644f9bb00116e086ac992f15681c505a94aa1e95b7732015bf3c1",
@@ -103,5 +139,52 @@
     "profile": "motiongit.package-handoff/1",
     "guideSource": "downloaded-package",
     "externalWorkflow": false
+  },
+  "sourceTemplateId": "385712",
+  "upstreamReleaseId": 736,
+  "upstreamAuthorArchiveSha256": "740fde784be1a51bfcb2c6ff8ec583d9d57dfa7ec80c25676c7eb4044e499f2f",
+  "sourceEntry": "kinetic_bootstrap.py",
+  "layouts": {
+    "landscape": [
+      1920,
+      1080
+    ],
+    "portrait": [
+      1080,
+      1920
+    ]
+  },
+  "languageCoverage": {
+    "zh": [
+      "landscape-native",
+      "landscape-B1-B4",
+      "portrait-native",
+      "portrait-B1-B4"
+    ],
+    "en": [
+      "landscape-native",
+      "landscape-B1-B4",
+      "portrait-B1-B4"
+    ]
+  },
+  "publicGuide": "template/PUBLIC-SOURCE.md",
+  "runtimeAndMediaUnchangedFromUpstream": true,
+  "currentPlatformValidation": {
+    "profile": "motiongit.public-windows-static-face-validation/1",
+    "sourceVersion": "0.2.31-open-beta",
+    "upstreamAuthorArchiveSha256": "740fde784be1a51bfcb2c6ff8ec583d9d57dfa7ec80c25676c7eb4044e499f2f",
+    "platform": "Windows 11",
+    "scope": "Coarse fixed face centering through normal setup, doctor, plan, prepare, preview, render and full movie decode",
+    "pathScope": "Chinese and space-containing folders",
+    "samplePolicy": "One image or at most five video samples for one fixed anchor; no real-time tracking",
+    "testPermissions": "Administrator/elevated test context; this is not a stated runtime permission requirement",
+    "notCovered": [
+      "Complete original native scene library",
+      "Ordinary-permission execution",
+      "A real Chinese Windows username"
+    ],
+    "acceptanceSha256": "54e9f9d8606b6d60337431c528bcbce6c48b1f8434bb21cdeefeb192302e1b5a",
+    "sourceReportSha256": "99d5f669e8f54ba902719b7638aae37a2d1f5b677ba66975c13eb2800c4fb139",
+    "guide": "PUBLIC-SOURCE.md#platform-validation"
   }
 }

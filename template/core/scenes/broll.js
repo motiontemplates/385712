@@ -28,7 +28,7 @@ window.CURRENT_UNIT="A";
     const u = t - T0, Lb = bt.length;
     
     const pull = EZ.expo(pr(t, bb(0) + .12, bb(2)));
-    const zoom = lerp(1920 / TW, .62, pull);
+    const zoom = lerp((USER_INPUT.layout==='portrait'?1080:1920)/TW,.62,pull);
     const pan = (t - bb(2)) * 60;
     const suck = EZ.in(pr(t, bb(Lb - 2), T1));
     
@@ -129,11 +129,11 @@ window.CURRENT_UNIT="C";
   const [T0, T1] = BR.C;
   const sc = SC(T0, T1, '#030405', 'B-ROLL — UPGRADE', { noGrid: true });
   const D = sc.top;
-  mk(D, `<div style="width:1920px;height:1080px;background:#030405"></div>`, 0, 0);
+  mk(D, `<div style="width:${USER_INPUT.layout==='portrait'?1080:1920}px;height:${USER_INPUT.layout==='portrait'?1920:1080}px;background:#030405"></div>`, 0, 0);
   const bt = BEATS.filter(b => b[0] >= T0 - 1e-3 && b[0] < T1).map(b => b[0]);
   
-  const STAGES = [[1, 1], [2, 2], [4, 4], [8, 6]];   
-  const grid = mk(D, `<div style="position:relative;width:1920px;height:1080px;overflow:hidden"></div>`, 0, 0);
+  const STAGES = USER_INPUT.layout==='portrait'?[[1,1],[2,2],[2,8],[4,12]]:[[1,1],[2,2],[4,4],[8,6]];   
+  const grid = mk(D, `<div style="position:relative;width:${USER_INPUT.layout==='portrait'?1080:1920}px;height:${USER_INPUT.layout==='portrait'?1920:1080}px;overflow:hidden"></div>`, 0, 0);
   const G = grid.firstChild, cells = [];
   for (let i = 0; i < 48; i++) {
     const c = document.createElement('div');
@@ -149,7 +149,7 @@ window.CURRENT_UNIT="C";
     const st = Math.min(STAGES.length - 1, Math.floor(Math.max(0, k) / 4)), [cols, rows] = STAGES[st];
     const prevSt = Math.max(0, st - 1), sp = EZ.expo(pr(t, bt[st * 4] || T0, (bt[st * 4] || T0) + .22));
     const [pc, pr_] = STAGES[prevSt];
-    const cw = lerp(1920 / pc, 1920 / cols, st ? sp : 1), ch = lerp(1080 / pr_, 1080 / rows, st ? sp : 1);
+    const PW=USER_INPUT.layout==='portrait'?1080:1920,PH=USER_INPUT.layout==='portrait'?1920:1080;const cw=lerp(PW/pc,PW/cols,st?sp:1),ch=lerp(PH/pr_,PH/rows,st?sp:1);
     const n = cols * rows;
     const fi = Math.floor(Math.max(0, t - T0) * 24);       
     cells.forEach((c, i) => {
@@ -162,8 +162,8 @@ window.CURRENT_UNIT="C";
       c.ok.style.opacity = pr(t, stampT, stampT + .06).toFixed(2); c.ok.style.transform = `scale(${(1 + (1 - EZ.out5(pr(t, stampT, stampT + .15))) * .8).toFixed(3)})`;
       c.ok.style.fontSize = (st >= 3 ? 10 : 13) + 'px';
     });
-    const total = Math.round(lerp(1, 500, EZ.in(pr(t, T0, T1 - .5))));
-    setTxt(cn, total >= 500 ? '500+' : String(total).padStart(3, '0'));
+    const total = Math.round(lerp(1, parseInt(RAW_TEXT("C.text002")), EZ.in(pr(t, T0, T1 - .5))));
+    setTxt(cn, total >= parseInt(RAW_TEXT("C.text002")) ? RAW_TEXT("C.text002") : String(total).padStart(3, '0'));
     place(cnt, { o: 1 });
     place(grid, { o: 1 - pr(t, T1 - .1, T1), s: zoomPunch(t, bt[k] || T0, .05, .25) });
   };
@@ -198,7 +198,7 @@ window.CURRENT_UNIT="D";
     place(v1, { x: 1170, y: 540, o: vo, s: .98 + (t - T0) * .006, r: -1.5 }); place(v2, { x: 1560, y: 560, o: vo * pr(t, T0 + .2, T0 + .4), s: .9, r: 2 });
     vseq(v1, 'w6827', 374, T0 + (t - T0) * 6, T0); vseq(v2, 'w6813', 420, T0 + (t - T0) * 6, T0);
     const di = Math.min(DAYS.length - 1, Math.floor(pr(t, T0, quiet - .1) * DAYS.length));
-    setTxt(dd, DAYS[di]); setTxt(dc, RAW_TEXT("D.text022") + String(Math.round(EZ.in(pr(t, T0, quiet - .1)) * 286)).padStart(3, '0') + RAW_TEXT("D.text023"));
+    setTxt(dd, DAYS[di]); setTxt(dc, RAW_TEXT("D.text022") + String(Math.round(EZ.in(pr(t, T0, quiet - .1)) * Number(RAW_TEXT("D.number001")))).padStart(3, '0') + RAW_TEXT("D.text023"));
     place(date, { o: vo });
     
     const cin = pr(t, quiet - .1, quiet + .25), dis = pr(t, quiet + .55, T1 - .1);
@@ -243,7 +243,7 @@ window.CURRENT_UNIT="F";
     const k = t < bt[8] ? 0 : 1;
     const seg0 = k ? bt[8] : T0, [dir, n] = CL[k];
     setFrame(im, seqAt(dir, n, 30, t, seg0, false));
-    setTxt(sp, ['×4.6', '×2.2'][k]);
+    setTxt(sp, [RAW_TEXT("F.metric001"), RAW_TEXT("F.metric002")][k]);
     const p = pr(t, seg0, seg0 + .25);
     place(win, { o: 1 - pr(t, T1 - .1, T1), s: (.96 + .04 * EZ.out(p)) * (1 + (t - T0) * .006), r: (1 - EZ.out(p)) * (k % 2 ? 1.5 : -1.5) });
     place(lab, { o: pr(t, T0, T0 + .25) }); place(src, { o: pr(t, T0 + .2, T0 + .5) * .9 });

@@ -318,10 +318,20 @@
         "broll.js:11244"
       ],
       "label": "C / html-text / cnt",
-      "maxChars": 4,
+      "maxChars": 7,
       "format": "numeric-text",
       "required": true,
-      "default": ""
+      "default": "",
+      "maxCharsByLanguage": {
+        "zh": 7,
+        "en": 7
+      },
+      "pattern": "^\\d{1,6}\\+?$",
+      "numberRule": {
+        "min": 0,
+        "max": 999999,
+        "percent": false
+      }
     },
     {
       "id": "C.text003",
@@ -3105,10 +3115,20 @@
         "s05_07.js:17542"
       ],
       "label": "S06 / html-text / panel",
-      "maxChars": 4,
+      "maxChars": 7,
       "format": "numeric-text",
       "required": true,
-      "default": ""
+      "default": "",
+      "maxCharsByLanguage": {
+        "zh": 7,
+        "en": 7
+      },
+      "pattern": "^\\d{1,3}(?:\\.\\d)?$",
+      "numberRule": {
+        "min": 0,
+        "max": 999.9,
+        "percent": false
+      }
     },
     {
       "id": "S06.text011",
@@ -3259,10 +3279,20 @@
         "s05_07.js:19495"
       ],
       "label": "S06 / html-text / upW",
-      "maxChars": 14,
-      "format": "text",
+      "maxChars": 7,
+      "format": "numeric-text",
       "required": true,
-      "default": ""
+      "default": "",
+      "maxCharsByLanguage": {
+        "zh": 7,
+        "en": 7
+      },
+      "pattern": "^\\d{1,6}\\+?$",
+      "numberRule": {
+        "min": 0,
+        "max": 999999,
+        "percent": false
+      }
     },
     {
       "id": "S06.text022",
@@ -4214,10 +4244,20 @@
         "s08_11.js:8183"
       ],
       "label": "S09 / html-text / commits",
-      "maxChars": 4,
+      "maxChars": 7,
       "format": "numeric-text",
       "required": true,
-      "default": ""
+      "default": "",
+      "maxCharsByLanguage": {
+        "zh": 7,
+        "en": 7
+      },
+      "pattern": "^\\d{1,6}$",
+      "numberRule": {
+        "min": 0,
+        "max": 999999,
+        "percent": false
+      }
     },
     {
       "id": "S09.text021",
@@ -5040,10 +5080,20 @@
         "s12_14.js:15535"
       ],
       "label": "S13 / html-text / halfN",
-      "maxChars": 4,
+      "maxChars": 7,
       "format": "numeric-text",
       "required": true,
-      "default": ""
+      "default": "",
+      "maxCharsByLanguage": {
+        "zh": 7,
+        "en": 7
+      },
+      "pattern": "^\\d{1,3}(?:\\.\\d)?%$",
+      "numberRule": {
+        "min": 0,
+        "max": 100,
+        "percent": true
+      }
     },
     {
       "id": "S13.text011",
@@ -6570,6 +6620,517 @@
       "format": "text",
       "required": true,
       "default": ""
+    },
+    {
+      "id": "S08.label001",
+      "unit": "S08",
+      "context": "explicit current-user visible label/data",
+      "source": "portable story binding repair",
+      "uses": [
+        "declared scene renderer"
+      ],
+      "label": "S08.label001",
+      "maxChars": 8,
+      "maxCharsByLanguage": {
+        "zh": 8,
+        "en": 14
+      },
+      "format": "text",
+      "required": true,
+      "default": ""
+    },
+    {
+      "id": "S08.label002",
+      "unit": "S08",
+      "context": "explicit current-user visible label/data",
+      "source": "portable story binding repair",
+      "uses": [
+        "declared scene renderer"
+      ],
+      "label": "S08.label002",
+      "maxChars": 8,
+      "maxCharsByLanguage": {
+        "zh": 8,
+        "en": 14
+      },
+      "format": "text",
+      "required": true,
+      "default": ""
+    },
+    {
+      "id": "S08.label003",
+      "unit": "S08",
+      "context": "explicit current-user visible label/data",
+      "source": "portable story binding repair",
+      "uses": [
+        "declared scene renderer"
+      ],
+      "label": "S08.label003",
+      "maxChars": 8,
+      "maxCharsByLanguage": {
+        "zh": 8,
+        "en": 14
+      },
+      "format": "text",
+      "required": true,
+      "default": ""
+    },
+    {
+      "id": "S08.label004",
+      "unit": "S08",
+      "context": "explicit current-user visible label/data",
+      "source": "portable story binding repair",
+      "uses": [
+        "declared scene renderer"
+      ],
+      "label": "S08.label004",
+      "maxChars": 8,
+      "maxCharsByLanguage": {
+        "zh": 8,
+        "en": 14
+      },
+      "format": "text",
+      "required": true,
+      "default": ""
+    },
+    {
+      "id": "S08.label005",
+      "unit": "S08",
+      "context": "explicit current-user visible label/data",
+      "source": "portable story binding repair",
+      "uses": [
+        "declared scene renderer"
+      ],
+      "label": "S08.label005",
+      "maxChars": 8,
+      "maxCharsByLanguage": {
+        "zh": 8,
+        "en": 14
+      },
+      "format": "text",
+      "required": true,
+      "default": ""
+    },
+    {
+      "id": "S08.year001",
+      "unit": "S08",
+      "context": "explicit current-user visible label/data",
+      "source": "portable story binding repair",
+      "uses": [
+        "declared scene renderer"
+      ],
+      "label": "S08.year001",
+      "maxChars": 6,
+      "maxCharsByLanguage": {
+        "zh": 6,
+        "en": 12
+      },
+      "format": "text",
+      "required": true,
+      "default": ""
+    },
+    {
+      "id": "S08.year002",
+      "unit": "S08",
+      "context": "explicit current-user visible label/data",
+      "source": "portable story binding repair",
+      "uses": [
+        "declared scene renderer"
+      ],
+      "label": "S08.year002",
+      "maxChars": 6,
+      "maxCharsByLanguage": {
+        "zh": 6,
+        "en": 12
+      },
+      "format": "text",
+      "required": true,
+      "default": ""
+    },
+    {
+      "id": "S16.terminal001",
+      "unit": "S16",
+      "context": "explicit current-user visible label/data",
+      "source": "portable story binding repair",
+      "uses": [
+        "declared scene renderer"
+      ],
+      "label": "S16.terminal001",
+      "maxChars": 24,
+      "maxCharsByLanguage": {
+        "zh": 24,
+        "en": 44
+      },
+      "format": "text",
+      "required": true,
+      "default": ""
+    },
+    {
+      "id": "S16.terminal002",
+      "unit": "S16",
+      "context": "explicit current-user visible label/data",
+      "source": "portable story binding repair",
+      "uses": [
+        "declared scene renderer"
+      ],
+      "label": "S16.terminal002",
+      "maxChars": 24,
+      "maxCharsByLanguage": {
+        "zh": 24,
+        "en": 44
+      },
+      "format": "text",
+      "required": true,
+      "default": ""
+    },
+    {
+      "id": "S16.terminal003",
+      "unit": "S16",
+      "context": "explicit current-user visible label/data",
+      "source": "portable story binding repair",
+      "uses": [
+        "declared scene renderer"
+      ],
+      "label": "S16.terminal003",
+      "maxChars": 24,
+      "maxCharsByLanguage": {
+        "zh": 24,
+        "en": 44
+      },
+      "format": "text",
+      "required": true,
+      "default": ""
+    },
+    {
+      "id": "S16.terminal004",
+      "unit": "S16",
+      "context": "explicit current-user visible label/data",
+      "source": "portable story binding repair",
+      "uses": [
+        "declared scene renderer"
+      ],
+      "label": "S16.terminal004",
+      "maxChars": 24,
+      "maxCharsByLanguage": {
+        "zh": 24,
+        "en": 44
+      },
+      "format": "text",
+      "required": true,
+      "default": ""
+    },
+    {
+      "id": "S16.terminal005",
+      "unit": "S16",
+      "context": "explicit current-user visible label/data",
+      "source": "portable story binding repair",
+      "uses": [
+        "declared scene renderer"
+      ],
+      "label": "S16.terminal005",
+      "maxChars": 24,
+      "maxCharsByLanguage": {
+        "zh": 24,
+        "en": 44
+      },
+      "format": "text",
+      "required": true,
+      "default": ""
+    },
+    {
+      "id": "S05.toolLabel",
+      "unit": "S05",
+      "context": "explicit current-user visible label/data",
+      "source": "portable story binding repair",
+      "uses": [
+        "declared scene renderer"
+      ],
+      "label": "S05.toolLabel",
+      "maxChars": 6,
+      "maxCharsByLanguage": {
+        "zh": 6,
+        "en": 12
+      },
+      "format": "text",
+      "required": true,
+      "default": ""
+    },
+    {
+      "id": "S05.file001",
+      "unit": "S05",
+      "context": "explicit current-user visible label/data",
+      "source": "portable story binding repair",
+      "uses": [
+        "declared scene renderer"
+      ],
+      "label": "S05.file001",
+      "maxChars": 12,
+      "maxCharsByLanguage": {
+        "zh": 12,
+        "en": 22
+      },
+      "format": "text",
+      "required": true,
+      "default": ""
+    },
+    {
+      "id": "S05.file002",
+      "unit": "S05",
+      "context": "explicit current-user visible label/data",
+      "source": "portable story binding repair",
+      "uses": [
+        "declared scene renderer"
+      ],
+      "label": "S05.file002",
+      "maxChars": 12,
+      "maxCharsByLanguage": {
+        "zh": 12,
+        "en": 22
+      },
+      "format": "text",
+      "required": true,
+      "default": ""
+    },
+    {
+      "id": "S05.file003",
+      "unit": "S05",
+      "context": "explicit current-user visible label/data",
+      "source": "portable story binding repair",
+      "uses": [
+        "declared scene renderer"
+      ],
+      "label": "S05.file003",
+      "maxChars": 12,
+      "maxCharsByLanguage": {
+        "zh": 12,
+        "en": 22
+      },
+      "format": "text",
+      "required": true,
+      "default": ""
+    },
+    {
+      "id": "S05.file004",
+      "unit": "S05",
+      "context": "explicit current-user visible label/data",
+      "source": "portable story binding repair",
+      "uses": [
+        "declared scene renderer"
+      ],
+      "label": "S05.file004",
+      "maxChars": 12,
+      "maxCharsByLanguage": {
+        "zh": 12,
+        "en": 22
+      },
+      "format": "text",
+      "required": true,
+      "default": ""
+    },
+    {
+      "id": "S15.onLabel",
+      "unit": "S15",
+      "context": "explicit current-user visible label/data",
+      "source": "portable story binding repair",
+      "uses": [
+        "declared scene renderer"
+      ],
+      "label": "S15.onLabel",
+      "maxChars": 4,
+      "maxCharsByLanguage": {
+        "zh": 4,
+        "en": 8
+      },
+      "format": "text",
+      "required": true,
+      "default": ""
+    },
+    {
+      "id": "S06.firstRowValue",
+      "unit": "S06",
+      "context": "explicit current-user visible label/data",
+      "source": "portable story binding repair",
+      "uses": [
+        "declared scene renderer"
+      ],
+      "label": "S06.firstRowValue",
+      "maxChars": 8,
+      "maxCharsByLanguage": {
+        "zh": 8,
+        "en": 14
+      },
+      "format": "text",
+      "required": true,
+      "default": ""
+    },
+    {
+      "id": "D.number001",
+      "unit": "D",
+      "context": "explicit current-user visible label/data",
+      "source": "portable story binding repair",
+      "uses": [
+        "declared scene renderer"
+      ],
+      "label": "D.number001",
+      "maxChars": 6,
+      "maxCharsByLanguage": {
+        "zh": 6,
+        "en": 6
+      },
+      "format": "numeric-text",
+      "required": true,
+      "default": "",
+      "pattern": "^\\d{1,6}$",
+      "numberRule": {
+        "min": 0,
+        "max": 999999
+      }
+    },
+    {
+      "id": "F.metric001",
+      "unit": "F",
+      "context": "explicit current-user visible label/data",
+      "source": "portable story binding repair",
+      "uses": [
+        "declared scene renderer"
+      ],
+      "label": "F.metric001",
+      "maxChars": 8,
+      "maxCharsByLanguage": {
+        "zh": 8,
+        "en": 12
+      },
+      "format": "text",
+      "required": true,
+      "default": ""
+    },
+    {
+      "id": "F.metric002",
+      "unit": "F",
+      "context": "explicit current-user visible label/data",
+      "source": "portable story binding repair",
+      "uses": [
+        "declared scene renderer"
+      ],
+      "label": "F.metric002",
+      "maxChars": 8,
+      "maxCharsByLanguage": {
+        "zh": 8,
+        "en": 12
+      },
+      "format": "text",
+      "required": true,
+      "default": ""
+    },
+    {
+      "id": "S06.number001",
+      "unit": "S06",
+      "context": "explicit current-user visible label/data",
+      "source": "portable story binding repair",
+      "uses": [
+        "declared scene renderer"
+      ],
+      "label": "S06.number001",
+      "maxChars": 5,
+      "maxCharsByLanguage": {
+        "zh": 5,
+        "en": 5
+      },
+      "format": "numeric-text",
+      "required": true,
+      "default": "",
+      "pattern": "^\\d{1,3}(?:\\.\\d)?$",
+      "numberRule": {
+        "min": 0,
+        "max": 999.9
+      }
+    },
+    {
+      "id": "S13.timerSeconds",
+      "unit": "S13",
+      "context": "explicit current-user visible label/data",
+      "source": "portable story binding repair",
+      "uses": [
+        "declared scene renderer"
+      ],
+      "label": "S13.timerSeconds",
+      "maxChars": 4,
+      "maxCharsByLanguage": {
+        "zh": 4,
+        "en": 4
+      },
+      "format": "numeric-text",
+      "required": true,
+      "default": "",
+      "pattern": "^\\d{1,4}$",
+      "numberRule": {
+        "min": 0,
+        "max": 5999
+      }
+    },
+    {
+      "id": "S16.versionPrefix",
+      "unit": "S16",
+      "context": "explicit current-user visible label/data",
+      "source": "portable story binding repair",
+      "uses": [
+        "declared scene renderer"
+      ],
+      "label": "S16.versionPrefix",
+      "maxChars": 3,
+      "maxCharsByLanguage": {
+        "zh": 3,
+        "en": 3
+      },
+      "format": "text",
+      "required": true,
+      "default": ""
+    },
+    {
+      "id": "S16.versionStart",
+      "unit": "S16",
+      "context": "explicit current-user visible label/data",
+      "source": "portable story binding repair",
+      "uses": [
+        "declared scene renderer"
+      ],
+      "label": "S16.versionStart",
+      "maxChars": 3,
+      "maxCharsByLanguage": {
+        "zh": 3,
+        "en": 3
+      },
+      "format": "numeric-text",
+      "required": true,
+      "default": "",
+      "pattern": "^\\d{1,3}$",
+      "numberRule": {
+        "min": 0,
+        "max": 999
+      }
+    },
+    {
+      "id": "S16.versionEnd",
+      "unit": "S16",
+      "context": "explicit current-user visible label/data",
+      "source": "portable story binding repair",
+      "uses": [
+        "declared scene renderer"
+      ],
+      "label": "S16.versionEnd",
+      "maxChars": 3,
+      "maxCharsByLanguage": {
+        "zh": 3,
+        "en": 3
+      },
+      "format": "numeric-text",
+      "required": true,
+      "default": "",
+      "pattern": "^\\d{1,3}$",
+      "numberRule": {
+        "min": 0,
+        "max": 999
+      }
     }
   ]
 }

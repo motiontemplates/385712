@@ -1,20 +1,20 @@
 {
   "mode": "user-media",
-  "language": "en",
+  "language": "zh",
   "layout": "landscape",
   "duration": 8,
-  "title": "Start with an idea",
+  "title": "从想法开始",
   "presenterLabel": "",
   "scenes": [
     {
       "id": "B1",
-      "title": "One idea"
+      "title": "一个想法"
     }
   ],
   "content": {},
   "basic": {
-    "keyword": "CREATE",
-    "explanation": "Turn your own idea\ninto a clear visual story."
+    "keyword": "创作",
+    "explanation": "把你的想法\n变成清晰的视觉故事"
   },
   "media": {
     "presenter": {

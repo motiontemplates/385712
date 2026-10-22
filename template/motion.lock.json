@@ -1,21 +1,39 @@
 {
   "profile": "kinetic-user-core/1",
   "nodeDependency": "playwright-core@1.64.0",
-  "pythonMinimum": "3.11",
+  "pythonMinimum": "3.13",
   "pythonDependencies": [
-    "numpy",
-    "scipy",
-    "soundfile",
-    "pyloudnorm",
-    "jsonschema"
+    "numpy==2.2.6",
+    "scipy==1.18.1",
+    "soundfile==0.14.0",
+    "pyloudnorm==0.2.0",
+    "jsonschema==4.26.0",
+    "opencv-python-headless==4.12.0.88",
+    "attrs==26.1.0",
+    "cffi==2.1.1",
+    "pycparser==3.11",
+    "referencing==0.37.0",
+    "rpds-py==2026.9.1",
+    "jsonschema-specifications==2025.9.1",
+    "typing_extensions==4.16.0"
   ],
-  "pythonVersionLock": "Not pinned; actual tested resolution is recorded separately",
+  "pythonVersionLock": "dependencies/requirements-runtime.lock.txt; every distribution hash and version pinned",
   "browser": "existing Chrome/Chromium/Edge resolved by chrome.mjs",
   "ffmpeg": "host installation",
   "testedSystem": "macOS",
-  "windows": "resolver present; native OS execution not yet tested",
+  "windows": "Portable media serialization and legacy-backslash semantics tested separately; native Windows execution not tested",
   "linux": "resolver present; native OS execution not yet tested",
   "sourceCueClock": "197 source action anchors; not invented speech alignment",
   "sound": "312 scene SFX and 24 additional source audio-recipe events",
-  "coverageComplete": false
+  "coverageComplete": false,
+  "bootstrap": "kinetic_bootstrap.py",
+  "externalDependencyContract": "dependencies/runtime-dependencies.json",
+  "coldStart": "Standard-library doctor/setup; Python3.14 host can dispatch to the isolated Python3.13 runtime",
+  "nodeDependencyPath": "Explicit verified external dependency cache",
+  "sourceFiles": {
+    "narration_continuity.py": "7eb16db9ba0e4c2d4ea45fabb4cac33266462a34c6129cad656078f5c2d6d807",
+    "kinetic_story.py": "ab1a346c0756135d83a0c0639ad02aec28b1ed78930fe8deef56736df12afaf8",
+    "core/story-visuals.js": "dff7b9fca7cbe31ee820c6d5112bdf273cdd73ca1f6dc68cda2592493fb1b013",
+    "signature.mjs": "88e393662e8595eedb41d46881aed5caaaa382225f971b761a53c6f81391359d"
+  }
 }

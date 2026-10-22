@@ -23,6 +23,7 @@ function mk(parent, html, x = 0, y = 0, opt = {}) {
   if (opt.style) d.style.cssText += opt.style;
   d.innerHTML = html; parent.appendChild(d);
   d._x = x; d._y = y; d._ax = opt.ax == null ? 0 : opt.ax; d._ay = opt.ay == null ? 0 : opt.ay;
+  d.dataset.nativeNode=String(parent._nativeSequence||0);parent._nativeSequence=(parent._nativeSequence||0)+1;
   place(d, { o: 0 }); return d;
 }
 function img(parent, src, x, y, h, opt = {}) {
@@ -34,6 +35,7 @@ function place(e, o = {}) {
   e.style.transform = `translate(${x.toFixed(2)}px,${y.toFixed(2)}px) translate(${-e._ax * 100}%,${-e._ay * 100}%) rotate(${(o.r || 0).toFixed(3)}deg) scale(${sx.toFixed(4)},${sy.toFixed(4)})`;
   e.style.transformOrigin = `${e._ax * 100}% ${e._ay * 100}%`;
   const op = o.o == null ? 1 : o.o;
+  e._lastPlace={x,y,s,sx,sy,r:o.r||0,o:op};
   e.style.opacity = op.toFixed(3);
   e.style.visibility = op <= 0.002 ? 'hidden' : 'visible';
   e.style.filter = o.blur ? `blur(${o.blur.toFixed(2)}px)` : '';
@@ -129,21 +131,7 @@ function camCard(parent, w, h, label = '// on air · ' + (CONFIG.account || 'Pre
   e._img = e.querySelector('img'); return e;
 }
 function faceAt(t){return window.userFace(t);}
-function camAt(e, t, o) {
-  setFrame(e._img, talkSrc(t)); place(e, o);
-  const round = e.firstChild.classList.contains('round');
-  const sm = e._sm != null ? e._sm : (e._sm = 0);          
-  const k = round ? 1 : sm;
-  if (k > 0) {
-    const f = faceAt(t), W = e.firstChild.offsetWidth, H = e.firstChild.offsetHeight;
-    
-    const cover = Math.max(W / 720, H / 1280), want = (H * .44) / (f.h * 1280 * cover);
-    const z = lerp(1, clamp(want, 1, 2.6), k);
-    const iw = 720 * cover * z, ih = 1280 * cover * z;
-    const ox = clamp(W / 2 - f.cx * iw, W - iw, 0), oy = clamp(H * .56 - f.cy * ih, H - ih, 0);
-    e._img.style.cssText = `position:absolute;left:${ox.toFixed(1)}px;top:${oy.toFixed(1)}px;width:${iw.toFixed(1)}px;height:${ih.toFixed(1)}px;max-width:none;object-fit:fill`;
-  } else if (e._img.style.position) e._img.style.cssText = '';
-}
+function camAt(e,t,o){setFrame(e._img,talkSrc(t));place(e,o);window.userPresenterFrame(e._img,t,e.firstChild.offsetWidth,e.firstChild.offsetHeight,e.firstChild.classList.contains('round'));}
 function vtile(parent, w, h, r = 16, extra = '') {
   const e = mk(parent, `<div class="vt" style="width:${w}px;height:${h}px;border-radius:${r}px;${extra}"><img></div>`, 0, 0, { ax: .5, ay: .5 });
   e._img = e.querySelector('img'); return e;

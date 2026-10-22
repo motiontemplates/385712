@@ -2,1320 +2,1884 @@
   "profile": "motiongit.content-boundary/1",
   "files": {
     "00-START-HERE.md": {
-      "role": "method-or-contract",
-      "sha256": "f7d5636f701819ec684b744c8ef2f039d23711cb310c7e137a8cec35d5af372e"
+      "role": "contract",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "ef7242814f8ef493ecfeec7fab7e229af67ddca6dfd73b86beb3d7e7ff65e069"
+    },
+    "AUDIO.md": {
+      "role": "contract",
+      "reason": "Audio and narration ownership repair",
+      "sha256": "c5e54b0113ac90ab0fef80508a8c2974ec0a9979f5883bcd97250ece2244ed98"
+    },
+    "BASIC.md": {
+      "role": "contract",
+      "reason": "Audio and narration ownership repair",
+      "sha256": "2af729d92592ec10cca72bcf71962b6c644103ab19bfd4436ddef7d794bedb18"
+    },
+    "CAPTIONS-EXPORT.md": {
+      "role": "contract",
+      "reason": "Additive narrated-story and runtime compatibility",
+      "sha256": "9bc27ffcd4d72eea365c9886ee546b68b29c80186d48f7dd6ac234d37d56b5f5"
     },
     "CREATION.md": {
-      "role": "method-or-contract",
-      "sha256": "7daa73b8ebf58b7d86a4dd14364aeb0c3ef7f08eef9b166460b2fb390a88b435"
+      "role": "contract",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "73961c3e36e753562da7c8ad2d3afe9f636559268e2278374fdfd0cbd1004b21"
+    },
+    "CURRENT-REVISION.md": {
+      "role": "contract",
+      "reason": "Audio and narration ownership repair",
+      "sha256": "b105859c941b315d191d5059e3819b825c7eb68c14fac178ed45f8c432d6bdb9"
+    },
+    "DURATION.md": {
+      "role": "contract",
+      "reason": "Whole-narration preservation and planning validation",
+      "sha256": "6fd6ba611862b29ac03850eb7e5aa55c4752860392b48bdd5c718c2e8f988467"
+    },
+    "MEDIA.md": {
+      "role": "contract",
+      "reason": "Audio and narration ownership repair",
+      "sha256": "e120b4f59e0f066de187736f9fa87c9d15c4be12b6e6fe836160c66096752ce6"
+    },
+    "NARRATED-STORY.md": {
+      "role": "contract",
+      "reason": "Additive narrated-story and runtime compatibility",
+      "sha256": "f5e85a34f2bbec962243a95f9fdf3d222a12ffbefff049b61624600b3de7a389"
+    },
+    "NARRATION-MAP.md": {
+      "role": "contract",
+      "reason": "Audio and narration ownership repair",
+      "sha256": "6e855db5e1443e3945fe7598237c4445042c86194b0a1900b8b0b6ccf950a5aa"
+    },
+    "NARRATION-VISUAL.md": {
+      "role": "contract",
+      "reason": "Unpublished sentence visual development candidate",
+      "sha256": "61cedf8c6cd90bdb2d8ce82b68250a9b7a643d34466cf175a27194ffd3e1848e"
+    },
+    "PORTABLE-PATHS.md": {
+      "role": "contract",
+      "reason": "Portable media binding and tested platform scope",
+      "sha256": "30da6b34fdbc1ef821a06763d8d738b1d2a86d18fb232bc88a9cc7aa1b13dae8"
+    },
+    "PORTRAIT-COMPOSITION.md": {
+      "role": "contract",
+      "reason": "Additive narrated-story and runtime compatibility",
+      "sha256": "d91fd1681d9bcc3e49f0a50b9b242cfe147a79345e1afc7e29860352eeff8e26"
+    },
+    "PORTRAIT-SIGNATURE.md": {
+      "role": "contract",
+      "reason": "Audio and narration ownership repair",
+      "sha256": "5405a1a2c36bad4307a19cd4210a6cd65f52ea34c6cd8bd71857afcd0304c72c"
+    },
+    "PUBLIC-SOURCE.md": {
+      "role": "contract",
+      "reason": "Public source onboarding",
+      "sha256": "7480e745b7117e11ffe82d2107d25f28c12c74a7e906b1b3a62c55c62afbacbd"
     },
     "README.md": {
-      "role": "method-or-contract",
-      "sha256": "f7d5636f701819ec684b744c8ef2f039d23711cb310c7e137a8cec35d5af372e"
+      "role": "contract",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "a5feb37b5d4fab14d25c80f61d8646cffdb8947ca67f9688ec8f779b45e29f59"
+    },
+    "STARTUP.md": {
+      "role": "contract",
+      "reason": "Audio and narration ownership repair",
+      "sha256": "73961c3e36e753562da7c8ad2d3afe9f636559268e2278374fdfd0cbd1004b21"
     },
     "adapter.py": {
-      "role": "method-or-contract",
-      "sha256": "404647d446eaad872dd0a9200d384c6d6062090e91eaa136bce6251efad38033"
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "ff70b955fc110cc3a808c59639a75a33f748f6e1c539ecc37bf97b65ee12b80f"
     },
     "asset-manifest.json": {
-      "role": "method-or-contract",
+      "role": "contract",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "e38e4ea856cbdeaaf0759dd58e13c7cae0f525a8ddb14229f91e0114b910e033"
     },
+    "audio-contract.json": {
+      "role": "contract",
+      "reason": "Audio and narration ownership repair",
+      "sha256": "500267b222335d7a80879992414ca4115db24c900e24cd782334568f80c6f22c"
+    },
+    "audio_integrity.py": {
+      "role": "method",
+      "reason": "Audio and narration ownership repair",
+      "sha256": "7e44f1d093d0af97fe1176cf9520e57e7baa25736e903b81b5993cf2e857401f"
+    },
+    "caption_timing.py": {
+      "role": "method",
+      "reason": "Audio and narration ownership repair",
+      "sha256": "da63451285dbb2ea935d59dff1ec0703e9c2bc63cb962bb117858e5dab5ee380"
+    },
     "chrome.mjs": {
-      "role": "method-or-contract",
-      "sha256": "ba36b204e3010e2e98ec5237f8cee8f2c7c131558c40ea6874048ea71750d8be"
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "07904750c6b81f1bc28df5b0fbd2ba6b8d9cdb1962ebe28775753e86e9d88d75"
     },
     "core/assets/grain.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "c8af9e35cd5859d19235332a8844514e3ff9bdc625be760c4a91eba4a319506f"
     },
     "core/audio-events.json": {
-      "role": "method-or-contract",
+      "role": "contract",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "f3ff3b2d3cb9fdf941fea9b3ce7d3e128c84ad895e9f186462a2574bfdac6cf7"
     },
     "core/basic.js": {
-      "role": "method-or-contract",
-      "sha256": "74df05aea6a3f5e235b13187390730730a699076bb79cf8f3f5e83f5ca90ba33"
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "a6a3ab13dcfbd9f84ca44ae784acdf4ea0644505d84040678f0026ae9460aa55"
     },
     "core/brand/frames-lighter/000.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "7a0f91669a7420941dabd5e2c1908a4696d3fa8efcdfb827551abd1b3cce9fa2"
     },
     "core/brand/frames-lighter/001.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "7a0f91669a7420941dabd5e2c1908a4696d3fa8efcdfb827551abd1b3cce9fa2"
     },
     "core/brand/frames-lighter/002.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "7a0f91669a7420941dabd5e2c1908a4696d3fa8efcdfb827551abd1b3cce9fa2"
     },
     "core/brand/frames-lighter/003.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "7a0f91669a7420941dabd5e2c1908a4696d3fa8efcdfb827551abd1b3cce9fa2"
     },
     "core/brand/frames-lighter/004.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "fd7c0c97670d457fa4af0cc7ba7de5ece04f0fca9d3148f0566dce242ae855af"
     },
     "core/brand/frames-lighter/005.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "fd5ad5abb287ea9d9675577b93badf32e43e975be78df29fddcfc03b295f2377"
     },
     "core/brand/frames-lighter/006.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "d9c27b1379b60fda150611eaacbb954ad235321101fd46178185edbda2c1e401"
     },
     "core/brand/frames-lighter/007.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "aecb94de8c3b05ba7e56f9d8d2edf2099240f22615a549606861e252fd9fbe29"
     },
     "core/brand/frames-lighter/008.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "7c7e07bbe5d359c0a679ebf22a7e1363d533182952e0100a8cd794908404f63e"
     },
     "core/brand/frames-lighter/009.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "d5e5151773858bfd7b04b9dfd3a8d1ad029a0931d76297fd83145d378eb335fd"
     },
     "core/brand/frames-lighter/010.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "bbe423eb0825d9ce90772fddd361ee9320b6088fc9b9be0faf194da71ba00079"
     },
     "core/brand/frames-lighter/011.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "6ac62947360654637d94d6fe1cf96509f8b8cc8ca76f706aa2f1c329b1eab735"
     },
     "core/brand/frames-lighter/012.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "268a81e3ba3599788c55bbc941b791be482011ecd260c38cdc8f60100d658db5"
     },
     "core/brand/frames-lighter/013.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "38bee7b808e65838ccc77f0a800d538c6df8371b8369113ae7d7c28f1c8c59ff"
     },
     "core/brand/frames-lighter/014.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "a67bbd60d731b52f84fc7a94ca176508b5a0165c29ba74540363ec11aed37cec"
     },
     "core/brand/frames-lighter/015.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "a67bbd60d731b52f84fc7a94ca176508b5a0165c29ba74540363ec11aed37cec"
     },
     "core/brand/frames-lighter/016.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "88750e344920eefd92a6ae88a15e92d62e1e3b129d9c820c933f81e6cc94d9ea"
     },
     "core/brand/frames-lighter/017.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "88750e344920eefd92a6ae88a15e92d62e1e3b129d9c820c933f81e6cc94d9ea"
     },
     "core/brand/frames-lighter/018.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "88750e344920eefd92a6ae88a15e92d62e1e3b129d9c820c933f81e6cc94d9ea"
     },
     "core/brand/frames-lighter/019.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "88750e344920eefd92a6ae88a15e92d62e1e3b129d9c820c933f81e6cc94d9ea"
     },
     "core/brand/frames-lighter/020.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "7dedfbe449d9bc085c442e5dd45042fed5e52333a7bec1e7943793d57bd501cc"
     },
     "core/brand/frames-lighter/021.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "3e36637b929a60f214e1515385a2faed1e35e018f69162cf92fa7ad49f12cdfb"
     },
     "core/brand/frames-lighter/022.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "4337e25ced5dd93a583e9b7ef755d0e2cbea19c437465a52b94ca3289ede5b63"
     },
     "core/brand/frames-lighter/023.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "c701f4853e3452cc233c3e8cb40614260f0799cc594296bd9dbbeeb7caca6758"
     },
     "core/brand/frames-lighter/024.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "ae8519bdcd73c9d184590b0b934a829ef21a96a211b618dee908c9c2a1aac015"
     },
     "core/brand/frames-lighter/025.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "061d3877ba113a5e9e095376c346326f8e2c55800e1ff2bcc89f664c8fa132a1"
     },
     "core/brand/frames-lighter/026.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "352fba2458f55cfb2ac3e3db60b340f2eba46bea677ca003b6c589570c6d805a"
     },
     "core/brand/frames-lighter/027.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "a5c7533686cfa90e87fb4d2993f0ae57d28f2dc1f409f1a9970512c800955f16"
     },
     "core/brand/frames-lighter/028.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "ba259b77cf2d94b06e09484ad4be5191cae3e9f3b4e8266c5c5b9f45f0f5a096"
     },
     "core/brand/frames-lighter/029.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "9ce3993207c8dfde02a387898422859a0814465932c2d3df441e674623e94d8a"
     },
     "core/brand/frames-lighter/030.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "94ae45b56d56d4724c8c9f0220d535ff0516d12e856dd25d5d76dbb940be4c35"
     },
     "core/brand/frames-lighter/031.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "454a1eaa23e8a6069178a412494fa77ee179d4a5b46229085e41a95d287b8d7b"
     },
     "core/brand/frames-lighter/032.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "5dd38088cdd45a91f4c87af382ffdc78efe38412f1a784abeb961627a5515074"
     },
     "core/brand/frames-lighter/033.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "a505eb540564cf9046c4020c1f378ca1e27a88fac3a24e601c46bfd87314cb79"
     },
     "core/brand/frames-lighter/034.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "347636373bf286d7b1bd63ef5e3500e75b07000e9fe2e8167d830df42352009b"
     },
     "core/brand/frames-lighter/035.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "bdd636e67e759c4233f54797c994cf922d9fea256f1507326f5ed9cebf3f209e"
     },
     "core/brand/frames-lighter/036.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "a48d5c35c87089054b797dddf860e3006d47846b797cc0b589f57441d1e0f6f0"
     },
     "core/brand/frames-lighter/037.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "d388f9a59272aadf3bbe649055a6022bdcdd685fa51c8eeba63526ce8644bcdc"
     },
     "core/brand/frames-lighter/038.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "3e1fe3791f8dda9e6bc20a0ada3deabfe0dbc9c97d8dbfc469cd4d21f95c86bb"
     },
     "core/brand/frames-lighter/039.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "ca0e8701450fc11796d0b97547d9564fc4c83d67c752f433d5ea3ee1b1c5f499"
     },
     "core/brand/frames-lighter/040.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "05c3e05f0facac813f11621507186d4e4c73c7cba9d449987ade6157e0377856"
     },
     "core/brand/frames-lighter/041.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "bd2043ed285db96ee80ad5a12152137a359bb2ee989bd49e3253a6d7cd694092"
     },
     "core/brand/frames-lighter/042.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "cf3b87621685ea598dbb26d26573be6c04beeba540cd998a6dc3eb786da6da61"
     },
     "core/brand/frames-lighter/043.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "fe9256520ee69686f06a3e76d913cac84762bcf6c40c2d886780f553ab2baf04"
     },
     "core/brand/frames-lighter/044.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "c0524ea89f8a1f7ea46352523d40a2d72bfc4133c0137d52e9d607627def22ac"
     },
     "core/brand/frames-lighter/045.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "82b2b453c26b531a32fa21bf873e440312ba356bcb045b74461dbf21de669b75"
     },
     "core/brand/frames-lighter/046.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "2152c477eb6faf8f6a70293c372bb3c0ec0767a24a672cf07058fa4d4ab65f28"
     },
     "core/brand/frames-lighter/047.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "83a537ad0ab9bdb8aa0835ff413e737db0b9ae8d9fc8d992ceeef65bc668756f"
     },
     "core/brand/frames-lighter/048.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "ec8de0b03f425863a4c01cedb660503263541d536d63b33da8dc85794940fa79"
     },
     "core/brand/frames-lighter/049.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "1eaac66d420a5c4f5a2b1a3d108bd22d1f3c62eaf55a26e1a5c4d83f340f0399"
     },
     "core/brand/frames-lighter/050.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "5a31cf3a7fbd48f0785ad99267f18edb6316d0adfa3e8b0670b0b211a0d3d8e9"
     },
     "core/brand/frames-lighter/051.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "d97dd1186509c30f4f945c86455617cf674803fde6b3f170328b32efaabcbe2e"
     },
     "core/brand/frames-lighter/052.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "e2dac4465428d3250b5bcb323062f8feebbbe082dcfc7a35442a6d53e90a5a69"
     },
     "core/brand/frames-lighter/053.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "3cd0214e391b8ec0707e49f9de28515707f4c637fe159879a957f474829e7473"
     },
     "core/brand/frames-lighter/054.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "dd4ca047d1c3b38ac83bef2e8890e206d530ab392356931aa147368143f8c978"
     },
     "core/brand/frames-lighter/055.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "be1fc3de1102dc25cb9d87a1bf8f3d17df0045884f5774d1842c31167f215e8f"
     },
     "core/brand/frames-lighter/056.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "888a6eb5f2b149b1dd463814337065c747eb70951ebc0bcba7d1ab0de4b268aa"
     },
     "core/brand/frames-lighter/057.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "6739de1cc0693ed8bc6d6d1ea10b2eb6302c7b81fe7cf3dfab804a0223364914"
     },
     "core/brand/frames-lighter/058.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "adacb72c823ba471b030d8898711c6354bb9c37290c640e8172abba225e00bc8"
     },
     "core/brand/frames-lighter/059.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "1ee21589f5cbfd5411201fd213c97237cd068e2dfc821a7f09b09db383a0e1f0"
     },
     "core/brand/frames-lighter/060.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "c3496c141a394848067a9d70ec6bb0fc4657677286ab8a41a3b64673d4c69f8e"
     },
     "core/brand/frames-lighter/061.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "1ab516bbea15d072a07da45fe1c9f44540ab4bb9a53d6330b084b31d3dcd8941"
     },
     "core/brand/frames-lighter/062.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "3c6152efb2bae89907ddc5ad0db73b9ed5b0922026971702493ca41b474590e8"
     },
     "core/brand/frames-lighter/063.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "1fc6b4d28b75d0533d63afed3b58c5a7f6f2dcd5ef15c1ca98976c43f3b5b613"
     },
     "core/brand/frames-lighter/064.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "9e9094ad989058af3d0c90179104498fc500ae373775030a72856055faa118d9"
     },
     "core/brand/frames-lighter/065.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "e1540a7e82a646d8bffaa8c8aedd5abf187f67a3bda465a06e2f2bb2a735bd3e"
     },
     "core/brand/frames-lighter/066.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "b07d79122aa323ede428a9fa7380d6744e3c3b20107c46bfb17887b2bfc27155"
     },
     "core/brand/frames-lighter/067.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "04e1b0269a1bfa082cd0f6d293e586090cfb8734ffd0f2acac31829e6a1ae433"
     },
     "core/brand/frames-lighter/068.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "55d3912fe5640841da18a54b6fe872f5765814bd68bdd8b2e6a3aa45c6de25f7"
     },
     "core/brand/frames-lighter/069.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "4052786c91ff90b3a530e5df2a8579fbedd8f81971c0931f8aa0b4eeb32c841a"
     },
     "core/brand/frames-lighter/070.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "e38b5dff9c22de6c01d5b9dc732ac611a88aa63381c6c2742c1a6ecbd5edde00"
     },
     "core/brand/frames-lighter/071.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "85b5aa8c844a7bfdb7b3f8894556e81a87f047eb3f0b80191212bd7b171cb07e"
     },
     "core/brand/frames-lighter/072.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "d11ebba241e0b8181ccf0d2db544cfc60356180ae105630aeaba23e71d2cfdf0"
     },
     "core/brand/frames-lighter/073.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "a726c746d3c81151f47e46e956f5e60da3427d9f0630719f46676b6e68a75eca"
     },
     "core/brand/frames-lighter/074.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "b581a70aa3698c2e050b5939eaad838bd70e5f8e728ecb8f5920fc68ff931ada"
     },
     "core/brand/frames-lighter/075.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "2a31450047ce034a64ac01d5f6f67e0da00afa4e7c341b38369aaf44cec90908"
     },
     "core/brand/frames-lighter/076.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "78e4a62457daeac561fe60e8ee1320f27e90223ab5ad9e6b16fff2978c11d222"
     },
     "core/brand/frames-lighter/077.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "17be8b1d4a0d93934f13569b3e87f56906c0bd55048832f6e65473281ea27e89"
     },
     "core/brand/frames-lighter/078.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "12ee3ff92283189f5b633a5cb8dc7182de66e63f1793eeb3307598c11f0b48a8"
     },
     "core/brand/frames-lighter/079.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "b8d520f308dfb90d7bf1663b2e8444d7239227de685400ef688a7780eba94f0a"
     },
     "core/brand/frames-lighter/080.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "914262712856b3387ea1c65b5babe38daa5447567855521e5fd84d9bc2e457bb"
     },
     "core/brand/frames-lighter/081.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "0e1f4470035944f88674c5b84c1a8e178aa1f99a34e7caadb111647cf19bae48"
     },
     "core/brand/frames-lighter/082.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "83415f7f1f91620b3baa0b370502c6b488e5305f8c74f642742b0e6adba971ce"
     },
     "core/brand/frames-lighter/083.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "65a3b9624becc17d79454d31dcf389cf6081c1b7d7646e0f0eb78b4c4cc04db6"
     },
     "core/brand/frames-lighter/084.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "098a6e3ed879252e673195be145ee168a79e2ac684b7a760fb8c2cefd7097e11"
     },
     "core/brand/frames-lighter/085.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "098a6e3ed879252e673195be145ee168a79e2ac684b7a760fb8c2cefd7097e11"
     },
     "core/brand/frames-lighter/086.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "c8e5787b618250f9c7bc304077e5f763b27b313af582cdb2cf3eda11010530c0"
     },
     "core/brand/frames-lighter/087.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "53a65d5f6806d198cfed9eaeb4c4023aea46add961c0457c8f8206858b025254"
     },
     "core/brand/frames-lighter/088.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "2415294cf4850a69653a232cf455f723fccb814ac135545d42bf77a0f82e36d0"
     },
     "core/brand/frames-lighter/089.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "7543ccdac7ef88d45f15d06c0f722708eb182e5f77ebd86235fc558e8b0c4fe9"
     },
     "core/brand/frames-lighter/090.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "add3a540332c2262bcd9f4dd814341bf6bafaa43be551fa46343ecfc55cf1e9c"
     },
     "core/brand/frames-lighter/091.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "0e977923e468e7bf9c597eeb96a6ed5583055998ef75c8635226e5ef31a72e26"
     },
     "core/brand/frames-lighter/092.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "4b53a93c21db6b404e8c7dfc940472777217e44660f011d353af0d84df070d56"
     },
     "core/brand/frames-lighter/093.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "3c6a23c25c94ca12694154e02d0b451852e94b64addd39178209d8ef9321d71e"
     },
     "core/brand/frames-lighter/094.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "2e5caa0d79f3a8a7cafc586e2b699b15b4f00a443cc3a4678ab599ff354dd796"
     },
     "core/brand/frames-lighter/095.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "99c30cc96c71e902cb20b241537f4dd1b25b9deff375228354c3acb675d7dccb"
     },
     "core/brand/frames-lighter/096.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "461859ebe37ba3f197e0d01baa604050afe7584bec6bd5468dd7e97f012f3584"
     },
     "core/brand/frames-lighter/097.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "051b4afeffd89bdce386cdb9150a50eaf36a3fc8c2a5e0750ed7a773060169c0"
     },
     "core/brand/frames-lighter/098.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "c0bc8cea14faf4dc579275f9050edd814db05b1d4658a34aac17e855a8624daf"
     },
     "core/brand/frames-lighter/099.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "c0bc8cea14faf4dc579275f9050edd814db05b1d4658a34aac17e855a8624daf"
     },
     "core/brand/frames-lighter/100.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "2f7facf48b5f25729dde2d502d29621163b833bd4bffef11953835f2dfd56e9b"
     },
     "core/brand/frames-lighter/101.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "2f7facf48b5f25729dde2d502d29621163b833bd4bffef11953835f2dfd56e9b"
     },
     "core/brand/frames-lighter/102.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "2f7facf48b5f25729dde2d502d29621163b833bd4bffef11953835f2dfd56e9b"
     },
     "core/brand/frames-lighter/103.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "2f7facf48b5f25729dde2d502d29621163b833bd4bffef11953835f2dfd56e9b"
     },
     "core/brand/frames-lighter/104.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "5fa02dd5873fd71f744fc11c9dfedeb8f0314a75f3d7803568b475888715efdb"
     },
     "core/brand/frames-lighter/105.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "5fa02dd5873fd71f744fc11c9dfedeb8f0314a75f3d7803568b475888715efdb"
     },
     "core/brand/frames-lighter/106.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "ec917a64cc798f41cdbf27aef6df1eab014ed7424b12f5612729b30939ab20f8"
     },
     "core/brand/frames-lighter/107.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "ec917a64cc798f41cdbf27aef6df1eab014ed7424b12f5612729b30939ab20f8"
     },
     "core/brand/frames-lighter/108.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "fe4d868a3c77d47222a4694035fbe1094844e6d3e7b53eb7a44751552f443f6d"
     },
     "core/brand/frames-lighter/109.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "6f05cfb816dce74055296572caf763f0ab0f24ef5bf5b612a99147902a693cd8"
     },
     "core/brand/frames-lighter/110.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "57461616a074c95059d6c56b9f6e51f6c7ffcb759d697899af5909b19da59fad"
     },
     "core/brand/frames-lighter/111.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "760381cafb603583a7cf61c5304dd44d3ee5b163ad9cd1342db5c6920543ba27"
     },
     "core/brand/frames-lighter/112.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "c0c8322766c11003194029aa90a6d489b944b297a916af8e9f50b6b290ff663d"
     },
     "core/brand/frames-lighter/113.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "758747b79adc38f5c4a07f8ba0772fcd92b01e0026832fd5442d2b7f5e486208"
     },
     "core/brand/frames-lighter/114.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "54745ceb51ac5524308e55a084b1ef4655e0ecb6ede8eb2aba43ef60bdf1508b"
     },
     "core/brand/frames-lighter/115.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "54745ceb51ac5524308e55a084b1ef4655e0ecb6ede8eb2aba43ef60bdf1508b"
     },
     "core/brand/frames-lighter/116.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "981f310bde9fa599b8e1f08697d363f602c027315eda2571ad1eaef3aca43c24"
     },
     "core/brand/frames-lighter/117.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "46344b2b28784217ad0d3af31c72032121220dc9e8ff99f1e63017f20a85195e"
     },
     "core/brand/frames-lighter/118.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "46344b2b28784217ad0d3af31c72032121220dc9e8ff99f1e63017f20a85195e"
     },
     "core/brand/frames-lighter/119.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "46344b2b28784217ad0d3af31c72032121220dc9e8ff99f1e63017f20a85195e"
     },
     "core/brand/frames-lighter/120.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "96a407b08926b800441b5ef178bb04f881bd9e05b94a241acad79199c3bb9e0d"
     },
     "core/brand/frames-lighter/121.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "96a407b08926b800441b5ef178bb04f881bd9e05b94a241acad79199c3bb9e0d"
     },
     "core/brand/frames-lighter/122.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "96a407b08926b800441b5ef178bb04f881bd9e05b94a241acad79199c3bb9e0d"
     },
     "core/brand/frames-lighter/123.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "96a407b08926b800441b5ef178bb04f881bd9e05b94a241acad79199c3bb9e0d"
     },
     "core/brand/frames-lighter/124.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "96a407b08926b800441b5ef178bb04f881bd9e05b94a241acad79199c3bb9e0d"
     },
     "core/brand/frames-lighter/125.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "96a407b08926b800441b5ef178bb04f881bd9e05b94a241acad79199c3bb9e0d"
     },
     "core/brand/frames-lighter/126.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "96a407b08926b800441b5ef178bb04f881bd9e05b94a241acad79199c3bb9e0d"
     },
     "core/brand/frames-lighter/127.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "96a407b08926b800441b5ef178bb04f881bd9e05b94a241acad79199c3bb9e0d"
     },
     "core/brand/frames-lighter/128.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "5f470f64331aba21acfe52f4d1d76c7f554a2444981f789dc49806597fdb9854"
     },
     "core/brand/frames-lighter/129.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "5f470f64331aba21acfe52f4d1d76c7f554a2444981f789dc49806597fdb9854"
     },
     "core/brand/frames-lighter/130.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "5f470f64331aba21acfe52f4d1d76c7f554a2444981f789dc49806597fdb9854"
     },
     "core/brand/frames-lighter/131.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "5f470f64331aba21acfe52f4d1d76c7f554a2444981f789dc49806597fdb9854"
     },
     "core/brand/frames-path/000.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "7fffc695c029c6a2b5c4d66c32715682e12274189ebe1fe68f3f4918d6a5abbb"
     },
     "core/brand/frames-path/001.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "7d334fa3ab3f9e0fd8ea807d50d6dcd5fecb74878e6c45521a2869f98892a79b"
     },
     "core/brand/frames-path/002.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "7d334fa3ab3f9e0fd8ea807d50d6dcd5fecb74878e6c45521a2869f98892a79b"
     },
     "core/brand/frames-path/003.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "7d334fa3ab3f9e0fd8ea807d50d6dcd5fecb74878e6c45521a2869f98892a79b"
     },
     "core/brand/frames-path/004.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "9ca6d95f707a229cec2c811c0dae67880545fead4502a1a3a1a739bc103444e0"
     },
     "core/brand/frames-path/005.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "d715d1439549730b48c8fe9a48915010699d490b64673bc7e13c5889b682d4ef"
     },
     "core/brand/frames-path/006.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "1312300eedd47dd649a2214e29f8814583affbd82fc12ea9a8b5000555e90fc3"
     },
     "core/brand/frames-path/007.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "7b6ee5ab053d22c9b0d72c78f88a907ce2609bbfb44d78b0bfb63d576ff49dce"
     },
     "core/brand/frames-path/008.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "18e7d0c4e475c4284dbf7f3bb027c7c88527bb6f51a7f71394973e5b34e42de7"
     },
     "core/brand/frames-path/009.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "79ca0591b35fa3c0a301c441accc31be01b068de9fda2bc7c4d0d7210cec5b5b"
     },
     "core/brand/frames-path/010.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "aa5dea1201a4e00eb509e2da0cf41098f3349e587b4e5315f9a37eb7188152f7"
     },
     "core/brand/frames-path/011.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "b7978feb69303ed87975e6d200cb2d78e6c95c3cd092cd31b4c004639997bd8c"
     },
     "core/brand/frames-path/012.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "c5580a02dd71fdaa4f658836e59b6a070b3355ec0f1bec4e91133680dad022ea"
     },
     "core/brand/frames-path/013.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "f01640c320d4b8a154d426eaae1ab1275ec0f449f3a980053b04b3eeadb2bb85"
     },
     "core/brand/frames-path/014.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "7e89c01773c9c98f61cd1fe0eae64dde06191c738c98c3b01061367fa6eccc9a"
     },
     "core/brand/frames-path/015.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "385e65b79c35ef5c522ede67ce90f13515d24ac4a4287a3694499ff443484c9c"
     },
     "core/brand/frames-path/016.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "991348c48ccdbc790e17b9eef3c6ee785b8949b451448cc20a36bbdcfdd9acd7"
     },
     "core/brand/frames-path/017.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "991348c48ccdbc790e17b9eef3c6ee785b8949b451448cc20a36bbdcfdd9acd7"
     },
     "core/brand/frames-path/018.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "7bf348c5bc1c46f7e68695f1e284ad30226e55953915c2b6989a6c867a4672b3"
     },
     "core/brand/frames-path/019.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "7bf348c5bc1c46f7e68695f1e284ad30226e55953915c2b6989a6c867a4672b3"
     },
     "core/brand/frames-path/020.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "ef38a239b700c5b6e36e0da8147b12eb19aaf25ffb40f8c124bc949ac1b253aa"
     },
     "core/brand/frames-path/021.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "fd0f9d850a7e1d4a046452d0e8c0601f5bbdd0915e44653eaf43d172c6632447"
     },
     "core/brand/frames-path/022.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "72552e2fa017ee7e804229b98f851a8191d5488ef80dd5f6613ee944c5895feb"
     },
     "core/brand/frames-path/023.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "addc8d6b605a8a095c2e0308ebf5e2fe6c735161c4d4c869e2437f69ea562b04"
     },
     "core/brand/frames-path/024.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "09d368680605dd0eeddf7af39b6fbd2b4164641fa0418a36db11ddc07be33904"
     },
     "core/brand/frames-path/025.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "342f5af6fe69b224f0f1c38bda98430a44725d744749186563700263ab9035e7"
     },
     "core/brand/frames-path/026.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "86c0f3908d5c994dccf14f1f5b7b3109d1149372b42d85065e38a51b7201eba1"
     },
     "core/brand/frames-path/027.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "6040600e4b7f544b95ce5b26095895bbdbfdd0fac98e20ffd76d714cb7b4f061"
     },
     "core/brand/frames-path/028.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "06f11eef492aa060685d74b0fd31dd045f1de865f7da24a5746a8e0b89792ad9"
     },
     "core/brand/frames-path/029.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "64fc93e7869075972d36375330363d284664eb0b40fbfda70cf9bbc4a22c5d7e"
     },
     "core/brand/frames-path/030.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "35a14a1c2eca30a361b1c693b8d3c8c7904a5346f897f8291838a9365df8dab4"
     },
     "core/brand/frames-path/031.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "9430baeb60ba42f2ae3eeaa5b0e2d924079e9cfc1387b3e63af435006257ac45"
     },
     "core/brand/frames-path/032.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "4202fccbf0bb0b1d3f9cf0c600a60232ba7edea360ba9b021983c4f24cbe6db0"
     },
     "core/brand/frames-path/033.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "30007fda3e1eb5db603021e0de0d3e674389b3947e8da915c14725d19d006c01"
     },
     "core/brand/frames-path/034.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "1d724e7e13e6ac9d0981733282b41ac5758974d3dc370b0d2a6a4427543cc9e5"
     },
     "core/brand/frames-path/035.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "0ccdd9a5613ba3325f46ae4a608594a08ebed8aad52926d44ab25112e8913c86"
     },
     "core/brand/frames-path/036.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "55ed8a9b6b76e33b9131e61decb0e48a8d5450407f280763420bfd442a8a97d4"
     },
     "core/brand/frames-path/037.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "1478a7bb910d1bb33a4568dce07dad28830f65a55e502126ab5bdf4a9d220013"
     },
     "core/brand/frames-path/038.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "a6eddb8801488870db1c3e17c29e935e11026e4b88aefa1e975cdc55c97bbfbf"
     },
     "core/brand/frames-path/039.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "281ffeaaa1c92290c2dea47c1d6bf5496c8bcda9667228d92ad2753d89ecb74d"
     },
     "core/brand/frames-path/040.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "210ce0c7abee197d609fa3fbcf4006e49d180c88ccc65f021d699b75a3992d19"
     },
     "core/brand/frames-path/041.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "7c65652b3499703d815a1287b47594d950ad05aa2a0bd319b5e4ead9d4107d34"
     },
     "core/brand/frames-path/042.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "feae1fddb0d773fa423ddb6a66b4aef8aaee1afab6b018456dfc1ac47afbf43b"
     },
     "core/brand/frames-path/043.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "2263dfe11c1f14bfcdd314d94be1ce8905bce87fbfd031170d4313773e6c40a1"
     },
     "core/brand/frames-path/044.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "a1ff8e551f00fafadd96c224422dc1d6b40e5ea77d5c5b052a220744985203c5"
     },
     "core/brand/frames-path/045.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "739f752151aa59eb361f4b7e9647c04e4fa9f7e0f95d0ed7afe4e7f66992d80d"
     },
     "core/brand/frames-path/046.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "14e9a2bc028e5a3f2b7b1449371d74e34219fbe91949a760f2cb2b392083c495"
     },
     "core/brand/frames-path/047.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "032ce611f2aa571eaa6ef7a1205a35f6d4106d3a91ac75d50e077a4d39665ad7"
     },
     "core/brand/frames-path/048.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "0ea1637e84441edb0060d2448798658a7fa6b3072bb9198d6d6e9bb1c704714e"
     },
     "core/brand/frames-path/049.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "ac23fe694c4d77f2fb37d31204b559bf6c960b301a0f98ad9cd320ec0dd15827"
     },
     "core/brand/frames-path/050.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "c13e3c5e54e070b6b6e57443bccd73c8d9a765eda1e8baf97856e3aa45afd1e0"
     },
     "core/brand/frames-path/051.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "ec34bf7bf5cc65f994829102fbff67f51c59ddccc85d57e9f60424c02e45e371"
     },
     "core/brand/frames-path/052.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "31791a34bb315f3844a27a69f28359d514f76ca1a61d9942059814d589895f48"
     },
     "core/brand/frames-path/053.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "53c18ad81ad36cb0f302ed0878a6109cb11ce77dea62d8cc4363f77545ab3ff2"
     },
     "core/brand/frames-path/054.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "1625bcbcdea67bb36cf63ee723bfe5ba2e4168c83d20a442dab397ddc414d8a5"
     },
     "core/brand/frames-path/055.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "77749e474c1f105da3132b2cad0eb97518c671070be40971f3040e3f0e2137d0"
     },
     "core/brand/frames-path/056.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "cff4f505136d1aebb9aef27ab16b97dc5d119734b8bc4e8717d6a745da767c80"
     },
     "core/brand/frames-path/057.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "802e179f9f1d9997c5d4327d7760b04f8fcc262efde8dfd919dc8ad8741bacad"
     },
     "core/brand/frames-path/058.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "e2aaefd8b4c9bb5e65af251dad303739084828fe89e22bd929e4379309465981"
     },
     "core/brand/frames-path/059.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "08f0ef4fad1a8c8c51c3a324e01d827c625154543f47fef2d8c84db19329f8f2"
     },
     "core/brand/frames-path/060.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "913d98ce02a71c536af820751d32e4df93a7e3dae0f73f324b411e37d6d1720b"
     },
     "core/brand/frames-path/061.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "6309b2b5c574b2148704c00b028fcd4d482c5a15a87648799d35570ec594452a"
     },
     "core/brand/frames-path/062.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "5ada6855d13988f295c70e31d503b9692b42deadde9338667fe00151dd4a0dff"
     },
     "core/brand/frames-path/063.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "68c373a22365e33596601e2c9251d5879597f1e65d9a19fc1a11287f32177378"
     },
     "core/brand/frames-path/064.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "52948eddea6372bfa6bb32ac43993228b2d4a123a1c67b1fc5e5479105f69749"
     },
     "core/brand/frames-path/065.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "a6d47b0dc80c9e8441161120a043639e1af51d2cd515b1aa939efc87ed5c8861"
     },
     "core/brand/frames-path/066.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "564b995696fd1af9f47687ac831a06b4c019ed49cc75a1fc75b29c06a7cd0419"
     },
     "core/brand/frames-path/067.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "fe1302b01b57475707d4e6b0efc27f86eba87ce18781e3285801f4953e9a72d0"
     },
     "core/brand/frames-path/068.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "1a86c125b0a3d70b02773cd3a53a2ecd840e21c064f4d77e1b16dad091f0178c"
     },
     "core/brand/frames-path/069.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "5b20287f9cd56f4c8bafe4128b7b01324e02c7d8bb7ed87148b52756acafe19a"
     },
     "core/brand/frames-path/070.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "c864a978d0bb0d5ebc23390496ba12ca4dc8b1e4bca2d6d24593112070434d78"
     },
     "core/brand/frames-path/071.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "0c759539157a9623f38fa439ffe6cb67e29ff612aecadc88525d948e150779b3"
     },
     "core/brand/frames-path/072.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "fbba4b4dd1be7929479891d1c5fb35f23f0b469fc78896dab25a009b2f529f64"
     },
     "core/brand/frames-path/073.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "6b2f94374885d7fdfed618c5c8fb69a88c678f206d4c48946349ee6ecc409b21"
     },
     "core/brand/frames-path/074.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "08ab43d16d91e40cb92b3c82997ade04d0146724b5c84917daf25e90440905de"
     },
     "core/brand/frames-path/075.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "503176e4432322d19bd50eb70b04de50e13b56b18b9fb970d6ffb6c7fc530a51"
     },
     "core/brand/frames-path/076.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "a7e5a0f8d3d33854d1933ca401e876899bd20bc89afaeda5c35c02b9617d46a0"
     },
     "core/brand/frames-path/077.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "67281edb9d2e971e12e724fd9984af69a9475cd6602477d5bc38e32b9e3cde6c"
     },
     "core/brand/frames-path/078.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "69837b42c8a3a1b4aa7b7763c5884bd56b0f2bdc23816370b4840aa7687f61f5"
     },
     "core/brand/frames-path/079.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "9c1b5aac968ba06d3d46b73e8bff93c4668711afa04016912d51140c9a16967a"
     },
     "core/brand/frames-path/080.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "21525c774287fd3d0369f98f213e1cdf7920a5a4c7b7e4294097555b89f01e7b"
     },
     "core/brand/frames-path/081.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "e5abd18276bb130fb0f2dc7cd2c1541ce118831b2ef3892c99ae59b83245df8c"
     },
     "core/brand/frames-path/082.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "7c780a733989c3289c056a120038d4f313493119026586e7e86935ed639fc900"
     },
     "core/brand/frames-path/083.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "4c89fe3057b3485de3f805db5c4d0db2e5e65f1799e06480fc9d3f070f361010"
     },
     "core/brand/frames-path/084.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "226f984c886d4d59035660f1747d3dd332a042d559f4d8824c3cfcce48cce474"
     },
     "core/brand/frames-path/085.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "226f984c886d4d59035660f1747d3dd332a042d559f4d8824c3cfcce48cce474"
     },
     "core/brand/frames-path/086.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "3d492706051fa80d78997c2a16d239c14ffd5fc169113578b7e50d9b04b6752b"
     },
     "core/brand/frames-path/087.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "84042a01a150b911c547ae562474104f2220604c373d31e6e253f0465c093684"
     },
     "core/brand/frames-path/088.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "d2e9e7a741e10b597bfdf769b1ebfb0e819b55a3da6ae367915a6d33423e23b2"
     },
     "core/brand/frames-path/089.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "903553628809f832e84344c98127375e487d2da4d9a55ce08f0b46e6aac2b550"
     },
     "core/brand/frames-path/090.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "17974fb4655c868b67338a2ce8971d3763982df497100a3df472e8c3c5f8ab45"
     },
     "core/brand/frames-path/091.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "f4419814e6e02df2de99a74c7a0ae3b20a968e1dd5292dd00291d5094c4f15a8"
     },
     "core/brand/frames-path/092.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "94ffff151391dd1f3db7925ef683d45f460f89d2dada4774c10420858033a964"
     },
     "core/brand/frames-path/093.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "3a47063c7da18995217910cc948c49750c6da0d96cc89f3d66625aa2738840e3"
     },
     "core/brand/frames-path/094.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "42e7f93573ef543f189e160adda6be119d3d1b98b2b26bd88fbcb531c65a523d"
     },
     "core/brand/frames-path/095.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "a206d23857c6d37db662cf8b5803f2ebb56ca06b0d5f709dd800c43e7e05b82b"
     },
     "core/brand/frames-path/096.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "21671a98abd5b68e112922b4a0d5d0f08f845f1023c59eb91c6a23c012923962"
     },
     "core/brand/frames-path/097.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "af61ccc597a08bb21d6d428e68f4c2b2ea38bd3cb463dbdd82ef8b3be39cc9c0"
     },
     "core/brand/frames-path/098.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "204b52618dcb01011eede43ee0ed77c3f0f9e314c18407f4e7ec70926df09799"
     },
     "core/brand/frames-path/099.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "33e33670c305a4ca095ca792dbd00a41d417016da38a2711f7049de0ce7628a1"
     },
     "core/brand/frames-path/100.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "0bae3beed5ca6c4dc59a94fb715367afbc64b1b83b2ff4cd90a3be6638c97c85"
     },
     "core/brand/frames-path/101.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "62cdf6f6cd1a560cf8f2be0551c031a6c6d9870c36f6485979c93401ef6deefd"
     },
     "core/brand/frames-path/102.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "5775e95fdc07161ef3025278fe43ce1393c0e136cdc56f07dc2380e3006770da"
     },
     "core/brand/frames-path/103.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "5775e95fdc07161ef3025278fe43ce1393c0e136cdc56f07dc2380e3006770da"
     },
     "core/brand/frames-path/104.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "dcd4c49a6d4b884478ccfa63e0dfe4e579bcce2bde6e7e47f558406b482b1785"
     },
     "core/brand/frames-path/105.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "65a41cb88bf929265cf95a35477d726eb03d31f13ffbce50224c6e616b5a893e"
     },
     "core/brand/frames-path/106.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "d896cc5ed7cc2de8fefd2226a8c75f0999e2c7f812bee6637516b8ebe2836fa9"
     },
     "core/brand/frames-path/107.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "d896cc5ed7cc2de8fefd2226a8c75f0999e2c7f812bee6637516b8ebe2836fa9"
     },
     "core/brand/frames-path/108.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "d9531cc6712dafbd42108a3221a6b9222006a6aa6dd3fe6210093f902b70c2ff"
     },
     "core/brand/frames-path/109.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "225694fc858ce32cc22d4b54aecb6b6dbb941f0a5d96074b027d552cfca82a13"
     },
     "core/brand/frames-path/110.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "cdeb7ade55cff1a4272c1ed790cbd933d2d53291537ad0ab5507834bda1e0a2c"
     },
     "core/brand/frames-path/111.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "cdeb7ade55cff1a4272c1ed790cbd933d2d53291537ad0ab5507834bda1e0a2c"
     },
     "core/brand/frames-path/112.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "6d1df644e9ec1397a13e51e6820b72cb3d4036f44f467086c660c90978274dd6"
     },
     "core/brand/frames-path/113.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "6d1df644e9ec1397a13e51e6820b72cb3d4036f44f467086c660c90978274dd6"
     },
     "core/brand/frames-path/114.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "075c4c91586ebeb779427fc5d436fc4881c89ab0e817dced84f211652295b146"
     },
     "core/brand/frames-path/115.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "075c4c91586ebeb779427fc5d436fc4881c89ab0e817dced84f211652295b146"
     },
     "core/brand/frames-path/116.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "c50e14eb108a6f36b8adb034e0b5055d9f9d9ce19a834552d7dae152a2ddd48b"
     },
     "core/brand/frames-path/117.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "c50e14eb108a6f36b8adb034e0b5055d9f9d9ce19a834552d7dae152a2ddd48b"
     },
     "core/brand/frames-path/118.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "c50e14eb108a6f36b8adb034e0b5055d9f9d9ce19a834552d7dae152a2ddd48b"
     },
     "core/brand/frames-path/119.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "c50e14eb108a6f36b8adb034e0b5055d9f9d9ce19a834552d7dae152a2ddd48b"
     },
     "core/brand/frames-path/120.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "cca658cbe41892f7544963954ebc58b915096a39e35221f26470550ccb40fae3"
     },
     "core/brand/frames-path/121.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "cca658cbe41892f7544963954ebc58b915096a39e35221f26470550ccb40fae3"
     },
     "core/brand/frames-path/122.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "571bf26e81c63b0356854d36ef974790e1a3f8e7ab73582380840c2fcd1621a5"
     },
     "core/brand/frames-path/123.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "571bf26e81c63b0356854d36ef974790e1a3f8e7ab73582380840c2fcd1621a5"
     },
     "core/brand/frames-path/124.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "571bf26e81c63b0356854d36ef974790e1a3f8e7ab73582380840c2fcd1621a5"
     },
     "core/brand/frames-path/125.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "571bf26e81c63b0356854d36ef974790e1a3f8e7ab73582380840c2fcd1621a5"
     },
     "core/brand/frames-path/126.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "571bf26e81c63b0356854d36ef974790e1a3f8e7ab73582380840c2fcd1621a5"
     },
     "core/brand/frames-path/127.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "571bf26e81c63b0356854d36ef974790e1a3f8e7ab73582380840c2fcd1621a5"
     },
     "core/brand/frames-path/128.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "1356e49f1cf41e3afded03cbbca783c9f7189921460de6ce5c9001d18e2a05d3"
     },
     "core/brand/frames-path/129.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "1356e49f1cf41e3afded03cbbca783c9f7189921460de6ce5c9001d18e2a05d3"
     },
     "core/brand/frames-path/130.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "1356e49f1cf41e3afded03cbbca783c9f7189921460de6ce5c9001d18e2a05d3"
     },
     "core/brand/frames-path/131.png": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "1356e49f1cf41e3afded03cbbca783c9f7189921460de6ce5c9001d18e2a05d3"
     },
     "core/brand/motiongit-circle-lighter.gif": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "4000ec7c67d9a500c52cb0da9ba36e6efc11f7f214d8077d8e79832cca784c77"
     },
     "core/brand/motiongit-circle-lighter.webm": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "1a4dc17a2ea86f4cf6b2745b3ee91d89dbae061e812cf78691d2680362776e0d"
     },
     "core/brand/motiongit-circle-path.gif": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "a9daba4d3585da1c8c19ab344ac74c281ecb20dddbde85b2fe01a96c2c68a3ba"
     },
     "core/brand/motiongit-circle-path.webm": {
-      "role": "method-or-contract",
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "9e9212233683817eef1ed474a192fbf797700f499839f7c7a3e2b96e1fe5ba8e"
     },
     "core/catalog.json": {
-      "role": "method-or-contract",
-      "sha256": "ebb50230df54ecb87248c10a594616910a9127b83016880cb47f4973b2cb99a9"
+      "role": "contract",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "e18fc614cc484f4fccc7955aa3726eaf36dac2eb2b543d9b411c91d9aac68cc0"
     },
     "core/content.schema.json": {
-      "role": "method-or-contract",
-      "sha256": "f486117e521545ac52d905975e1060889334caab7dcb5e14ddf6a44e4992a067"
+      "role": "contract",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "39af140c8fc5f8090213d4b5ac0786c65d0dcfe5dcaff156a83535ab4f228b59"
     },
     "core/core.js": {
-      "role": "method-or-contract",
-      "sha256": "5af3a5f77070b659682af604ec8cddd74e560c661149d48670fa3f74709d492f"
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "8b569f2e792aecea40dff0895899f75092e4179851627456e2d74c212b1612c6"
     },
     "core/data/beats.js": {
-      "role": "method-or-contract",
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "b49d9b0282a11913e9b3590d638aac6da7f23b5a98c861b87313a0a880232c2a"
     },
     "core/data/land.js": {
-      "role": "method-or-contract",
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "518cd942f4c94e70fefca68db28d9a9f296711e9a78c014e4ea80b72db57b385"
     },
     "core/data/timemap.js": {
-      "role": "method-or-contract",
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "c7b1b80f7b218c822e5600dd6f0d8b5709909974043995f624063b7aa725f796"
     },
     "core/face.js": {
-      "role": "method-or-contract",
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "a56444334ecb4a2723a87584c0eb7f1657874abe231255b8275d1c76f6a8bbbb"
     },
     "core/fonts/Anton-Regular.ttf": {
       "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "a4ba3a92350ebb031da0cb47630ac49eb265082ca1bc0450442f4a83ab947cab"
     },
     "core/fonts/Geist-normal-400.woff2": {
       "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "0c855f7567881c1f3c41738616d4274cea4afbd2bf6aa198be467aefc157ee6d"
     },
     "core/fonts/Geist-normal-500.woff2": {
       "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "0c855f7567881c1f3c41738616d4274cea4afbd2bf6aa198be467aefc157ee6d"
     },
     "core/fonts/Geist-normal-600.woff2": {
       "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "0c855f7567881c1f3c41738616d4274cea4afbd2bf6aa198be467aefc157ee6d"
     },
     "core/fonts/Geist-normal-700.woff2": {
       "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "0c855f7567881c1f3c41738616d4274cea4afbd2bf6aa198be467aefc157ee6d"
     },
     "core/fonts/Geist-normal-800.woff2": {
       "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "0c855f7567881c1f3c41738616d4274cea4afbd2bf6aa198be467aefc157ee6d"
     },
     "core/fonts/GeistMono-normal-400.woff2": {
       "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "5f3d6ad60f29d6cb708414ec6887163d63bf197377ef5417d2483ff31ace6c3b"
     },
     "core/fonts/GeistMono-normal-500.woff2": {
       "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "5f3d6ad60f29d6cb708414ec6887163d63bf197377ef5417d2483ff31ace6c3b"
     },
     "core/fonts/GeistMono-normal-600.woff2": {
       "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "5f3d6ad60f29d6cb708414ec6887163d63bf197377ef5417d2483ff31ace6c3b"
     },
     "core/fonts/NotoSansSC.ttf": {
       "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da"
     },
     "core/fonts/fonts.css": {
-      "role": "style-resource",
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "7bd0ffa32c5af10efb94a63739f074ee9618ae568e3e4bce3620dd55d63393ae"
     },
     "core/icons.js": {
-      "role": "method-or-contract",
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "bb06dd772f154f028ac798520518c2510212bb231540ce97350665975aa0bb95"
     },
     "core/index.html": {
-      "role": "method-or-contract",
-      "sha256": "f42b80fa8d9ad4ed18570f35428d02596148b0fbed3a63982187d883c76e86db"
+      "role": "style-resource",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "5376b180cb2571bc14ee97e00d7026fe9853facccf42697f01df0f31cb846f71"
     },
     "core/lib.js": {
-      "role": "method-or-contract",
-      "sha256": "5398f88f1ad1bc0dd55e9fdf0f58dc8b57afd1a753126a3e0c00f34829feba08"
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "1d5beb7a6109971189154e7bc1591422a46f28927b4c4dbf127bc986a95989dd"
     },
     "core/main.js": {
-      "role": "method-or-contract",
-      "sha256": "518d515c3ef86d106235215db7540576e52016aef5df319210e6a006874187b8"
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "24747c4cc381b8fd532c4c207e74033a7e3ee1bb15def6c6de63e1c40d18024c"
+    },
+    "core/narration_reveal.js": {
+      "role": "runtime",
+      "reason": "Unpublished sentence visual development candidate",
+      "sha256": "e6ae3b108d3ff085651540cc0e94ea66447b54df81a5c2b4e245040b83cf3727"
     },
     "core/native-anchors.js": {
-      "role": "method-or-contract",
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "9b77eff0132a23089d600d2b12a592ae13d901590133addfd55dd9d4fc869c8c"
     },
     "core/native_audiolib.py": {
-      "role": "method-or-contract",
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "3dd366f58704685d58fb72efc6fa617a8f677ec2146842bd66a41a6f493a3c95"
     },
+    "core/portrait.css": {
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "c6a68439fca2b79303205c58b90d5546b0a81b331f038797b2794cef3efe63ae"
+    },
+    "core/portrait.js": {
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "351f7ab35967a3cec48fba7a17b7bf44a3fda449e1a36038841e24caf66def7c"
+    },
+    "core/presenter-framing.js": {
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "809e63358eb81e21d1bb88036ec5c5bc217900e713f20e08a962616a2fb9fc42"
+    },
     "core/scenes/broll.js": {
-      "role": "method-or-contract",
-      "sha256": "ed579b7b94f78d8bf444018fd80f603cd8d323fc9a672999fb36a8cc7f6650ac"
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "8a3f20d9b9a0ab67cdf7d276a22658463d9d93468afea76b0f4d2137a696c4b2"
     },
     "core/scenes/post.js": {
-      "role": "method-or-contract",
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "1f265224837558da4817eb323268a7ef06fbb67cb4f0ae1a6a2fdf8e5df97f62"
     },
     "core/scenes/s01.js": {
-      "role": "method-or-contract",
-      "sha256": "7172740a95dd9f620a901bb2cfaf510b4769f2944ce2f6d19799bc900d6005ba"
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "b2a51197497b4f455f8c4039bc717ec65ebf51e7b2e6b6c5ca2e40d037405a71"
     },
     "core/scenes/s02_04.js": {
-      "role": "method-or-contract",
-      "sha256": "bb3f49db4a4fef8b8c64c700eeb6bd010b615053145bec7039a0960cacfdc984"
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "108205b1d2945c0c3327f15993cc83458429bdf795c6ceeacc06a9450060a782"
     },
     "core/scenes/s05_07.js": {
-      "role": "method-or-contract",
-      "sha256": "0b2759cc1279e6755bfd7f078ca612ae3312ddcfcd1d349d1ca9f5938a1c0dcc"
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "79bd9221c1c696e6594480d63e3b66b425c25cad279fc2aa73964ea633f66d58"
     },
     "core/scenes/s08_11.js": {
-      "role": "method-or-contract",
-      "sha256": "8c3a803d71ed37dc5739ff3e4bbc8fc0626c4834d531fc2f2d80ff2356c948c6"
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "4504beba03a695368be71a2540e7a06422cafe430bd6b0e4003e6783328ff535"
     },
     "core/scenes/s12_14.js": {
-      "role": "method-or-contract",
-      "sha256": "77a79847df5b13df6cef03ad989203de1263b27bb9fcff8a0974eaef0097e587"
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "b4f82b17d369884d4521356821a3b83a8621a0c91d294a95439c19398eb8e8f4"
     },
     "core/scenes/s15_17.js": {
-      "role": "method-or-contract",
-      "sha256": "6d0231a95d1082bccc4816742675a592fbdac75354a7e1844a3aa298d9c3ac2c"
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "f9d221f4fa388b035572979008cabb02652b2371038f14ee07f9432cf6a811ad"
+    },
+    "core/story-visuals.js": {
+      "role": "method",
+      "reason": "Additive narrated-story and runtime compatibility",
+      "sha256": "dff7b9fca7cbe31ee820c6d5112bdf273cdd73ca1f6dc68cda2592493fb1b013"
     },
     "core/style.css": {
-      "role": "method-or-contract",
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "dfc76211877e61ec4f51daf5ce6524cab305025924a39c93786bf7cbfa92baf5"
     },
     "core/talkmap.js": {
-      "role": "method-or-contract",
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "9a0fbd2226ec59855510853c9fc06c458930a93a3b337c8d9d9abb6ee94cf251"
     },
     "core/user-runtime.js": {
-      "role": "method-or-contract",
-      "sha256": "98ae9b7395f7162b6fd83ba8f90a654d92c78e56965af35de0d5c6681acacb5b"
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "5bc41cbb78fd95135e9eee06bb9790eec800dd59f6826f5b11692d2eb9aa96f3"
     },
     "delivery.json": {
-      "role": "method-or-contract",
-      "sha256": "d701baf80633145fb1b532f4f1b73a151811a1e83cd4cf7747aa806f3e42c487"
+      "role": "contract",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "df897906d073070df1fe9f7286209e5c9981bc1367bb4ce991ece35420d925ad"
+    },
+    "dependencies/package-lock.json": {
+      "role": "contract",
+      "reason": "Audio and narration ownership repair",
+      "sha256": "cba08eac8a937551697fbfd06ff20f7873c3a54c0e3b29ee625915810bb20683"
+    },
+    "dependencies/package.json": {
+      "role": "contract",
+      "reason": "Audio and narration ownership repair",
+      "sha256": "ffc2f0dff21f79a368883cf1822ba2ecf5bf4014b3bb71cc13422ca2ef17cecb"
+    },
+    "dependencies/requirements-runtime.lock.txt": {
+      "role": "contract",
+      "reason": "Audio and narration ownership repair",
+      "sha256": "91e59c2e867cc70ac7dcb0dc2bf75d01e1aa144e6ebbf2a5fbd20b6bafec22bf"
+    },
+    "dependencies/runtime-dependencies.json": {
+      "role": "contract",
+      "reason": "Audio and narration ownership repair",
+      "sha256": "14bbed43904a4af4e4a4b9a0bbbb4c1b8c02fe153777ecb776cc1e2a2493857c"
+    },
+    "duration-policy.json": {
+      "role": "contract",
+      "reason": "Whole-narration preservation and planning validation",
+      "sha256": "0ad484c1fc574463804af441fbbc25ecd1b1f83c053d82732f4f359a2c2404b7"
+    },
+    "duration_policy.py": {
+      "role": "runtime",
+      "reason": "Whole-narration preservation and planning validation",
+      "sha256": "e62a1588c685d94f4ce1eddde6b9c3b89ecc13102be24fe03431d29b4ae340b5"
+    },
+    "examples/text-only-en.json": {
+      "role": "contract",
+      "reason": "Public source onboarding",
+      "sha256": "8b516cb7c2142fe0c18789b4e5a0c923624d18f44c5482d7ed3ec771996e800d"
     },
     "examples/text-only.json": {
-      "role": "method-or-contract",
-      "sha256": "820e5e0eb9c5f18c9e57b936859abdfc6494cff7b847336946b4030f68ff7c5c"
+      "role": "contract",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "0feda4708f6d08a714a91857229047ea9d1d678c4779d2f1f445f74911e6f318"
     },
     "extraction-status.json": {
-      "role": "method-or-contract",
-      "sha256": "9a87d6bb753b7490f49e8cd35c68757c61d5e551aef252ad48fdf187a053a25e"
+      "role": "contract",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "253b3e07da6bb96b1b4ae4761381b8a7a2bda8583410c3d1c76511c3b0078ec4"
     },
     "guide.en.json": {
-      "role": "method-or-contract",
-      "sha256": "8427880148361469244522309c3f9180e35d78bf13c3540614dedab4b56b6a74"
+      "role": "contract",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "edabae167c84fda63a8dae7b7f13a53a8d5af0176dbc3040fa4116c8f092f037"
     },
     "guide.json": {
-      "role": "method-or-contract",
-      "sha256": "8427880148361469244522309c3f9180e35d78bf13c3540614dedab4b56b6a74"
+      "role": "contract",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "9497f84e583e516e9ed7cecafa6383f310059116c62eb5e1e1335af3a3ce1a10"
+    },
+    "kinetic_bootstrap.py": {
+      "role": "method",
+      "reason": "Audio and narration ownership repair",
+      "sha256": "ad3d535f50a86e1e73ae615710882e4d1dbf67a13dd758f99afc09c507768565"
+    },
+    "kinetic_story.py": {
+      "role": "method",
+      "reason": "Additive narrated-story and runtime compatibility",
+      "sha256": "ab1a346c0756135d83a0c0639ad02aec28b1ed78930fe8deef56736df12afaf8"
     },
     "licenses/OFL-Anton.txt": {
-      "role": "method-or-contract",
+      "role": "license",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "ee67e6ee22790b7929f1a3769ca2801d565c64b5a9096942c1adf5596de9c9e4"
     },
     "licenses/OFL-Geist.txt": {
-      "role": "method-or-contract",
+      "role": "license",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "1781d2806a07d91c4edf4740b88449fab7d0eadad53f7c351b94cd4d4eb8c00f"
     },
     "licenses/OFL-NotoSansSC.txt": {
-      "role": "method-or-contract",
+      "role": "license",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
     },
     "licenses/TEMPLATE-LICENSE.txt": {
-      "role": "method-or-contract",
+      "role": "license",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "8881ef9bfbb1b6eab92a957272ca12b7dfe5b76c751513840c94d9a9842a8d70"
     },
     "licenses/THIRD-PARTY-NOTICES.md": {
-      "role": "method-or-contract",
+      "role": "license",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "eb29e3df47d8fb1ab4d736aacf8e50e042b9de02e93eed00c87ad1f287a9ede8"
     },
+    "locales/en/AUDIO.md": {
+      "role": "contract",
+      "reason": "Audio and narration ownership repair",
+      "sha256": "314a5bef6d4e55818b11530343eb8a7bf3934bba3c6099f0a25027cc0d26d38d"
+    },
+    "locales/en/BASIC.md": {
+      "role": "contract",
+      "reason": "Audio and narration ownership repair",
+      "sha256": "3085157ebfa578dc2f5ea7610e5f41bbd68a028d7246ee0f15502fb7d5cf3332"
+    },
+    "locales/en/CREATION.md": {
+      "role": "contract",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "5ac31c46d534ec0d75a9653f089fbb34068a84a577a02d26f725f8174d0f5d44"
+    },
+    "locales/en/DURATION.md": {
+      "role": "contract",
+      "reason": "Whole-narration preservation and planning validation",
+      "sha256": "2c84be06de3a5d57f6ca3bb927bf087b21a83178ca40a4f28b425951cfaca40e"
+    },
+    "locales/en/MEDIA.md": {
+      "role": "contract",
+      "reason": "Audio and narration ownership repair",
+      "sha256": "d84d40641bbc4d99c24e4c6b1f594a317c7a8b0c30a3a107e7c0c464a8f089bd"
+    },
+    "locales/en/NARRATION-MAP.md": {
+      "role": "contract",
+      "reason": "Audio and narration ownership repair",
+      "sha256": "3a4762983cf61a9a7055b9373b926e0925cb43f3ecd878b8ebe6c5744de8d6aa"
+    },
+    "locales/en/README.md": {
+      "role": "contract",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "439f44ce2a0355c2aac0aae3d9fc5d2927fbdcecd23d93576738d27263639f73"
+    },
+    "locales/en/STARTUP.md": {
+      "role": "contract",
+      "reason": "Audio and narration ownership repair",
+      "sha256": "6a7745f62c7f0e4ba57f1cebeef059928ddc47a3caadc532bde6015053b9d6f3"
+    },
+    "locales/en/guide.json": {
+      "role": "contract",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "21c03d11e63d19eb99ec0b5586be4393251558cd086034c1c19085996d0ebfaf"
+    },
+    "locales/en/params.schema.json": {
+      "role": "contract",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "307c7f85432e03eba5a5e77772d8899497ac9541e2bd53cb800048ff6077fb4b"
+    },
     "mix.py": {
-      "role": "method-or-contract",
-      "sha256": "a144012bd6daa9107507c7f6e5f434cb079e4a0f41fcb594008a095da166cb16"
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "8a69cfb624755dcd04cda09852a1377fec1b2bddbd1c5330d008ffb6de425dfc"
     },
     "motion.json": {
-      "role": "method-or-contract",
-      "sha256": "209badb5eea1666cda9401311068e7855fea534fb5cc26caf79686296b58c855"
+      "role": "contract",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "043132327329bbbd998c1506f517a1a83437f8e6fb9afe255d6c14c41fa51818"
     },
     "motion.lock.json": {
-      "role": "method-or-contract",
-      "sha256": "8612fccb4afa02df55b636a0a457c51b48759f115e43ae083d70e92782c0e4b1"
+      "role": "contract",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "f1639fdfa7f87b1e1335ba806d8f384e2a12e9064ba1efcb94963bb6c10a4dff"
+    },
+    "narration_alignment.py": {
+      "role": "method",
+      "reason": "Audio and narration ownership repair",
+      "sha256": "91406909db0ef4a1784f123cfe04c0101b4c9ffe86e9cb959729f2211d8bd76a"
+    },
+    "narration_continuity.py": {
+      "role": "method",
+      "reason": "Additive narrated-story and runtime compatibility",
+      "sha256": "7eb16db9ba0e4c2d4ea45fabb4cac33266462a34c6129cad656078f5c2d6d807"
+    },
+    "narration_visual_coverage.py": {
+      "role": "runtime",
+      "reason": "Unpublished sentence visual development candidate",
+      "sha256": "33b196a495dda740fdf411eba3ecfa1feda5fa9279a774d33334f2f8d3c0cd6f"
     },
     "package-lock.json": {
-      "role": "method-or-contract",
+      "role": "contract",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "cba08eac8a937551697fbfd06ff20f7873c3a54c0e3b29ee625915810bb20683"
     },
     "package.json": {
-      "role": "method-or-contract",
+      "role": "contract",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
       "sha256": "ffc2f0dff21f79a368883cf1822ba2ecf5bf4014b3bb71cc13422ca2ef17cecb"
     },
     "params.schema.json": {
-      "role": "method-or-contract",
-      "sha256": "307c7f85432e03eba5a5e77772d8899497ac9541e2bd53cb800048ff6077fb4b"
+      "role": "contract",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "e91aa818c22506902bc3f60cc1b2901eaa34bcc8924c247cf45321916fee0b25"
+    },
+    "presenter_face.py": {
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "3c90d7bd63dd2fad2eed89801f0b69f27cc3c4d077e1119244e152ec9b445a7a"
     },
     "render.mjs": {
-      "role": "method-or-contract",
-      "sha256": "ea3482a02d24834eb71a668bee37d5db2d99027f9d1c15d283aa5695e53612ff"
+      "role": "method",
+      "reason": "Inherited public0.2.7 closure or explicit portrait/face-framing derivative",
+      "sha256": "6d16f14f200ae41fabb4d3fc8b7c4516c6e83e4e3f93581025301cd9bfc7ca0e"
+    },
+    "signature.mjs": {
+      "role": "method",
+      "reason": "Additive narrated-story and runtime compatibility",
+      "sha256": "88e393662e8595eedb41d46881aed5caaaa382225f971b761a53c6f81391359d"
+    },
+    "timing_evidence.py": {
+      "role": "method",
+      "reason": "Audio and narration ownership repair",
+      "sha256": "a67ffb32e119a1ce8f27085195dc7627b9ff21f7baffb82f4a7e3b8617ef874e"
     }
   },
   "bindings": [

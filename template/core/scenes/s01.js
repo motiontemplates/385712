@@ -6,12 +6,12 @@ window.CURRENT_UNIT="S01";
   const T0 = 0, T1 = O(8.20);
   const sc = SC(T0, T1, BG, '01 — 开场', { gridOpt: { a: .03 } });
   const D = sc.el;
-  const sky = mk(D, `<div style="width:1920px;height:1080px;background:radial-gradient(ellipse 90% 80% at 50% 45%,#141a3a 0%,#080b1c 55%,#04050b 100%)"></div>`, 0, 0);
+  const sky = mk(D, `<div style="width:${USER_INPUT.layout==='portrait'?1080:1920}px;height:${USER_INPUT.layout==='portrait'?1920:1080}px;background:radial-gradient(ellipse 90% 80% at 50% 45%,#141a3a 0%,#080b1c 55%,#04050b 100%)"></div>`, 0, 0);
   D.insertBefore(sky, D.firstChild);
   
   const IDS = [605, 607, 609, 611, 613, 585, 586, 587, 588, 589, 590, 591, 592, 593, 594, 595, 596, 597, 598, 599, 600, 601, 602, 603, 604, 615, 616, 617, 618, 619, 620, 621, 622];
   const NAME = { 605: RAW_TEXT("S01.text001"), 607: RAW_TEXT("S01.text002"), 609: RAW_TEXT("S01.text003"), 611: RAW_TEXT("S01.text004"), 613: RAW_TEXT("S01.text005"), 585: RAW_TEXT("S01.text006"), 586: RAW_TEXT("S01.text007"), 587: RAW_TEXT("S01.text008"), 588: RAW_TEXT("S01.text009"), 589: RAW_TEXT("S01.text010"), 590: RAW_TEXT("S01.text011"), 591: RAW_TEXT("S01.text012"), 592: RAW_TEXT("S01.text013"), 593: RAW_TEXT("S01.text014"), 594: RAW_TEXT("S01.text015"), 595: RAW_TEXT("S01.text016"), 596: RAW_TEXT("S01.text017"), 597: RAW_TEXT("S01.text018"), 598: RAW_TEXT("S01.text019"), 599: RAW_TEXT("S01.text020"), 600: RAW_TEXT("S01.text021"), 601: RAW_TEXT("S01.text022"), 602: RAW_TEXT("S01.text023"), 603: RAW_TEXT("S01.text024"), 604: RAW_TEXT("S01.text025"), 615: RAW_TEXT("S01.text026"), 616: RAW_TEXT("S01.text027"), 617: RAW_TEXT("S01.text028"), 618: RAW_TEXT("S01.text029"), 619: RAW_TEXT("S01.text030"), 620: RAW_TEXT("S01.text031"), 621: RAW_TEXT("S01.text032"), 622: RAW_TEXT("S01.text033") };
-  const space = mk(D, `<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;perspective:1100px;perspective-origin:50% 46%"><div class="w3" style="position:absolute;left:960px;top:500px;transform-style:preserve-3d"></div></div>`, 0, 0);
+  const space = mk(D, `<div style="position:absolute;left:0;top:0;width:${USER_INPUT.layout==='portrait'?1080:1920}px;height:${USER_INPUT.layout==='portrait'?1920:1080}px;perspective:1100px;perspective-origin:50% 46%"><div class="w3" style="position:absolute;left:${USER_INPUT.layout==='portrait'?540:960}px;top:${USER_INPUT.layout==='portrait'?950:500}px;transform-style:preserve-3d"></div></div>`, 0, 0);
   const W3 = space.querySelector('.w3');
   const cards = [];
   const N = 72; let vi = 0;
@@ -35,10 +35,10 @@ window.CURRENT_UNIT="S01";
     W3.appendChild(el);
     
     const a = hash(i * 1.37) * 6.2832, rad = 420 + hash(i * 5.9) * 900;
-    cards.push({ el, img: el._img, clip: el._clip, x: Math.cos(a) * rad * 1.25, y: Math.sin(a) * rad * .62, z: -2600 + hash(i * 8.3) * 3200, rx: (hash(i * 3.1) - .5) * 50, ry: (hash(i * 6.2) - .5) * 70, rz: (hash(i * 9.4) - .5) * 30, sp: .7 + hash(i * 2.9) * .6, ph: hash(i) * 10 });
+    cards.push({ el, img: el._img, clip: el._clip, x: Math.cos(a)*rad*(USER_INPUT.layout==='portrait'?.60:1.25), y: Math.sin(a)*rad*(USER_INPUT.layout==='portrait'?1.2:.62), z: -2600 + hash(i * 8.3) * 3200, rx: (hash(i * 3.1) - .5) * 50, ry: (hash(i * 6.2) - .5) * 70, rz: (hash(i * 9.4) - .5) * 30, sp: .7 + hash(i * 2.9) * .6, ph: hash(i) * 10 });
   }
   
-  const shade = mk(D, `<div style="width:1920px;height:1080px;background:linear-gradient(90deg,rgba(4,6,16,.82) 0%,rgba(4,6,16,.62) 30%,rgba(4,6,16,0) 55%)"></div>`, 0, 0);
+  const shade = mk(D, `<div style="width:${USER_INPUT.layout==='portrait'?1080:1920}px;height:${USER_INPUT.layout==='portrait'?1920:1080}px;background:linear-gradient(90deg,rgba(4,6,16,.82) 0%,rgba(4,6,16,.62) 30%,rgba(4,6,16,0) 55%)"></div>`, 0, 0);
   const tBro = chars(D, RAW_TEXT("S01.text035"), 150, 300, HV(136, SILVER, 6));
   const pills = [RAW_TEXT("S01.text036"), RAW_TEXT("S01.text037"), RAW_TEXT("S01.text038")].map((s, i) => mk(D, `<div class="chip" style="font-size:26px;padding:11px 24px;border-color:rgba(125,178,255,.55);color:#e2ecff;background:rgba(20,40,90,.45);text-transform:none;letter-spacing:1px"><span style="color:${BLUE2}">▸</span>${TEXT_GLOBAL(s)}</div>`, 156 + [0, 150, 410][i], 470, { ax: 0, ay: .5 }));
   const sup = TX(D, TEXT("S01.text039"), 158, 404, MONO(18, BLUE2, 4));

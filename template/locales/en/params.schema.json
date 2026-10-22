@@ -1,0 +1,2559 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "mode",
+    "language",
+    "layout",
+    "duration",
+    "title",
+    "presenterLabel",
+    "scenes",
+    "content",
+    "media",
+    "soundEffects",
+    "captions"
+  ],
+  "properties": {
+    "mode": {
+      "const": "user-media"
+    },
+    "language": {
+      "const": "en"
+    },
+    "layout": {
+      "const": "landscape"
+    },
+    "duration": {
+      "type": "number",
+      "minimum": 4.3,
+      "maximum": 600
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 45
+    },
+    "presenterLabel": {
+      "type": "string",
+      "maxLength": 45
+    },
+    "scenes": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 30,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title"
+        ],
+        "properties": {
+          "id": {
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "F",
+              "S01",
+              "S02",
+              "S03",
+              "S04",
+              "S05",
+              "S06",
+              "S07",
+              "S08",
+              "S09",
+              "S10",
+              "S11",
+              "S12",
+              "S13",
+              "S14",
+              "S15",
+              "S16",
+              "S17",
+              "END",
+              "B1",
+              "B2",
+              "B3",
+              "B4"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 45
+          },
+          "duration": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "content": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "A.text001": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "A.text002": {
+          "type": "string",
+          "maxLength": 93,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "A.text003": {
+          "type": "string",
+          "maxLength": 60,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "A.text004": {
+          "type": "string",
+          "maxLength": 57,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "A.text005": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "A.text006": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "B.text001": {
+          "type": "string",
+          "maxLength": 93,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "B.text002": {
+          "type": "string",
+          "maxLength": 105,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "B.text003": {
+          "type": "string",
+          "maxLength": 105,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "B.text004": {
+          "type": "string",
+          "maxLength": 84,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "B.text005": {
+          "type": "string",
+          "maxLength": 99,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "B.text006": {
+          "type": "string",
+          "maxLength": 78,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "B.text007": {
+          "type": "string",
+          "maxLength": 90,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "B.text008": {
+          "type": "string",
+          "maxLength": 105,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "B.text009": {
+          "type": "string",
+          "maxLength": 102,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "B.text010": {
+          "type": "string",
+          "maxLength": 84,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "B.text011": {
+          "type": "string",
+          "maxLength": 72,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "B.text012": {
+          "type": "string",
+          "maxLength": 99,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "B.text013": {
+          "type": "string",
+          "maxLength": 84,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "B.text014": {
+          "type": "string",
+          "maxLength": 99,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "B.text015": {
+          "type": "string",
+          "maxLength": 63,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "C.text001": {
+          "type": "string",
+          "maxLength": 39,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "C.text002": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "C.text003": {
+          "type": "string",
+          "maxLength": 54,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "D.text001": {
+          "type": "string",
+          "maxLength": 54,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "D.text002": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "D.text003": {
+          "type": "string",
+          "maxLength": 54,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "D.text004": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "D.text005": {
+          "type": "string",
+          "maxLength": 78,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "D.text006": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "D.text007": {
+          "type": "string",
+          "maxLength": 45,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "D.text008": {
+          "type": "string",
+          "maxLength": 54,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "D.text009": {
+          "type": "string",
+          "maxLength": 48,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "D.text010": {
+          "type": "string",
+          "maxLength": 51,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "D.text011": {
+          "type": "string",
+          "maxLength": 90,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "D.text012": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "D.text013": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "D.text014": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "D.text015": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "D.text016": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "D.text017": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "D.text018": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "D.text019": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "D.text020": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "D.text021": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "D.text022": {
+          "type": "string",
+          "maxLength": 36,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "D.text023": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "F.text001": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "F.text002": {
+          "type": "string",
+          "maxLength": 54,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "F.text003": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "F.text004": {
+          "type": "string",
+          "maxLength": 54,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text001": {
+          "type": "string",
+          "maxLength": 45,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text002": {
+          "type": "string",
+          "maxLength": 45,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text003": {
+          "type": "string",
+          "maxLength": 42,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text004": {
+          "type": "string",
+          "maxLength": 48,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text005": {
+          "type": "string",
+          "maxLength": 42,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text006": {
+          "type": "string",
+          "maxLength": 42,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text007": {
+          "type": "string",
+          "maxLength": 45,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text008": {
+          "type": "string",
+          "maxLength": 36,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text009": {
+          "type": "string",
+          "maxLength": 39,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text010": {
+          "type": "string",
+          "maxLength": 33,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text011": {
+          "type": "string",
+          "maxLength": 39,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text012": {
+          "type": "string",
+          "maxLength": 33,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text013": {
+          "type": "string",
+          "maxLength": 42,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text014": {
+          "type": "string",
+          "maxLength": 42,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text015": {
+          "type": "string",
+          "maxLength": 42,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text016": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text017": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text018": {
+          "type": "string",
+          "maxLength": 39,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text019": {
+          "type": "string",
+          "maxLength": 36,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text020": {
+          "type": "string",
+          "maxLength": 42,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text021": {
+          "type": "string",
+          "maxLength": 33,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text022": {
+          "type": "string",
+          "maxLength": 36,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text023": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text024": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text025": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text026": {
+          "type": "string",
+          "maxLength": 36,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text027": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text028": {
+          "type": "string",
+          "maxLength": 33,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text029": {
+          "type": "string",
+          "maxLength": 39,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text030": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text031": {
+          "type": "string",
+          "maxLength": 42,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text032": {
+          "type": "string",
+          "maxLength": 33,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text033": {
+          "type": "string",
+          "maxLength": 33,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text034": {
+          "type": "string",
+          "maxLength": 33,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text035": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text036": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text037": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text038": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text039": {
+          "type": "string",
+          "maxLength": 60,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text040": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text041": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text042": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text043": {
+          "type": "string",
+          "maxLength": 102,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text044": {
+          "type": "string",
+          "maxLength": 78,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text045": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text046": {
+          "type": "string",
+          "maxLength": 42,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text047": {
+          "type": "string",
+          "maxLength": 102,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text048": {
+          "type": "string",
+          "maxLength": 51,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text049": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text050": {
+          "type": "string",
+          "maxLength": 72,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text051": {
+          "type": "string",
+          "maxLength": 102,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S01.text052": {
+          "type": "string",
+          "maxLength": 72,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text001": {
+          "type": "string",
+          "maxLength": 66,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text002": {
+          "type": "string",
+          "maxLength": 69,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text003": {
+          "type": "string",
+          "maxLength": 63,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text004": {
+          "type": "string",
+          "maxLength": 66,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text005": {
+          "type": "string",
+          "maxLength": 63,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text006": {
+          "type": "string",
+          "maxLength": 69,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text007": {
+          "type": "string",
+          "maxLength": 57,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text008": {
+          "type": "string",
+          "maxLength": 66,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text009": {
+          "type": "string",
+          "maxLength": 48,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text010": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text011": {
+          "type": "string",
+          "maxLength": 63,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text012": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text013": {
+          "type": "string",
+          "maxLength": 48,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text014": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text015": {
+          "type": "string",
+          "maxLength": 48,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text016": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text017": {
+          "type": "string",
+          "maxLength": 48,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text018": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text019": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text020": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text021": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text022": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text023": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text024": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text025": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text026": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text027": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text028": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text029": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text030": {
+          "type": "string",
+          "maxLength": 84,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S02.text031": {
+          "type": "string",
+          "maxLength": 48,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S03.text001": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S03.text002": {
+          "type": "string",
+          "maxLength": 36,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S03.text003": {
+          "type": "string",
+          "maxLength": 45,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S03.text004": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S03.text005": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S03.text006": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S03.text007": {
+          "type": "string",
+          "maxLength": 87,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S03.text008": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S03.text009": {
+          "type": "string",
+          "maxLength": 54,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S03.text010": {
+          "type": "string",
+          "maxLength": 42,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S03.text011": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S03.text012": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S04.text001": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S04.text002": {
+          "type": "string",
+          "maxLength": 57,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S04.text003": {
+          "type": "string",
+          "maxLength": 54,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S04.text004": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S04.text005": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S04.text006": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S04.text007": {
+          "type": "string",
+          "maxLength": 69,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S04.text008": {
+          "type": "string",
+          "maxLength": 69,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S04.text009": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S04.text010": {
+          "type": "string",
+          "maxLength": 81,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S04.text011": {
+          "type": "string",
+          "maxLength": 39,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S04.text012": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S04.text013": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S04.text014": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S04.text015": {
+          "type": "string",
+          "maxLength": 84,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text001": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text002": {
+          "type": "string",
+          "maxLength": 54,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text003": {
+          "type": "string",
+          "maxLength": 39,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text004": {
+          "type": "string",
+          "maxLength": 39,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text005": {
+          "type": "string",
+          "maxLength": 90,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text006": {
+          "type": "string",
+          "maxLength": 39,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text007": {
+          "type": "string",
+          "maxLength": 36,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text008": {
+          "type": "string",
+          "maxLength": 48,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text009": {
+          "type": "string",
+          "maxLength": 48,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text010": {
+          "type": "string",
+          "maxLength": 33,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text011": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text012": {
+          "type": "string",
+          "maxLength": 111,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text013": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text014": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text015": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text016": {
+          "type": "string",
+          "maxLength": 60,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text017": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text018": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text019": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text020": {
+          "type": "string",
+          "maxLength": 69,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text021": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text022": {
+          "type": "string",
+          "maxLength": 63,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text023": {
+          "type": "string",
+          "maxLength": 63,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text024": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text025": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text026": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text027": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text028": {
+          "type": "string",
+          "maxLength": 63,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text029": {
+          "type": "string",
+          "maxLength": 51,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text030": {
+          "type": "string",
+          "maxLength": 33,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text031": {
+          "type": "string",
+          "maxLength": 72,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text032": {
+          "type": "string",
+          "maxLength": 60,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text033": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text034": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text035": {
+          "type": "string",
+          "maxLength": 33,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text036": {
+          "type": "string",
+          "maxLength": 51,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text037": {
+          "type": "string",
+          "maxLength": 33,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text038": {
+          "type": "string",
+          "maxLength": 33,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text039": {
+          "type": "string",
+          "maxLength": 42,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text040": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text041": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text042": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text043": {
+          "type": "string",
+          "maxLength": 48,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text044": {
+          "type": "string",
+          "maxLength": 66,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text045": {
+          "type": "string",
+          "maxLength": 36,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text046": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text047": {
+          "type": "string",
+          "maxLength": 45,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text048": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text049": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text050": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S05.text051": {
+          "type": "string",
+          "maxLength": 69,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S06.text001": {
+          "type": "string",
+          "maxLength": 36,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S06.text002": {
+          "type": "string",
+          "maxLength": 36,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S06.text003": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S06.text004": {
+          "type": "string",
+          "maxLength": 33,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S06.text005": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S06.text006": {
+          "type": "string",
+          "maxLength": 39,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S06.text007": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S06.text008": {
+          "type": "string",
+          "maxLength": 33,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S06.text009": {
+          "type": "string",
+          "maxLength": 33,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S06.text010": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S06.text011": {
+          "type": "string",
+          "maxLength": 33,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S06.text012": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S06.text013": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S06.text014": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S06.text015": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S06.text016": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S06.text017": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S06.text018": {
+          "type": "string",
+          "maxLength": 111,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S06.text019": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S06.text020": {
+          "type": "string",
+          "maxLength": 33,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S06.text021": {
+          "type": "string",
+          "maxLength": 54,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S06.text022": {
+          "type": "string",
+          "maxLength": 45,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text001": {
+          "type": "string",
+          "maxLength": 39,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text002": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text003": {
+          "type": "string",
+          "maxLength": 33,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text004": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text005": {
+          "type": "string",
+          "maxLength": 66,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text006": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text007": {
+          "type": "string",
+          "maxLength": 78,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text008": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text009": {
+          "type": "string",
+          "maxLength": 45,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text010": {
+          "type": "string",
+          "maxLength": 54,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text011": {
+          "type": "string",
+          "maxLength": 39,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text012": {
+          "type": "string",
+          "maxLength": 48,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text013": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text014": {
+          "type": "string",
+          "maxLength": 48,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text015": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text016": {
+          "type": "string",
+          "maxLength": 51,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text017": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text018": {
+          "type": "string",
+          "maxLength": 39,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text019": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text020": {
+          "type": "string",
+          "maxLength": 42,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text021": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text022": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text023": {
+          "type": "string",
+          "maxLength": 96,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text024": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text025": {
+          "type": "string",
+          "maxLength": 75,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text026": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text027": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text028": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text029": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text030": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text031": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text032": {
+          "type": "string",
+          "maxLength": 45,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text033": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text034": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text035": {
+          "type": "string",
+          "maxLength": 45,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S07.text036": {
+          "type": "string",
+          "maxLength": 66,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S08.text001": {
+          "type": "string",
+          "maxLength": 60,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S08.text002": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S08.text003": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S08.text004": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S08.text005": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S08.text006": {
+          "type": "string",
+          "maxLength": 51,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S08.text007": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S08.text008": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S08.text009": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S08.text010": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S08.text011": {
+          "type": "string",
+          "maxLength": 33,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text001": {
+          "type": "string",
+          "maxLength": 60,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text002": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text003": {
+          "type": "string",
+          "maxLength": 102,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text004": {
+          "type": "string",
+          "maxLength": 78,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text005": {
+          "type": "string",
+          "maxLength": 87,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text006": {
+          "type": "string",
+          "maxLength": 93,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text007": {
+          "type": "string",
+          "maxLength": 84,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text008": {
+          "type": "string",
+          "maxLength": 90,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text009": {
+          "type": "string",
+          "maxLength": 81,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text010": {
+          "type": "string",
+          "maxLength": 72,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text011": {
+          "type": "string",
+          "maxLength": 84,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text012": {
+          "type": "string",
+          "maxLength": 84,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text013": {
+          "type": "string",
+          "maxLength": 69,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text014": {
+          "type": "string",
+          "maxLength": 81,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text015": {
+          "type": "string",
+          "maxLength": 63,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text016": {
+          "type": "string",
+          "maxLength": 57,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text017": {
+          "type": "string",
+          "maxLength": 54,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text018": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text019": {
+          "type": "string",
+          "maxLength": 33,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text020": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text021": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text022": {
+          "type": "string",
+          "maxLength": 33,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text023": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text024": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text025": {
+          "type": "string",
+          "maxLength": 78,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text026": {
+          "type": "string",
+          "maxLength": 54,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text027": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S09.text028": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S10.text001": {
+          "type": "string",
+          "maxLength": 51,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S10.text002": {
+          "type": "string",
+          "maxLength": 42,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S10.text003": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S10.text004": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S10.text005": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S10.text006": {
+          "type": "string",
+          "maxLength": 99,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S10.text007": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S10.text008": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S10.text009": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S11.text001": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S11.text002": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S11.text003": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S11.text004": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S11.text005": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S11.text006": {
+          "type": "string",
+          "maxLength": 45,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S11.text007": {
+          "type": "string",
+          "maxLength": 63,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S11.text008": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S11.text009": {
+          "type": "string",
+          "maxLength": 57,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S11.text010": {
+          "type": "string",
+          "maxLength": 33,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S11.text011": {
+          "type": "string",
+          "maxLength": 36,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S11.text012": {
+          "type": "string",
+          "maxLength": 33,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S12.text001": {
+          "type": "string",
+          "maxLength": 51,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S12.text002": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S12.text003": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S12.text004": {
+          "type": "string",
+          "maxLength": 48,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S12.text005": {
+          "type": "string",
+          "maxLength": 60,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S12.text006": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S12.text007": {
+          "type": "string",
+          "maxLength": 54,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S12.text008": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S12.text009": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S12.text010": {
+          "type": "string",
+          "maxLength": 66,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S12.text011": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S12.text012": {
+          "type": "string",
+          "maxLength": 45,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S12.text013": {
+          "type": "string",
+          "maxLength": 69,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S12.text014": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S12.text015": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S12.text016": {
+          "type": "string",
+          "maxLength": 57,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S12.text017": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S12.text018": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S12.text019": {
+          "type": "string",
+          "maxLength": 51,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S12.text020": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S13.text001": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S13.text002": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S13.text003": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S13.text004": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S13.text005": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S13.text006": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S13.text007": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S13.text008": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S13.text009": {
+          "type": "string",
+          "maxLength": 42,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S13.text010": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S13.text011": {
+          "type": "string",
+          "maxLength": 39,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S13.text012": {
+          "type": "string",
+          "maxLength": 78,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S13.text013": {
+          "type": "string",
+          "maxLength": 54,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S13.text014": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S13.text015": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S13.text016": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S13.text017": {
+          "type": "string",
+          "maxLength": 33,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S13.text018": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S13.text019": {
+          "type": "string",
+          "maxLength": 81,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S13.text020": {
+          "type": "string",
+          "maxLength": 51,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S13.text021": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S13.text022": {
+          "type": "string",
+          "maxLength": 63,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S13.text023": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text001": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text002": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text003": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text004": {
+          "type": "string",
+          "maxLength": 48,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text005": {
+          "type": "string",
+          "maxLength": 51,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text006": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text007": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text008": {
+          "type": "string",
+          "maxLength": 36,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text009": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text010": {
+          "type": "string",
+          "maxLength": 36,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text011": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text012": {
+          "type": "string",
+          "maxLength": 51,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text013": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text014": {
+          "type": "string",
+          "maxLength": 63,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text015": {
+          "type": "string",
+          "maxLength": 54,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text016": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text017": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text018": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text019": {
+          "type": "string",
+          "maxLength": 57,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text020": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text021": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text022": {
+          "type": "string",
+          "maxLength": 42,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text023": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text024": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text025": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text026": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text027": {
+          "type": "string",
+          "maxLength": 45,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text028": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text029": {
+          "type": "string",
+          "maxLength": 45,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text030": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text031": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text032": {
+          "type": "string",
+          "maxLength": 42,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text033": {
+          "type": "string",
+          "maxLength": 51,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text034": {
+          "type": "string",
+          "maxLength": 39,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S14.text035": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S15.text001": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S15.text002": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S15.text003": {
+          "type": "string",
+          "maxLength": 42,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S15.text004": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S15.text005": {
+          "type": "string",
+          "maxLength": 48,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S15.text006": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S15.text007": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S15.text008": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S15.text009": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S15.text010": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S15.text011": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S15.text012": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S15.text013": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S15.text014": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S15.text015": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S15.text016": {
+          "type": "string",
+          "maxLength": 51,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S15.text017": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S15.text018": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S16.text001": {
+          "type": "string",
+          "maxLength": 87,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S16.text002": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S16.text003": {
+          "type": "string",
+          "maxLength": 39,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S16.text004": {
+          "type": "string",
+          "maxLength": 33,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S16.text005": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S16.text006": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S17.text001": {
+          "type": "string",
+          "maxLength": 45,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S17.text002": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S17.text003": {
+          "type": "string",
+          "maxLength": 87,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S17.text004": {
+          "type": "string",
+          "maxLength": 57,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S17.text005": {
+          "type": "string",
+          "maxLength": 48,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S17.text006": {
+          "type": "string",
+          "maxLength": 45,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S17.text007": {
+          "type": "string",
+          "maxLength": 42,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S17.text008": {
+          "type": "string",
+          "maxLength": 45,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S17.text009": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S17.text010": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S17.text011": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S17.text012": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S17.text013": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S17.text014": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S17.text015": {
+          "type": "string",
+          "maxLength": 33,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S17.text016": {
+          "type": "string",
+          "maxLength": 99,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S17.text017": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S17.text018": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S17.text019": {
+          "type": "string",
+          "maxLength": 39,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S17.text020": {
+          "type": "string",
+          "maxLength": 87,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S17.text021": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "S17.text022": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "END.text001": {
+          "type": "string",
+          "maxLength": 39,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "END.text002": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "END.text003": {
+          "type": "string",
+          "maxLength": 33,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "END.text004": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "END.text005": {
+          "type": "string",
+          "maxLength": 54,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "END.text006": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "END.text007": {
+          "type": "string",
+          "maxLength": 24,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "END.text008": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "END.text009": {
+          "type": "string",
+          "maxLength": 75,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "END.text010": {
+          "type": "string",
+          "maxLength": 81,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "END.text011": {
+          "type": "string",
+          "maxLength": 63,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "END.text012": {
+          "type": "string",
+          "maxLength": 27,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "END.text013": {
+          "type": "string",
+          "maxLength": 63,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "END.text014": {
+          "type": "string",
+          "maxLength": 48,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        },
+        "END.text015": {
+          "type": "string",
+          "maxLength": 84,
+          "description": "Required only when its native unit is active. Chinese source-size limit is enforced by adapter; English glyph capacity is provisional."
+        }
+      }
+    },
+    "media": {
+      "type": "object",
+      "description": "Explicit role bindings; conditional counts and minimum video lengths in core/catalog.json. Omission never selects demo media."
+    },
+    "soundEffects": {
+      "enum": [
+        "native",
+        "none"
+      ]
+    },
+    "captions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "start",
+          "end",
+          "text"
+        ],
+        "properties": {
+          "start": {
+            "type": "number"
+          },
+          "end": {
+            "type": "number"
+          },
+          "text": {
+            "type": "string"
+          },
+          "units": {
+            "type": "array"
+          },
+          "breakAfter": {
+            "type": "array",
+            "maxItems": 1
+          }
+        }
+      }
+    },
+    "basic": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "keyword": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "explanation": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "heading": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "left": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "right": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "conclusion": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "summary": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "action": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "label": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "points": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 5,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 90
+          }
+        }
+      }
+    },
+    "markWindows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "start",
+          "end"
+        ],
+        "properties": {
+          "start": {
+            "type": "number",
+            "minimum": 0
+          },
+          "end": {
+            "type": "number",
+            "minimum": 0
+          }
+        }
+      }
+    }
+  }
+}

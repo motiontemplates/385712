@@ -3,22 +3,21 @@
   "format": "motiongit-template",
   "specVersion": "0.1.0-draft.1",
   "template": {
-    "id": "kinetic-tech",
-    "version": "0.2.7-open-beta",
-    "name": "Kinetic Tech",
-    "status": "open-beta"
+    "id": "385712",
+    "version": "0.2.31-open-beta",
+    "name": "酷炫科技风 · 口播讲解"
   },
   "runtime": {
     "profile": "kinetic-user-core/1",
-    "entry": "adapter.py",
+    "entry": "kinetic_bootstrap.py",
     "dependencyLock": "motion.lock.json"
   },
   "parameters": {
     "schema": "params.schema.json"
   },
   "output": {
-    "width": 1920,
-    "height": 1080,
+    "width": 1080,
+    "height": 1920,
     "fps": {
       "num": 60,
       "den": 1
@@ -28,11 +27,16 @@
       "landscape": [
         1920,
         1080
+      ],
+      "portrait": [
+        1080,
+        1920
       ]
     }
   },
   "license": {
-    "file": "licenses/TEMPLATE-LICENSE.txt"
+    "file": "licenses/TEMPLATE-LICENSE.txt",
+    "id": "MIT"
   },
   "assets": {
     "manifest": "asset-manifest.json"
@@ -48,14 +52,14 @@
     ]
   },
   "ai": {
-    "summary": "Silver metal type,amber light and native spatial choreography. Read guide.json and use current user content.",
+    "summary": "金属科技口播模板：中英横屏及中文竖屏、60fps。先读guide.json，按本期内容选原生组与素材。",
     "entry": "guide.json",
     "guide": "guide.json",
     "authoring": {
       "tool": "codex",
       "client": "codex-desktop",
       "model": "GPT-6",
-      "date": "2026-10-14"
+      "date": "2026-10-15"
     }
   },
   "extensions": {
@@ -70,11 +74,167 @@
       "sourceAuthor": "unknown",
       "originalDemoIncluded": false
     },
-    "motiongit.com:locale": "en",
     "motiongit.com:open-source": {
       "repository": "https://github.com/motiontemplates/385712",
+      "personalIdentityIncluded": false,
+      "serviceCapabilities": "Query current verified personal delivery; source-stage identity is not consumer API status"
+    },
+    "motiongit.com:website-publication": {
+      "sourceRepository": "https://github.com/motiontemplates/385712",
+      "sourceTemplateId": "kinetic-tech",
+      "sourceArchiveSha256": "472a95af35f8e0c09c0f7dc2ca0992b7c9a3405c5aa8063730c347fc4e015c21",
+      "website": "https://motiongit.com/@adunext/385712",
+      "version": "0.2.9-open-beta",
+      "primaryDemo": "Chinese portrait; existing English landscape demo retained",
+      "previousWebsiteVersion": "0.2.7-open-beta",
+      "ownerPublicationRequestedAt": "2026-10-15"
+    },
+    "motiongit.com:portrait": {
+      "sourceArchiveSha256": "f334901a26f19c4c13784a6c998cf797ae2123b5a4d6797192edbc45c803e46e",
+      "sourceVersion": "0.2.7-open-beta",
+      "status": "owner-approved-public-beta",
+      "languages": [
+        "zh"
+      ],
+      "EnglishPortrait": "not validated or selectable",
+      "coverageComplete": false,
+      "ownerApprovedAt": "2026-10-15",
+      "sourceCandidateSHA256": "36673c60f572ae45633ed66ffc887bc2c351cdf6fef0a9526a3ce17da02f8916"
+    },
+    "motiongit.com:whole-narration": {
+      "profile": "motiongit.whole-narration/1",
+      "contract": "duration-policy.json",
+      "guide": "DURATION.md",
+      "preserveCompleteSpeech": true,
+      "singleSceneLimitIsFilmLimit": false
+    },
+    "motiongit.com:portable-media-paths": {
+      "profile": "motiongit.portable-media-paths/1",
+      "sourceVersion": "0.2.10-open-beta",
+      "sourceReleaseId": 313,
+      "sourceArchiveSha256": "c5986d46e8f43fa7461d75c85218c9137138d9f329bf827207602d482b3ca67f",
+      "status": "candidate-not-uploaded",
+      "serializedPaths": "POSIX relative URL paths",
+      "legacyBackslashBindings": "normalized when reading prepared media",
+      "nativeWindowsExecution": "not tested"
+    },
+    "motiongit.com:audio-integrity": {
+      "profile": "motiongit.audio-integrity/1",
+      "guide": "AUDIO.md",
+      "contract": "audio-contract.json",
+      "narrationAlignmentGuide": "NARRATION-MAP.md",
+      "semanticReview": "required separately from technical validation",
+      "sourceVersion": "0.2.11-windows-path-candidate"
+    },
+    "motiongit.com:runtime-setup": {
+      "profile": "motiongit.kinetic-dependencies/1",
+      "entry": "kinetic_bootstrap.py",
+      "guide": "STARTUP.md",
+      "lock": "dependencies/runtime-dependencies.json",
+      "stdlibDoctor": true,
+      "python": "3.13 isolated cache; no global installation",
+      "network": "Explicit setup may obtain only declared public runtime dependencies; creative rendering remains offline",
+      "coreLifetime": "Official helper operation; setup caches dependency files only",
+      "workingInstancePermissions": "Fresh copied work receives writable modes without changing the immutable operation source"
+    },
+    "motiongit.com:media-bindings": {
+      "guide": "MEDIA.md",
+      "schema": "params.schema.json#/properties/media",
+      "globalRoles": [
+        "presenter",
+        "voice",
+        "music"
+      ],
+      "existingRuntimeBehaviorOnly": true
+    },
+    "motiongit.com:basic-text-capacity": {
+      "guide": "BASIC.md",
+      "schema": "params.schema.json",
+      "existingRuntimeBehaviorOnly": true,
+      "languageSpecific": [
+        "zh",
+        "en"
+      ],
+      "sceneOverridesGlobal": true,
+      "wholeNarrationLimit": false,
+      "pointRoles": "Optional B2 point/action roles; see BASIC.md"
+    },
+    "motiongit.com:output-signature": {
+      "profile": "output-clock-circle/2",
+      "portraitInsetsAt1080": {
+        "right": 96,
+        "top": 88
+      },
+      "englishPortraitGroups": [
+        "B1",
+        "B2",
+        "B3",
+        "B4"
+      ]
+    },
+    "motiongit.com:caption-timing-review": {
+      "profile": "motiongit.caption-timing-review/1",
+      "guide": "NARRATION-MAP.md",
+      "sourceVersion": "0.2.22-open-beta",
+      "authorSourceSha256": "5da906b5b4b0c960eef0cdef6bad79c511d6d3bc33e7e7586fa71aee2cc36916",
+      "preserveOriginalAudioAndClock": true,
+      "completeSentenceSrtSupported": true,
+      "ordinaryRecordedNonSpeech": "Retain actual full-source review/analysis and original records.",
+      "semanticAcceptance": "Final encoded film requires separate review; provenance is not recognition accuracy."
+    },
+    "motiongit.com:narration-layout": {
+      "profile": "motiongit.narration-layout/1",
+      "guide": "NARRATION-VISUAL.md",
+      "existingProjects": "Original layout remains the default. New production guidance selects the supported layout without additional user steps.",
+      "sourceClockPreserved": true,
+      "sourceVersion": "0.2.23-open-beta"
+    },
+    "motiongit.com:consumer-entry-recovery": {
+      "profile": "motiongit.consumer-entry-recovery/1",
+      "sourceVersion": "0.2.24-open-beta",
+      "authorSourceSha256": "7d10abe808ee6397b96daa1804ce1d335932cddf7811ed7a93c41bc06ee5929c",
+      "scope": "bounded failed-tool diagnostics, current personal-entry instructions and explicit English demo music choice",
+      "visualSourcesCuesMediaColorAndAudioPolicyUnchanged": true,
+      "newlyClaimedFullExtraction": false,
+      "windowsNativeAcceptance": "not performed"
+    },
+    "motiongit.com:render-runtime-upgrade": {
+      "profile": "motiongit.render-runtime-upgrade/1",
+      "sourceVersion": "0.2.30-open-beta",
+      "authorSourceSha256": "c502364502cc8560fef05683d1c69c919db3f90771962946ecca9bb1c2aa3d25",
+      "components": [
+        "static_face_kinetic_patch"
+      ],
+      "preserveOriginalPackagesAndProjects": true,
+      "acceptanceEvidence": "Recorded separately for this exact author archive; no platform or assistant acceptance is implied by this metadata."
+    },
+    "motiongit.com:public-source": {
+      "profile": "motiongit.public-source/1",
+      "upstreamAuthorArchiveSha256": "740fde784be1a51bfcb2c6ff8ec583d9d57dfa7ec80c25676c7eb4044e499f2f",
+      "upstreamReleaseId": 736,
+      "guide": "PUBLIC-SOURCE.md",
+      "documentationAdapted": true,
+      "runtimeAndMediaUnchanged": true,
+      "credentialsIncluded": false,
       "apiEnabled": false,
-      "personalIdentityIncluded": false
+      "currentPlatformValidation": {
+        "profile": "motiongit.public-windows-static-face-validation/1",
+        "sourceVersion": "0.2.31-open-beta",
+        "upstreamAuthorArchiveSha256": "740fde784be1a51bfcb2c6ff8ec583d9d57dfa7ec80c25676c7eb4044e499f2f",
+        "platform": "Windows 11",
+        "scope": "Coarse fixed face centering through normal setup, doctor, plan, prepare, preview, render and full movie decode",
+        "pathScope": "Chinese and space-containing folders",
+        "samplePolicy": "One image or at most five video samples for one fixed anchor; no real-time tracking",
+        "testPermissions": "Administrator/elevated test context; this is not a stated runtime permission requirement",
+        "notCovered": [
+          "Complete original native scene library",
+          "Ordinary-permission execution",
+          "A real Chinese Windows username"
+        ],
+        "acceptanceSha256": "54e9f9d8606b6d60337431c528bcbce6c48b1f8434bb21cdeefeb192302e1b5a",
+        "sourceReportSha256": "99d5f669e8f54ba902719b7638aae37a2d1f5b677ba66975c13eb2800c4fb139",
+        "guide": "PUBLIC-SOURCE.md#platform-validation"
+      }
     }
   },
   "integrity": "integrity.json"

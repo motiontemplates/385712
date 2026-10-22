@@ -1,0 +1,19 @@
+{
+  "profile": "motiongit.whole-narration/1",
+  "originalEntry": "adapter.py",
+  "wholeFilmDurationSource": "complete-user-narration-and-actual-captions",
+  "sceneConstraints": "per-scene only; retain protected source action speed",
+  "onConflict": "recompose-preserving-full-content",
+  "shorteningDefault": false,
+  "shorteningAuthorization": "explicit-user-editorial-request-or-confirmed-platform-limit",
+  "rules": [
+    "先读取完整口播、原文和实际字幕时间，以完整人声及字幕的结束时刻确定全片时长；样片长度和单镜头容量都不是整片上限。",
+    "先按完整内容列出语义段落，再依据实际句子/短语边界安排多个镜头。一个主题可以跨多个镜头；一个语义段也可拆成多个相容镜头。",
+    "优先使用本模板同风格的原生组、已实现的基础表达及合法相邻组合；必要时重复组的独立实例并绑定各自内容。不要默认跨风格拼接或退化成静态底图。",
+    "单组放不下时，依次重新分段、增加或更换同风格镜头、在声明的安静阅读区合法停留，再重新绑定cue。动作仍按原速，真人、人声和字幕连续使用输出时钟。",
+    "cue越界、动作保护窗冲突或当前候选未匹配，只说明当前镜头方案失败；检查多个完整分段方案后重试，不能据此断言整片只能15–19秒或要求用户剪短。",
+    "素材名冲突、rc版本报错及依赖错误属于工具问题，保留准确日志并排查，不能当作文案太长或模板时长上限。",
+    "所有分段与候选方案覆盖同一条完整口播；不删句、不丢限定词、不通过改小narrationDuration掩盖缺口。导出前检查首句、末句、总帧数、字幕与人声完整覆盖。",
+    "只有用户明确要求精简或平台存在已确认的硬性时长限制时，才提出剪辑建议并让用户核对改稿；当前风格能力确实不足时列出具体缺口，不夸称一定能原样适配任意内容。"
+  ]
+}

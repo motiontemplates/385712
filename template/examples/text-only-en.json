@@ -1,0 +1,32 @@
+{
+  "mode": "user-media",
+  "language": "en",
+  "layout": "portrait",
+  "duration": 8,
+  "title": "A clear idea",
+  "presenterLabel": "",
+  "scenes": [
+    {
+      "id": "B1",
+      "title": "One idea"
+    }
+  ],
+  "content": {},
+  "basic": {
+    "keyword": "Create",
+    "explanation": "One clear idea.\nMake it visible."
+  },
+  "media": {
+    "presenter": {
+      "mode": "none"
+    },
+    "voice": {
+      "mode": "none"
+    },
+    "music": {
+      "mode": "none"
+    }
+  },
+  "soundEffects": "native",
+  "captions": []
+}

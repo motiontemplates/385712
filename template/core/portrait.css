@@ -1,0 +1,4 @@
+html[data-layout="portrait"],html[data-layout="portrait"] body,html[data-layout="portrait"] #stage{width:1080px;height:1920px}
+html[data-layout="portrait"] #world{width:1080px;height:1920px;transform-origin:540px 960px}
+html[data-layout="portrait"] .sc,html[data-layout="portrait"] .layer{width:1080px;height:1920px}
+html[data-layout="portrait"] .portrait-node{position:absolute;left:0;top:0;transform-origin:0 0;pointer-events:none}

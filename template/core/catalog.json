@@ -103,7 +103,8 @@
         "D.text020",
         "D.text021",
         "D.text022",
-        "D.text023"
+        "D.text023",
+        "D.number001"
       ],
       "media": [
         "w6827",
@@ -120,7 +121,9 @@
         "F.text001",
         "F.text002",
         "F.text003",
-        "F.text004"
+        "F.text004",
+        "F.metric001",
+        "F.metric002"
       ],
       "media": [
         "cmA",
@@ -344,7 +347,12 @@
         "S05.text048",
         "S05.text049",
         "S05.text050",
-        "S05.text051"
+        "S05.text051",
+        "S05.toolLabel",
+        "S05.file001",
+        "S05.file002",
+        "S05.file003",
+        "S05.file004"
       ],
       "media": [
         "pr591_30",
@@ -353,7 +361,13 @@
         "d605",
         "thumbnail"
       ],
-      "capacityStatus": "source-size provisional; maximum legal capacity unverified"
+      "capacityStatus": "source-size provisional; maximum legal capacity unverified",
+      "allowedVisualPurposes": [
+        "software-project-workflow"
+      ],
+      "notSuitableFor": [
+        "Unrelated account-risk or policy explanations: a project file/export graphic does not mean account association. Use a neutral relation/list expression."
+      ]
     },
     {
       "id": "S06",
@@ -382,7 +396,9 @@
         "S06.text019",
         "S06.text020",
         "S06.text021",
-        "S06.text022"
+        "S06.text022",
+        "S06.firstRowValue",
+        "S06.number001"
       ],
       "media": [],
       "capacityStatus": "source-size provisional; maximum legal capacity unverified"
@@ -472,10 +488,23 @@
         "S08.text008",
         "S08.text009",
         "S08.text010",
-        "S08.text011"
+        "S08.text011",
+        "S08.label001",
+        "S08.label002",
+        "S08.label003",
+        "S08.label004",
+        "S08.label005",
+        "S08.year001",
+        "S08.year002"
       ],
       "media": [],
-      "capacityStatus": "source-size provisional; maximum legal capacity unverified"
+      "capacityStatus": "source-size provisional; maximum legal capacity unverified",
+      "allowedVisualPurposes": [
+        "decision-rejection"
+      ],
+      "notSuitableFor": [
+        "Outreach, care or benefit delivery: grey-out, shatter and elimination would contradict those meanings. Use B1/B2 or a neutral component."
+      ]
     },
     {
       "id": "S09",
@@ -535,7 +564,10 @@
         "S10.text009"
       ],
       "media": [],
-      "capacityStatus": "source-size provisional; maximum legal capacity unverified"
+      "capacityStatus": "source-size provisional; maximum legal capacity unverified",
+      "allowedVisualPurposes": [
+        "real-comparison"
+      ]
     },
     {
       "id": "S11",
@@ -621,12 +653,16 @@
         "S13.text020",
         "S13.text021",
         "S13.text022",
-        "S13.text023"
+        "S13.text023",
+        "S13.timerSeconds"
       ],
       "media": [
         "d605"
       ],
-      "capacityStatus": "source-size provisional; maximum legal capacity unverified"
+      "capacityStatus": "source-size provisional; maximum legal capacity unverified",
+      "allowedVisualPurposes": [
+        "software-project-workflow"
+      ]
     },
     {
       "id": "S14",
@@ -698,10 +734,16 @@
         "S15.text015",
         "S15.text016",
         "S15.text017",
-        "S15.text018"
+        "S15.text018",
+        "S15.onLabel"
       ],
       "media": [],
-      "capacityStatus": "source-size provisional; maximum legal capacity unverified"
+      "capacityStatus": "source-size provisional; maximum legal capacity unverified",
+      "allowedVisualPurposes": [
+        "ordered-process",
+        "real-comparison",
+        "confirmed-completion"
+      ]
     },
     {
       "id": "S16",
@@ -714,10 +756,22 @@
         "S16.text003",
         "S16.text004",
         "S16.text005",
-        "S16.text006"
+        "S16.text006",
+        "S16.terminal001",
+        "S16.terminal002",
+        "S16.terminal003",
+        "S16.terminal004",
+        "S16.terminal005",
+        "S16.versionPrefix",
+        "S16.versionStart",
+        "S16.versionEnd"
       ],
       "media": [],
-      "capacityStatus": "source-size provisional; maximum legal capacity unverified"
+      "capacityStatus": "source-size provisional; maximum legal capacity unverified",
+      "allowedVisualPurposes": [
+        "software-project-workflow",
+        "confirmed-completion"
+      ]
     },
     {
       "id": "S17",
@@ -784,8 +838,9 @@
       "fields": [],
       "media": [],
       "origin": "new same-engine expression; not a source unit",
-      "maxReadingHold": 12,
-      "holdAt": 256.9
+      "maxReadingHold": 30,
+      "holdAt": 256.9,
+      "readingHoldPolicy": "Quiet middle holds keep source entry/exit speed; measured phrase focus follows the narrated item."
     },
     {
       "id": "B2",
@@ -795,8 +850,9 @@
       "fields": [],
       "media": [],
       "origin": "new same-engine expression; not a source unit",
-      "maxReadingHold": 12,
-      "holdAt": 268.9
+      "maxReadingHold": 30,
+      "holdAt": 268.9,
+      "readingHoldPolicy": "Quiet middle holds keep source entry/exit speed; measured phrase focus follows the narrated item."
     },
     {
       "id": "B3",
@@ -806,8 +862,9 @@
       "fields": [],
       "media": [],
       "origin": "new same-engine expression; not a source unit",
-      "maxReadingHold": 12,
-      "holdAt": 280.9
+      "maxReadingHold": 30,
+      "holdAt": 280.9,
+      "readingHoldPolicy": "Quiet middle holds keep source entry/exit speed; measured phrase focus follows the narrated item."
     },
     {
       "id": "B4",
@@ -817,8 +874,9 @@
       "fields": [],
       "media": [],
       "origin": "new same-engine expression; not a source unit",
-      "maxReadingHold": 12,
-      "holdAt": 290.9
+      "maxReadingHold": 30,
+      "holdAt": 290.9,
+      "readingHoldPolicy": "Quiet middle holds keep source entry/exit speed; measured phrase focus follows the narrated item."
     }
   ],
   "nativeSourceUnits": 23,
@@ -1193,5 +1251,108 @@
       }
     }
   },
-  "coverageComplete": false
+  "coverageComplete": false,
+  "globalMediaBindings": {
+    "schema": "../params.schema.json#/properties/media",
+    "guide": "../MEDIA.md",
+    "alwaysExplicit": [
+      "presenter",
+      "voice",
+      "music"
+    ],
+    "presenterModes": [
+      "none",
+      "image",
+      "video"
+    ],
+    "voiceModes": [
+      "none",
+      "file",
+      "presenter"
+    ],
+    "musicModes": [
+      "none",
+      "file"
+    ],
+    "officialMusicPrepareMapping": {
+      "output": "media.music.file",
+      "license": "media.music.license",
+      "mode": "file"
+    },
+    "conditionalVisualPorts": "mediaPorts (unchanged; required only by selected scene roles)"
+  },
+  "basicBindings": {
+    "guide": "../BASIC.md",
+    "schema": "../params.schema.json",
+    "inheritance": "{...basic, ...scenes[i].basic}",
+    "requiredEffectiveFields": {
+      "B1": [
+        "keyword",
+        "explanation"
+      ],
+      "B2": [
+        "heading",
+        "points"
+      ],
+      "B3": [
+        "heading",
+        "left",
+        "right",
+        "conclusion"
+      ],
+      "B4": [
+        "summary",
+        "action"
+      ]
+    },
+    "zhTotalCharacterLimits": {
+      "keyword": 8,
+      "heading": 10,
+      "left": 8,
+      "right": 8,
+      "explanation": 42,
+      "conclusion": 48,
+      "summary": 10,
+      "action": 42,
+      "label": 32
+    },
+    "enTotalCharacterLimits": {
+      "keyword": 36,
+      "heading": 42,
+      "left": 36,
+      "right": 36,
+      "explanation": 138,
+      "conclusion": 156,
+      "summary": 42,
+      "action": 138,
+      "label": 108
+    },
+    "maxExplicitLines": 2,
+    "points": {
+      "count": [
+        1,
+        5
+      ],
+      "maxCharactersPerLine": {
+        "zh": 18,
+        "en": 44
+      }
+    },
+    "runtimeGlyphWidthCheckStillRequired": true,
+    "wholeNarrationLimit": false,
+    "pointRoles": {
+      "optional": true,
+      "enum": [
+        "point",
+        "action"
+      ],
+      "length": "effective points length",
+      "default": "all point",
+      "actionBadges": {
+        "zh": "行动",
+        "en": "ACTION"
+      },
+      "targetIndices": "actual row index, including action rows"
+    }
+  }
 }

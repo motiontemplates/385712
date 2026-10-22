@@ -1,0 +1,9 @@
+{
+  "profile": "motiongit.audio-integrity/1",
+  "guide": "AUDIO.md",
+  "sourceNarration": "complete source on common container clock",
+  "digitalSilence": "reject",
+  "quietAudio": "listen; no arbitrary silence threshold",
+  "encodedMix": "compare actual decoded final to premix",
+  "semanticAcceptance": "separate real listening and visual review"
+}

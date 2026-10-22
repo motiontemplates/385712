@@ -48,7 +48,7 @@ window.CURRENT_UNIT="S15";
     const on = EZ.spring(pr(t, tWork - .05, tWork + .35));
     knob.style.left = lerp(6, 82, on).toFixed(1) + 'px';
     trk.style.background = on > .5 ? BLUE : '#262a31'; trk.style.boxShadow = on > .5 ? `0 0 26px rgba(47,123,255,${(.6 * on).toFixed(2)})` : 'none';
-    setTxt(swl, on > .5 ? 'ON' : RAW_TEXT("S15.text017")); swl.style.color = on > .5 ? BLUE2 : DIM;
+    setTxt(swl, on > .5 ? RAW_TEXT("S15.onLabel") : RAW_TEXT("S15.text017")); swl.style.color = on > .5 ? BLUE2 : DIM;
     
     show(tier, t, tModel - .35, { k: 'up', d: .45, out: tEff - .3 });
     const MT = NATIVE_CUE("cue-177"), step = MT.filter(x => t >= x).length;   
@@ -92,12 +92,12 @@ window.CURRENT_UNIT="S16";
     
     const termOn = 1 - pr(t, tNext - .02, tNext + .28);
     place(tm, { x: 840, y: 470, o: pr(t, T0, T0 + .3) * termOn, s: 1 + beatPulse(t, true) * .004 + (t > tBeta ? .02 * (1 - EZ.out(pr(t, tBeta, tBeta + .5))) : 0) });
-    termAt(tm, t, [[T0 + .15, '<span style="color:#6c7480"># 执行本期流程</span>', 40], [tCl - .5, '<span style="color:#7DB2FF">$</span> run project --check', 22],
-      [tCl + .45, '<span style="color:#6c7480">waiting for confirmation ...</span>', 30], [tBeta, '<span style="color:#F5B92E">✓ CHECK COMPLETE · DEMO</span>', 200], [tBeta + .25, '<span style="color:#cfd6df">ready, your project.</span>', 40]]);
+    termAt(tm, t, [[T0 + .15, `<span style="color:#6c7480">${TEXT_GLOBAL(RAW_TEXT("S16.terminal001"))}</span>`, 40], [tCl - .5, `<span style="color:#7DB2FF">$</span> ${TEXT_GLOBAL(RAW_TEXT("S16.terminal002"))}`, 22],
+      [tCl + .45, `<span style="color:#6c7480">${TEXT_GLOBAL(RAW_TEXT("S16.terminal003"))}</span>`, 30], [tBeta, `<span style="color:#F5B92E">${TEXT_GLOBAL(RAW_TEXT("S16.terminal004"))}</span>`, 200], [tBeta + .25, `<span style="color:#cfd6df">${TEXT_GLOBAL(RAW_TEXT("S16.terminal005"))}</span>`, 40]]);
     sealAt(stamp, t, tBeta + .08, tNext + .05);
     
-    const vi = t < tIt ? 1 : Math.min(99, 1 + Math.floor(Math.pow((t - tIt) * 2.2, 2.1)));
-    setTxt(vv, 'V' + vi);
+    const vi = t < tIt ? Number(RAW_TEXT("S16.versionStart")) : Math.min(Number(RAW_TEXT("S16.versionEnd")), Number(RAW_TEXT("S16.versionStart")) + Math.floor(Math.pow((t - tIt) * 2.2, 2.1)));
+    setTxt(vv, RAW_TEXT("S16.versionPrefix") + vi);
     show(ver, t, tNext + .2, { k: 'left', d: .4 });
     const fp = pr(t, tFast - .02, tFast + .2);
     place(fast, { s: 1 + (1 - EZ.out5(fp)) * 1.2, o: clamp(fp * 5), blur: (1 - fp) * 10 });

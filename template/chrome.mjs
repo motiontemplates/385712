@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
 
-export function chrome(explicit = process.env.CHROME) {
+export function chrome(explicit = process.env.CHROME_PATH || process.env.CHROME) {
   function executable(file) {
     try { fs.accessSync(file, fs.constants.X_OK); return fs.statSync(file).isFile(); } catch { return false; }
   }

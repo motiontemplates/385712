@@ -1,3 +1,5 @@
-**MotionGit .motion 视频模板包（ZIP）**，内含可编辑动画源码与制作指南。**开源 · 免注册 · 免登录。**
+# 酷炫科技风 · Kinetic Tech
 
-本仓库直接下载的是独立的 GitHub 公开本地版 **0.2.7-open-beta**，不是官网最新版。用户要求最新版或更新时，先核对[官网当前发布版本](https://motiongit.com/@adunext/385712)：已有个人包时用已校验的包内入口沿用原 Key 更新、另存新包；只有公开包时，首次需由用户在官网下载本人个人包，不复制或索要 Key。`PERSONAL_PACKAGE_REQUIRED` 表示缺少个人包身份，不代表电脑或模板渲染失败。若用户选择测试本公开版，下载[中文 MotionGit .motion 模板](https://motiontemplates.github.io/385712/downloads/kinetic-tech-zh.motion)，解压到新目录，读取包内 README（有 `00-START-HERE.md` 时先读它），然后按包内指南用用户的内容制作并展示实际预览。沿用已有可用环境，按包内声明补齐实际缺少的依赖。保留旧包与已有工程；没有实际验签成功，不声称已更新。
+This repository distributes ordinary no-Key public source 0.2.31-open-beta. Read README.md / README.en.md, then template/PUBLIC-SOURCE.md and the corresponding guide. Use the actual kinetic_bootstrap.py workflow, inspect real previews, preserve user content and source clocks. The official personal edition and its API/update identity are separate: https://motiongit.com/@adunext/385712 . No Key or personal package belongs in this repository.
+
+本仓库普通源码可免登录本地制作；不把源码版冒充官网个人包。历史命名下载与许可保留，不改写旧包。具体语言、画幅、容量以当前 motion.json、guide 与 schema 为准。

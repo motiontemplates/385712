@@ -14,7 +14,7 @@ window.CURRENT_UNIT="S02";
   const X = 860;
   
   const OWN = [['own_next', RAW_TEXT("S02.text001")], ['own_end', RAW_TEXT("S02.text002")], ['own_mac', RAW_TEXT("S02.text003")], ['own_hud', RAW_TEXT("S02.text004")], ['own_db', RAW_TEXT("S02.text005")], ['own_dev', RAW_TEXT("S02.text006")]];
-  const stage = mk(D, `<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;perspective:1600px;perspective-origin:1330px 470px"><div class="rg" style="position:absolute;left:1330px;top:500px;transform-style:preserve-3d"></div></div>`, 0, 0);
+  const stage = mk(D, `<div style="position:absolute;left:0;top:0;width:${USER_INPUT.layout==='portrait'?1080:1920}px;height:${USER_INPUT.layout==='portrait'?1920:1080}px;perspective:1600px;perspective-origin:${USER_INPUT.layout==='portrait'?540:1330}px ${USER_INPUT.layout==='portrait'?750:470}px"><div class="rg" style="position:absolute;left:${USER_INPUT.layout==='portrait'?540:1330}px;top:${USER_INPUT.layout==='portrait'?750:500}px;transform-style:preserve-3d"></div></div>`, 0, 0);
   const RG = stage.querySelector('.rg');
   const tiles = OWN.map(([dir, name], i) => {
     const d = document.createElement('div');

@@ -88,7 +88,7 @@ window.CURRENT_UNIT="S12";
     place(tl, { o: clamp(tlIn * 3) * (1 - suck), y: lerp(560 + (1 - EZ.out(tlIn)) * 80, 580, side) + jy, x: lerp(lerp(860, 1040, side), 1500, suck) + jx, s: lerp(1, .45, side) * (1 - suck * .8), r: madK * (hash(Math.floor(t * 20)) - .5) * 3 });
     const steps = Math.floor(Math.max(0, t - tFrame) * 6.5);
     tl._ph.style.left = (110 + Math.min(steps * 3, tl._w - 130)) + 'px';
-    setTxt(tl._fc, RAW_TEXT("S12.text020") + String(Math.floor(Math.max(0, t - tFrame) * 600) % 100000).padStart(5, '0'));
+    setTxt(tl._fc, RAW_TEXT("S12.text020") + String(Math.floor(Math.max(0, USER_OUTPUT_TIME) * 60) % 100000).padStart(5, '0'));
     tl._cl.forEach((c, i) => {
       const k = madK * hash(i * 1.7);
       c.style.transform = k > .02 ? `translate(${((hash(i * 3.1) - .5) * 260 * k).toFixed(1)}px,${((hash(i * 5.3) - .5) * 160 * k).toFixed(1)}px) rotate(${((hash(i) - .5) * 60 * k).toFixed(1)}deg)` : '';
@@ -196,7 +196,7 @@ window.CURRENT_UNIT="S13";
     
     const gIn = pr(t, tDare - .2, tDare + .2), gOut = pr(t, tLike - .3, tLike);
     place(gauge, { o: clamp(gIn * 3) * (1 - gOut), y: 560 + (1 - EZ.out(gIn)) * 40 });
-    const v = .5 * EZ.spring(pr(t, tHalf - .05, tHalf + .9));
+    const v = parseFloat(RAW_TEXT("S13.text010"))/100 * EZ.spring(pr(t, tHalf - .05, tHalf + .9));
     ga.style.strokeDashoffset = (1037 * (1 - v)).toFixed(1);
     nd.setAttribute('transform', `rotate(${(-90 + v * 180).toFixed(2)})`);
     setTxt(hv, Math.round(v * 100) + '%');
@@ -210,7 +210,7 @@ window.CURRENT_UNIT="S13";
       const a = tDrop + i * .12, x = pr(t, a, a + .5), y = EZ.in(x);
       place(f, { x: 360 + i * 105 - y * (i - 1.5) * 70, y: lerp(150, 650, y), o: x > 0 && x < 1 ? 1 : 0, r: (1 - y) * (i - 1.5) * 20, s: 1 - y * .4 });
     });
-    const tp = pr(t, tHr - .1, tOut + .1), mins = Math.floor(EZ.inout(tp) * 30), secs = Math.floor(EZ.inout(tp) * 1800) % 60;
+    const tp = pr(t, tHr - .1, tOut + .1), mins = Math.floor(EZ.inout(tp) * Number(RAW_TEXT("S13.timerSeconds"))/60), secs = Math.floor(EZ.inout(tp) * Number(RAW_TEXT("S13.timerSeconds"))) % 60;
     setTxt(tmr, `${String(mins).padStart(2, '0')}:${String(tp >= 1 ? 0 : secs).padStart(2, '0')}`); tmr.style.color = tp >= 1 ? GOLD : SILVER;
     const op = pr(t, tOut, tOut + .5);
     place(outV, { x: lerp(520, 1150, EZ.out(op)), y: lerp(610, 640, EZ.out(op)), s: .3 + .55 * EZ.out(op), o: clamp(op * 4) * (1 - pr(t, tExp - .35, tExp - .1)) });
@@ -318,7 +318,7 @@ window.CURRENT_UNIT="S14";
     hh.setAttribute('transform', `rotate(${(spin * 360 / 12 * 2).toFixed(1)})`); mh.setAttribute('transform', `rotate(${(spin * 360).toFixed(1)})`);
     place(coffee, { o: clamp(nIn * 3) * (1 - nOut), x: 1430, y: 560 + Math.sin(t * 2.4) * 8, s: .7 + .3 * EZ.spring(pr(t, tNight - .1, tNight + .5)), r: -6 });
     show(nights, t, tAwk - .1, { k: 'mask', d: .45, out: tForce - .3 });
-    setTxt(nc, RAW_TEXT("S14.text034") + Math.min(5, 1 + Math.floor(Math.max(0, t - tAwk) * 3.2)) + RAW_TEXT("S14.text035"));
+    setTxt(nc, RAW_TEXT("S14.text034") + Math.min(USER_INPUT.media.banner.focus.highlights.length, 1 + Math.floor(Math.max(0, t - tAwk) * 3.2)) + RAW_TEXT("S14.text035"));
     
     const wIn = pr(t, tForce - .25, tForce + .1), boom = pr(t, tBreak + .55, tBreak + 1.5);
     place(wall, { o: clamp(wIn * 3) * (1 - pr(t, tNow - .35, tNow - .1)), x: 1100, y: 540 });
@@ -354,7 +354,7 @@ window.CURRENT_UNIT="S14";
       if (t >= tBreak + .5 && t < tBreak + 1.6) sparks(c, t, tBreak + .55, 1100, 540, { n: 110, life: 1, dir: 0, spread: 6.3, speed: 1300, g: 900, col: '170,205,255', seed: 14 });
       
       const nk = pr(t, tAwk - .2, tAwk + .2) * (1 - pr(t, tForce - .3, tForce));
-      if (nk > 0) { const day = .5 + .5 * Math.sin(Math.max(0, t - tAwk) * 3.2 * Math.PI); c.fillStyle = `rgba(245,185,46,${(nk * day * .07).toFixed(3)})`; c.fillRect(0, 0, 1920, 1080); }
+      if (nk > 0) { const day = .5 + .5 * Math.sin(Math.max(0, t - tAwk) * 3.2 * Math.PI); c.fillStyle = `rgba(245,185,46,${(nk * day * .07).toFixed(3)})`; if(USER_INPUT.layout==='portrait'){c.save();c.setTransform(1,0,0,1,0,0);c.fillRect(0,0,1080,1920);c.restore();}else c.fillRect(0,0,1920,1080); }
     });
   };
   SOURCE_S("S14.sound000",T0, 'whoosh', .5); SOURCE_S("S14.sound001",tNat - .4, 'swoosh', .45); TOOLS.forEach((_, i) => SOURCE_S("S14.sound002",tFor - .3 + i * .2, 'tick', .4, -.4 + i * .2)); SOURCE_S("S14.sound003",tFor + 1.0, 'card', .45); SOURCE_S("S14.sound004",tFor + 1.25, 'err', .55);

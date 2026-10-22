@@ -10,13 +10,14 @@
     "en"
   ],
   "testedLayouts": [
-    "landscape"
+    "landscape",
+    "portrait-zh; see external same-version evidence"
   ],
-  "portrait": "pending individual layout adaptation",
+  "portrait": "Chinese 1080×1920 author-review candidate; all27 units selectable",
   "ownerAcceptedBaseline": "Chinese landscape 0.1.0 only",
-  "publication": "manual GitHub source promotion release",
+  "publication": "unpublished derivative; old public0.2.7 untouched",
   "encryption": false,
-  "validationScope": "Complete native-library regression with schematic inputs, two different new-content expressions and independent user parameters. Full source visual comparison, maximum native capacity and owner look/listen remain pending.",
+  "validationScope": "Portrait normal-entry tour, independent real narration and capacity checks are recorded outside the package. Full original-source visual coverage and maximum native-slot capacity remain pending.",
   "english": "localized author edition; demo approval is separate from package runtime verification",
   "sourceWaveformComparison": "Scene-SFX correlation0.9996916 after removing global gain; no byte-equivalence or master-mix equivalence claim",
   "apiEnabled": false

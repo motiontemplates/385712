@@ -1,20 +1,38 @@
 {
+  "currentPlatformValidation": {
+    "profile": "motiongit.public-windows-static-face-validation/1",
+    "sourceVersion": "0.2.31-open-beta",
+    "upstreamAuthorArchiveSha256": "740fde784be1a51bfcb2c6ff8ec583d9d57dfa7ec80c25676c7eb4044e499f2f",
+    "platform": "Windows 11",
+    "scope": "Coarse fixed face centering through normal setup, doctor, plan, prepare, preview, render and full movie decode",
+    "pathScope": "Chinese and space-containing folders",
+    "samplePolicy": "One image or at most five video samples for one fixed anchor; no real-time tracking",
+    "testPermissions": "Administrator/elevated test context; this is not a stated runtime permission requirement",
+    "notCovered": [
+      "Complete original native scene library",
+      "Ordinary-permission execution",
+      "A real Chinese Windows username"
+    ],
+    "acceptanceSha256": "54e9f9d8606b6d60337431c528bcbce6c48b1f8434bb21cdeefeb192302e1b5a",
+    "sourceReportSha256": "99d5f669e8f54ba902719b7638aae37a2d1f5b677ba66975c13eb2800c4fb139",
+    "guide": "PUBLIC-SOURCE.md#platform-validation"
+  },
   "guideVersion": "0.1",
   "defaultMode": "user-media",
-  "firstResponse": "Kinetic Tech uses metal typography, light and mechanical motion to explain your story. What would you like to say? Send your topic, script or existing material; I will arrange the scenes and show you a plan and preview.",
+  "firstResponse": "这是「酷炫科技风」模板，适合用金属字、光效和机械动效讲清一个主题。你想讲什么？把已有文案或素材发我就行，我来安排镜头，先给你看方案和预览。",
   "fit": {
     "genres": [
       "talking-head",
       "tutorial",
       "showcase"
     ],
-    "summary": "Rhythmic metal typography and spatial motion for technical explanations",
+    "summary": "用强节奏金属字、焊花、机械翻牌与空间卡片讲清观点和关系",
     "goodFor": [
-      "Technical viewpoints, workflows, comparisons and demonstrations"
+      "技术观点、工作过程、方法比较、案例展示"
     ],
     "notFor": [
-      "Presenting illustrative values as evidence",
-      "Filling missing media with the original presenter or work"
+      "把示意数据当成真实证据",
+      "缺少素材时自动使用原人物或原作品"
     ],
     "placement": "whole"
   },
@@ -25,221 +43,233 @@
     "default": 8,
     "param": "duration",
     "rules": [
-      "Native durations are fixed by round(end*60)-round(start*60), then divided by60. The requested duration must match the complete scene plan.",
-      "B1/B2/B3/B4 last8/10/10/8 seconds. Each supports0–12 extra seconds only in its declared quiet reading interval. Presenter, captions and audio continue on output time.",
-      "B1+B2 is18 seconds. B3 at12 seconds followed by B4 at8 seconds is20 seconds. Replan or split text when narration does not fit; keep negation, conditions and quantities."
+      "先读取完整口播、原文和实际字幕时间，以完整人声及字幕的结束时刻确定全片时长；样片长度和单镜头容量都不是整片上限。",
+      "先按完整内容列出语义段落，再依据实际句子/短语边界安排多个镜头。一个主题可以跨多个镜头；一个语义段也可拆成多个相容镜头。",
+      "优先使用本模板同风格的原生组、已实现的基础表达及合法相邻组合；必要时重复组的独立实例并绑定各自内容。不要默认跨风格拼接或退化成静态底图。",
+      "单组放不下时，依次重新分段、增加或更换同风格镜头、在声明的安静阅读区合法停留，再重新绑定cue。动作仍按原速，真人、人声和字幕连续使用输出时钟。",
+      "cue越界、动作保护窗冲突或当前候选未匹配，只说明当前镜头方案失败；检查多个完整分段方案后重试，不能据此断言整片只能15–19秒或要求用户剪短。",
+      "素材名冲突、rc版本报错及依赖错误属于工具问题，保留准确日志并排查，不能当作文案太长或模板时长上限。",
+      "所有分段与候选方案覆盖同一条完整口播；不删句、不丢限定词、不通过改小narrationDuration掩盖缺口。导出前检查首句、末句、总帧数、字幕与人声完整覆盖。",
+      "只有用户明确要求精简或平台存在已确认的硬性时长限制时，才提出剪辑建议并让用户核对改稿；当前风格能力确实不足时列出具体缺口，不夸称一定能原样适配任意内容。",
+      "动作窗决定实际时长，而不是任意输入一个秒数。catalog 中以 round(end*60)-round(start*60) 得到每组帧数，拼接后以总帧数/60 为准",
+      "原生组不变速。B1、B2、B3、B4 的基础时长分别为8、10、10、8秒，各可在安静阅读窗延长0–30秒并按真实语句切换焦点；人物、字幕与声音仍使用输出时钟",
+      "例如仅选 B1+B2 时为18秒；B3选12秒再接B4的8秒时为20秒。需更长朗读时间时先增加合法阅读停留、拆句或换组，不能删限定词凑时长"
     ]
   },
   "materials": [
     {
       "role": "text.script",
       "required": false,
-      "ask": "What would you like to say? Send your script or existing material.",
+      "ask": "你想讲什么？把已有文案或素材发我就行。",
       "maps": [
         "content",
         "scenes"
       ],
-      "use": "If a topic is already supplied, draft a short faithful script for review without repeating the question.",
-      "ifMissing": "With no topic, ask only for this."
+      "use": "主题已有则直接拟简短文案供核对，不重复提问。",
+      "ifMissing": "没有主题时只问这一项。"
     },
     {
       "role": "video.presenter",
       "required": false,
-      "ask": "Reuse supplied presenter material.",
+      "ask": "沿用已提供的人物素材。",
       "maps": [
         "media"
       ],
-      "use": "Bind real dimensions and face geometry; text-only content uses B1–B4.",
-      "ifMissing": "Do not ask unless a presenter was requested and its material is missing."
+      "use": "有素材则绑定实际尺寸和人脸位置；纯文案走B1–B4。",
+      "ifMissing": "未要求人物时不询问；明确要求时才问缺少的人物素材。"
     },
     {
       "role": "text.subtitles",
       "required": false,
-      "ask": "Reuse existing captions or measured speech times.",
+      "ask": "沿用已有字幕或实测语音时间。",
       "maps": [
         "captions"
       ],
-      "use": "Follow real narration. Text motion without narration does not require a subtitle file.",
-      "ifMissing": "Never invent word timing; do not ask for unrequested subtitles."
+      "use": "字幕跟随真实人声；没有人声的文字动效不额外要求字幕文件。",
+      "ifMissing": "不用编造单词时间；未要求字幕时不追问。"
     },
     {
       "role": "video.screen",
       "required": false,
-      "ask": "Use the supplied recording or work samples.",
+      "ask": "使用用户已有的录屏或作品。",
       "maps": [
         "media"
       ],
-      "use": "Read counts, aspect and duration only for selected scenes.",
-      "ifMissing": "Ask only when a selected media scene genuinely lacks its input."
+      "use": "只为已选中的镜头读取其数量、比例和时长要求。",
+      "ifMissing": "未选媒体镜头则不询问；选中且缺素材时只问这份素材。"
     },
     {
       "role": "audio.voiceover",
       "required": false,
-      "ask": "Reuse supplied or explicitly requested narration.",
+      "ask": "沿用已提供或明确要求的旁白。",
       "maps": [
         "media"
       ],
-      "use": "Use its real duration at original speed.",
-      "ifMissing": "Proceed when narration was not requested. If requested but missing, ask only for the recording without a capability explanation."
+      "use": "已有音频则按真实时长使用，不变速。",
+      "ifMissing": "未要求旁白时直接推进；明确要求且缺文件时，只问需要的录音，不展开能力说明。"
     },
     {
       "role": "audio.music",
       "required": false,
-      "ask": "Reuse supplied or explicitly specified background music.",
+      "ask": "沿用已提供或明确指定的背景音乐。",
       "maps": [
         "media"
       ],
-      "use": "Bind the actual track and known provenance; preserve native action sounds.",
-      "ifMissing": "Proceed when music was not requested. If requested but missing, ask only for that audio, not a mandatory music/no-music choice."
+      "use": "绑定实际曲目和已知来源信息，保持原生动作音效。",
+      "ifMissing": "未要求配乐时直接推进；明确要求且缺文件时，只问这份音频，不生成“有配乐/无配乐”的必答题。"
     }
   ],
   "copy": [
     {
       "param": "mode",
-      "label": "mode",
+      "label": "制作模式",
       "from": [
         "conversation"
       ],
-      "rule": "Always user-media; no author preset."
+      "rule": "始终使用本期用户材料"
     },
     {
       "param": "language",
-      "label": "language",
+      "label": "语言",
       "from": [
         "conversation"
       ],
-      "rule": "This English edition uses en. UI text, speech and captions are localized independently."
+      "rule": "中文或英语，画面、声音和字幕分别本地化"
     },
     {
       "param": "layout",
-      "label": "layout",
+      "label": "画幅",
       "from": [
         "conversation"
       ],
-      "rule": "Landscape only. Evidence for this candidate is in the adjacent review record; portrait remains pending."
+      "rule": "Chinese and English: landscape1920×1080 at60fps. Portrait1080×1920 supports the declared B1–B4 basic-expression groups in both languages; English native source groups remain landscape only. Portrait film/chapter titles fit18 characters and presenter labels10, with actual measured line layout."
     },
     {
       "param": "title",
-      "label": "title",
+      "label": "项目标题",
       "from": [
         "conversation"
       ],
-      "rule": "The current user topic."
+      "rule": "来自本期用户内容，不沿用原主题；竖屏项目和章节标题各最多18字符，全文放字幕"
     },
     {
       "param": "presenterLabel",
-      "label": "presenterLabel",
+      "label": "人物标识",
       "from": [
         "conversation"
       ],
-      "rule": "The user presenter label, empty when no presenter."
+      "rule": "使用用户称呼；明确不出镜时可空；竖屏最多10字符"
     },
     {
       "param": "scenes",
-      "label": "scenes",
+      "label": "镜头组",
       "from": [
         "conversation"
       ],
-      "rule": "The assistant selects scenes from content, not from keyword similarity alone."
+      "rule": "先按内容选组，再由助手依据 catalog 和 schema 填输入，不让用户填写参数表"
     },
     {
       "param": "content",
-      "label": "content",
+      "label": "上屏内容",
       "from": [
         "conversation"
       ],
-      "rule": "Read catalog and slot context/source; bind all required visible text explicitly."
+      "rule": "按 core/content.schema.json 的槽和容量填写，保持用户原意"
     },
     {
       "param": "soundEffects",
-      "label": "soundEffects",
+      "label": "动作声音",
       "from": [
         "conversation"
       ],
-      "rule": "Native scene sounds or explicit none, independent of narration and music."
+      "rule": "native 保留对应原生音效，none 明确关闭；旁白、音乐分别选择"
     },
     {
       "param": "captions",
-      "label": "captions",
+      "label": "字幕",
       "from": [
         "conversation"
       ],
-      "rule": "Only displayed terminal commas and periods are removed; retain source units and intervals."
+      "rule": "仅清除显示末尾逗号或句号，内部标点和实际词区间保留"
     },
     {
       "param": "basic",
-      "label": "basic",
+      "label": "灵活表达",
       "from": [
+        "text.script",
         "conversation"
       ],
-      "rule": "B1 keyword/explanation, B2 one to five neutral points, B3 two perspectives/conclusion, B4 summary/action. One or two explicit lines; no automatic paraphrase."
-    }
-  ],
-  "routes": [
-    {
-      "materials": "Topic/script without requested presenter media",
-      "groups": [
-        "B1",
-        "B2",
-        "B3",
-        "B4"
-      ],
-      "input": "Select the actual text expressions from meaning; do not use a demo preset as user content."
-    },
-    {
-      "materials": "Supplied presenter, recording, image or work samples",
-      "groups": "23 native units plus B1–B4",
-      "input": "Read only selected scene ports. Do not request 62 gallery entries unless that wall scene is selected."
+      "rule": "B1 关键词与解释、B2 一至五项中性要点、B3 两个角度与结论、B4 总结与行动。保留原意，段落使用显式一至两行；仅在已声明的安静阅读窗延长，原生动作原速。"
     }
   ],
   "conversation": [
-    "Briefly introduce the style and acknowledge the current content. With only a screenshot/link and no topic, ask one question: what would you like to say? Send a script or existing material. Reuse information already supplied.",
-    "Use the screenshot to identify and open the repository; read README and ASSISTANT before choosing production tools. This task uses the actual template, not a lookalike generated from the screenshot or a rebuilt demo. If the host disallows execution, give a truthful local handoff, never claim template execution or bypass host safeguards.",
-    "Give the first creative response before waiting for downloads, dependency installation or a full source scan. Check the environment while the user prepares content; install only missing declared dependencies.",
-    "Choose scenes from actual inputs: text/topic uses B1–B4 first; inspect matching native units only when presenter, recording or work samples are supplied. Users do not choose technical workflows, scene IDs or JSON fields.",
-    "Ask only for a genuine current gap, usually one question at a time. Do not launch a presenter/voice/music questionnaire. Unrequested optional material does not block creation.",
-    "When presenter, voice and music are neither supplied nor requested, proceed with text motion and native action sounds. State the actual sound arrangement in the brief. Never silently omit something explicitly requested.",
-    "Understand meaning before choosing the original motion. Preserve negations, conditions, numbers and conclusions. Read only selected scene fields, check text width/line breaks and never reuse original author content.",
-    "Show a plan and real preview, then render the complete video under the existing stage authorization. Save revisions separately. A preview, environment example or passing plan is not a completed film.",
-    "During onboarding, material collection, preview and revision, do not introduce platform services or turn unused extras into limitation messages or choices. Only after a completed video is presented may you use the single message in delivery.json."
+    "先用一句话说明风格并承接用户内容。仅有截图或链接、没有主题时只问“你想讲什么？把已有文案或素材发我就行”。已有信息直接沿用，不重复询问。",
+    "截图先用于识别并打开仓库，读取 README 与 ASSISTANT，再选择制作入口；这是使用实际模板的任务，不能改成照截图生成相似视频或重建 Demo。宿主不允许执行时如实交付本地转交步骤，不声称已使用模板，不绕过宿主安全策略。",
+    "不要等下载、依赖检查或扫描全部源码结束后才给用户第一次创作回复。用户准备内容时可检查环境；只安装确实缺少的声明依赖。",
+    "依据实际输入选择场景：只有文案/主题时优先 B1–B4；用户有真人视频、录屏或作品时才读取相应原生单元。不要让用户选择工作流、场景 ID 或填写 JSON。",
+    "每次只问当前制作真正缺少的一项，通常一个问题即可；不提前弹出人物、配音、配乐四项问卷。用户没要求、也没提供的可选素材不形成阻塞。",
+    "未提供也未要求人物、人声或背景音乐时，用文字动效和模板原生动作音效推进；在简短方案中说明实际声音安排。明确要求的内容不能静默省略。",
+    "先理解文案与语义，再安排模板原有动作。保留否定、条件、数字与结论；只读取选中场景的字段，按实际文字测宽和分行，不借用原作者内容。",
+    "先方案和真实预览，再完整导出；沿用用户已有阶段授权，修改另存。预览、环境示例或计划通过不等于成片完成。",
+    "开始、素材收集、预览和修改阶段不介绍平台服务，不把未使用的配套能力列成限制或选择题。成片完成并呈现给用户后，才使用 delivery.json 中的一句后续介绍。"
+  ],
+  "hostWithoutTools": [
+    "交付本期镜头方案、上屏文字、素材清单、真实或暂未测得的时间证据，以及符合 params.schema.json 的 user.json",
+    "由具备 Node、Python/uv、Chrome、FFmpeg 的宿主运行包内入口；不要求安装额外制作 skill"
   ],
   "entry": {
-    "setup": "In a temporary runner copy, use npm ci for the locked Node dependency. uv reads declared Python3.11+ dependencies; these Python versions are not pinned. Use existing Chrome and FFmpeg. No additional production skill is required.",
-    "plan": "uv run adapter.py plan --input /absolute/user.json --out /absolute/new-plan.json",
-    "prepare": "uv run adapter.py prepare --input /absolute/user.json --out /absolute/new-instance",
-    "preview": "uv run adapter.py preview --instance /absolute/new-instance --out /absolute/new-preview.png --time 1",
-    "render": "uv run adapter.py render --instance /absolute/new-instance --out /absolute/new-silent.mp4",
-    "renderResult": "Final sound result is <new-silent>-with-audio.mp4 next to the silent video."
+    "doctor": "python3 -B kinetic_bootstrap.py doctor",
+    "setup": "python3 -B kinetic_bootstrap.py setup",
+    "capabilities": "python3 -B kinetic_bootstrap.py capabilities",
+    "check-params": "python3 -B kinetic_bootstrap.py check-params --input <absolute-user.json>",
+    "plan": "python3 -B kinetic_bootstrap.py plan --input <absolute-user.json> --out <work>/plan.json",
+    "prepare": "python3 -B kinetic_bootstrap.py prepare --input <absolute-user.json> --out <work>/project",
+    "preview": "python3 -B kinetic_bootstrap.py preview --instance <work>/project --time 2 --out <work>/preview.png",
+    "render": "python3 -B kinetic_bootstrap.py render --instance <work>/project --out <work>/silent.mp4",
+    "renderResult": "silent-with-audio.mp4 contains sound; preserve prior outputs and choose fresh paths",
+    "readSchema": "params.schema.json (read directly from the extracted package root)",
+    "checkTimingEvidence": "python3 -B kinetic_bootstrap.py check-params --input <instance>/inputs/user.json",
+    "compose": "python3 -B kinetic_bootstrap.py compose --input <absolute-user.json> --out <work>/composed.json"
   },
-  "brand": {
-    "mark": "A subtle circular MotionGit signature with fade-in/out and light/dark selection.",
-    "default": "One5.5-second window in short videos; approximately every30 seconds in longer videos. Adjust windows using markWindows.",
-    "limits": "No mark-disable, user-logo replacement, or hidden-timecode parameter is currently implemented."
-  },
-  "mediaCounts": {
-    "wall": {
-      "count": 62,
-      "use": "Explicit carriers; user-chosen reuse is allowed, without claiming62 distinct works."
-    },
-    "feedback": {
-      "count": 10,
-      "use": "Explicit feedback media; no original comments."
-    },
-    "other": "See catalog.mediaPorts for fps and frame counts. Video cycling needs explicit permission. Use media-free groups when appropriate."
-  },
-  "hostWithoutTools": [
-    "Deliver the scene plan, faithful text, material requirements and valid user.json.",
-    "A host with Node, Python/uv, Chrome and FFmpeg runs the included entry."
-  ],
   "motiongit": {
-    "apiEnabled": false,
     "credentialsIncluded": false,
     "repository": "https://github.com/motiontemplates/385712",
     "delivery": "delivery.json",
     "customerNoticeStage": "after-completed-video-only"
   },
   "productionStatus": "incomplete-extraction",
-  "languageNote": "Use the edition language declared by motion.json and the schema. Landscape is supported; technical verification scope is recorded in motion.lock.json.",
+  "routes": [
+    {
+      "materials": "主题、文案，没有指定人物素材",
+      "groups": [
+        "B1",
+        "B2",
+        "B3",
+        "B4"
+      ],
+      "input": "助手按语义选择真实文字表达组，不用演示预设填充本期内容。"
+    },
+    {
+      "materials": "已提供人物、录屏、图片或作品素材",
+      "groups": "23 native units plus B1–B4",
+      "input": "只读取选中场景的真实素材口；没有选作品墙时不要求62份素材。"
+    }
+  ],
+  "brand": {
+    "mark": "时间角标与圆形动态装饰标志 / Time corner and circular animated decoration",
+    "timing": "Use markWindows for placement and current scene tone for asset selection; preserve reviewed design parameters in this repair."
+  },
+  "mediaCounts": {
+    "wall": {
+      "count": 62,
+      "use": "每个载体显式绑定，允许用户明确复用自己的素材；不是62个独立作品的事实声明"
+    },
+    "feedback": {
+      "count": 10,
+      "use": "每个评价载体显式绑定，不使用旧评论"
+    },
+    "other": "catalog.mediaPorts 逐项列出fps/帧数，视频循环需明确 cycle=explicit-allow；不需要这些素材时选无媒体表达组"
+  },
   "onboarding": {
     "profile": "motiongit.creation-onboarding/1",
     "entry": "CREATION.md",
@@ -252,5 +282,353 @@
     "screenshotRole": "template-identification",
     "unsupportedHostAction": "local-handoff",
     "completionNotice": "delivery.json"
+  },
+  "languageNote": "Chinese retains its declared landscape and portrait groups. English landscape retains its declared native and basic groups; English portrait supports the declared B1–B4 basic groups only.",
+  "portraitCandidate": {
+    "size": [
+      1080,
+      1920
+    ],
+    "language": "zh",
+    "status": "owner-approved-public-beta",
+    "source": "0.2.7-open-beta",
+    "nativeUnits": 23,
+    "basicExpressions": 4,
+    "coverageComplete": false,
+    "face": "local approximate center; original aspect ratio retained",
+    "capacity": {
+      "chapterTitle": 18,
+      "projectTitle": 18,
+      "presenterLabel": 10,
+      "captions": "50px,920px width,1–2 explicit measured lines; transparent stroke; no fabricated word times"
+    },
+    "layout": "Separate foreground,background,presenter,captions; native choreography/clock preserved; media walls/grids,recording clips and graphs reflow individually",
+    "notClaimed": [
+      "full original-source coverage",
+      "Windows execution"
+    ],
+    "englishBasicGroups": [
+      "B1",
+      "B2",
+      "B3",
+      "B4"
+    ],
+    "englishNativeGroups": "landscape only",
+    "historicalSourceNotice": "This block records the source version named here, including its original notClaimed evidence. Current 0.2.31 Windows fixed-centering acceptance is currentPlatformValidation/PUBLIC-SOURCE.md, not a prohibition on Windows use."
+  },
+  "presenterFraming": {
+    "default": "One image or at most five uniformly sampled video frames; largest-face median, local only; preserve original aspect ratio",
+    "manual": "media.presenter.face:{cx,cy,h}; original-frame normalized coordinates; existing tracking takes priority",
+    "fallback": "undetected is reported; center cover without additional zoom; manually hint a rough face center if needed",
+    "carriers": "Same geometry for horizontal,vertical and circular carriers; continuous rectangular/circular morph; no identity recognition or mandatory cloud service",
+    "platformCompatibility": {
+      "profile": "motiongit.static-face-portability/1",
+      "scope": "Same local OpenCV/FFmpeg path on Windows, macOS and Linux; actual OS validation is recorded outside the archive.",
+      "detectorLoad": "Python UTF-8 read plus OpenCV memory storage; no C++ filename load from a Unicode installation path.",
+      "samples": "One image or at most five video samples; keep successful samples after an individual frame failure and use one fixed median face.",
+      "manual": "Existing explicit face or valid tracking still takes priority.",
+      "fallback": "Report undetected and a specific dependency/tool/detector/sample error; centered cover without extra zoom.",
+      "geometry": "Presenter carrier positions, rectangular/circular morph, captions and source clocks unchanged; no real-time tracking."
+    }
+  },
+  "wholeNarrationPolicy": {
+    "contract": "duration-policy.json",
+    "readBeforePlanning": "DURATION.md",
+    "preserveEntireNarration": true,
+    "singleSceneLimitIsFilmLimit": false,
+    "defaultOnSceneConflict": "recompose-within-template-style",
+    "shorteningRequiresExplicitUserRequest": true,
+    "rules": [
+      "先读取完整口播、原文和实际字幕时间，以完整人声及字幕的结束时刻确定全片时长；样片长度和单镜头容量都不是整片上限。",
+      "先按完整内容列出语义段落，再依据实际句子/短语边界安排多个镜头。一个主题可以跨多个镜头；一个语义段也可拆成多个相容镜头。",
+      "优先使用本模板同风格的原生组、已实现的基础表达及合法相邻组合；必要时重复组的独立实例并绑定各自内容。不要默认跨风格拼接或退化成静态底图。",
+      "单组放不下时，依次重新分段、增加或更换同风格镜头、在声明的安静阅读区合法停留，再重新绑定cue。动作仍按原速，真人、人声和字幕连续使用输出时钟。",
+      "cue越界、动作保护窗冲突或当前候选未匹配，只说明当前镜头方案失败；检查多个完整分段方案后重试，不能据此断言整片只能15–19秒或要求用户剪短。",
+      "素材名冲突、rc版本报错及依赖错误属于工具问题，保留准确日志并排查，不能当作文案太长或模板时长上限。",
+      "所有分段与候选方案覆盖同一条完整口播；不删句、不丢限定词、不通过改小narrationDuration掩盖缺口。导出前检查首句、末句、总帧数、字幕与人声完整覆盖。",
+      "只有用户明确要求精简或平台存在已确认的硬性时长限制时，才提出剪辑建议并让用户核对改稿；当前风格能力确实不足时列出具体缺口，不夸称一定能原样适配任意内容。"
+    ]
+  },
+  "portableMediaPaths": {
+    "guide": "PORTABLE-PATHS.md",
+    "serialization": "POSIX relative URL paths; legacy backslashes normalized",
+    "windowsScope": "0.2.31 Windows 11 coarse fixed-centering normal workflow tested in Chinese/spaces folders; full native scene library, ordinary permissions and a real Chinese Windows username are outside acceptance. See PUBLIC-SOURCE.md#platform-validation.",
+    "publication": "candidate not uploaded",
+    "historicalWindowsScope": "Path semantics regression; native Windows execution not tested",
+    "historicalSourceNotice": "Earlier candidate publication/path-semantics statements below are source-stage provenance, not current Windows support restrictions."
+  },
+  "audioIntegrity": {
+    "contract": "audio-contract.json",
+    "instructions": "AUDIO.md",
+    "beforeExport": "Verify original narration, final encoded mix and actual listening; do not infer human speech from SFX or stream duration"
+  },
+  "narrationAlignment": {
+    "instructions": "NARRATION-MAP.md",
+    "meaningAcceptance": "Listen and inspect actual encoded frames; ASR and structural timing are not semantic acceptance"
+  },
+  "version": "0.2.31-open-beta",
+  "environment": {
+    "readFirst": "STARTUP.md",
+    "dependencies": "dependencies/runtime-dependencies.json",
+    "python": "Host standard library for bootstrap; isolated locked Python3.13 for production",
+    "cache": "Default platform MotionGit dependency cache; optional --cache root before operation",
+    "noCoreInterception": true,
+    "setupIsReal": "Inspect doctor/setup reports; missing dependency is an environment issue, not a narration sync failure"
+  },
+  "mediaBindings": {
+    "guide": "MEDIA.md",
+    "schema": "params.schema.json#/properties/media",
+    "global": [
+      "presenter",
+      "voice",
+      "music"
+    ],
+    "officialPreparedMusic": {
+      "mode": "file",
+      "fileFrom": "prepared.output",
+      "licenseFrom": "prepared.license"
+    },
+    "receipts": "Keep actual recommendation.json, download.json, prepared-music.json; failure.json is unusable",
+    "conditionalScenePorts": "core/catalog.json.mediaPorts remain unchanged",
+    "unsupportedMusicControls": [
+      "offset",
+      "start",
+      "gain",
+      "volume",
+      "loop",
+      "generate"
+    ]
+  },
+  "basicTextCapacity": {
+    "guide": "BASIC.md",
+    "schema": "params.schema.json",
+    "inheritance": "scene.basic overrides basic; each occurrence validates its effective fields",
+    "limits": "Read language-specific total lengths, at most2 explicit lines; points per-line zh18/en44",
+    "preserveNarration": "These are visible field capacities; preserve the complete script and recompose shots"
+  },
+  "b2PointRoles": {
+    "guide": "BASIC.md",
+    "param": "basic.pointRoles / scenes[i].basic.pointRoles",
+    "values": [
+      "point",
+      "action"
+    ],
+    "default": "all point; legacy appearance retained",
+    "length": "Exactly equal to effective points length after inheritance",
+    "numbering": "Count point rows only; action badge 行动/ACTION, never a numeric ordinal",
+    "timingTargets": "points.i uses actual row index including actions; not the printed number",
+    "preserve": "Native scene duration, motion, original audio, per-row SFX and complete narration"
+  },
+  "publicInputDiscovery": {
+    "inputSchema": "Root-level public path string: params.schema.json",
+    "inputSchemaContent": "Complete JSON Schema object returned by capabilities; build inputs from this object",
+    "inputSchemaSha256": "SHA-256 of the actual schema file, also returned by capabilities",
+    "publicPaths": [
+      "params.schema.json",
+      "BASIC.md",
+      "CREATION.md",
+      "guide.json",
+      "guide.en.json",
+      "MEDIA.md",
+      "AUDIO.md",
+      "NARRATION-MAP.md"
+    ],
+    "readSchema": "params.schema.json (read directly from the extracted package root)",
+    "readBasic": "BASIC.md (read directly from the extracted package root)",
+    "pathRule": "All listed paths are root-level public documents; never prepend core/ or extract protected runtime source",
+    "next": "Use capabilities.inputSchemaContent or normal public read, then construct and validate actual inputs; do not guess missing structure"
+  },
+  "b3VisibleFocus": {
+    "guide": "BASIC.md",
+    "targets": [
+      "left",
+      "right"
+    ],
+    "effect": "Active panel outline/glow preserves metal text and native shadow; inactive restores",
+    "verification": "Inspect actual pixels, not phraseFocus metadata alone",
+    "inputSchemaOrTimingChanged": false
+  },
+  "narrationTimingEvidence": {
+    "instructions": "NARRATION-MAP.md",
+    "sentenceFallback": "Complete original cue text and interval only. A cue containing both comparison sides uses an overall heading/card; no guessed internal side switch.",
+    "wordTiming": "Actual file/hash, bound source identity, method, tool, clock/offset and contiguous wordIndices are checked; the unmodified result is retained in the prepared project.",
+    "evidenceParameter": "narrationTimingEvidence",
+    "clock": "output = raw word seconds + offsetSeconds; no speed change",
+    "acceptance": "File/hash/reference consistency is traceability only; actual measurement authenticity, ASR accuracy and encoded-film meaning/listening remain separate"
+  },
+  "portraitSignature": {
+    "guide": "PORTRAIT-SIGNATURE.md",
+    "rightInsetAt1080": 96,
+    "topInsetAt1080": 88,
+    "diameterAt1080": 56,
+    "englishGroups": [
+      "B1",
+      "B2",
+      "B3",
+      "B4"
+    ],
+    "language": "zh"
+  },
+  "captionTimingEvidence": {
+    "instructions": "NARRATION-MAP.md",
+    "evidenceParameter": "captionTimingEvidence",
+    "draft": "Automatic/draft SRT is unverified; source labels do not prove alignment. Obtain actual local ASR/alignment or listen-check every complete sentence against the bound original voice.",
+    "checkedSrt": "An actually reviewed whole-sentence SRT can be bound directly; no mandatory ASR service, word timing or new approval.",
+    "coverage": "Original per-channel activity flags substantial uncovered signal; silence is allowed. Ordinary recorded music/environment can be reviewed using actual full-source listening or local acoustic-analysis findings and original records, bound to source and captions; labels/ASR gaps cannot waive alarms. No actual capability means still needs review. Read NARRATION-MAP.md. No audio changes or retiming.",
+    "meaning": "Keep negation, conditions and both comparison sides; inspect/listen to the actual encoded film. Hashes and self-declared tool/review provenance are not semantic acceptance."
+  },
+  "narrationVisualDevelopment": {
+    "guide": "NARRATION-VISUAL.md",
+    "newProductions": "Use narrationVisualMode=follow-speech for B1–B4 with measured sentence bindings. Every complete sentence needs a real visual target; use meaningful continuing states instead of automatic cuts.",
+    "existingProjects": "Omitted/original preserves approved choreography. Never change an old project silently.",
+    "timing": "Sentence captions permit complete-sentence presentation. Genuine word alignment permits precise accents; never estimate word times from character count.",
+    "coverage": "Read narrationAlignment.visualCoverage; warnings are advisory and never replace semantic/frame review.",
+    "scope": "Current optional narration enhancement; preserve existing projects, native audio/action clocks and current signed delivery identity."
+  },
+  "narrationLayoutDevelopment": {
+    "newProduction": "Use narrationLayout=balanced for new portrait B1/B2/B4 productions without a presenter. It cancels the landscape-only horizontal offset so cards and text remain within the portrait frame. B3, supplied presenters, other native groups, signatures, captions and sound/source clocks stay on their existing paths. The assistant sets the option without extra user steps. Omitted/original keeps approved old project placement.",
+    "scope": "Current optional narration enhancement; preserve existing projects, native audio/action clocks and current signed delivery identity."
+  },
+  "currentNarrationRelease": {
+    "version": "0.2.31-open-beta",
+    "guide": "NARRATION-VISUAL.md",
+    "delivery": "Ordinary no-Key public source; read PUBLIC-SOURCE.md and use kinetic_bootstrap.py. Official personal downloads and signed incremental updates remain separate."
+  },
+  "consumerDemo": {
+    "policy": "Use the declared kinetic_bootstrap.py source workflow. Source examples are explicit environment tests, not user content. Do not claim a final film or source coverage from a style preview.",
+    "runtimeCheck": "python3 -B kinetic_bootstrap.py doctor",
+    "downloadHeaders": {
+      "User-Agent": "MotionGit/1.0"
+    },
+    "previewAccess": "Open the public style preview in a browser or request it with the transparent MotionGit User-Agent. A CDN 403/1010 for a default Python request does not mean the file is absent. Never send the package credential to a public media host.",
+    "exampleInputs": "A preset alone is not a self-contained demo. It may intentionally need current copy or unbundled narration/media. Verify its declared inputs; if any are absent, identify the missing demo input without running an author-directory command, changing the user content, or claiming the native template is unusable.",
+    "nativeReproduction": "Reproduce only with the declared native inputs and actual supported plan/prepare/preview commands. Do not guess demo inputs, copy an author-directory command, add an unsupported --demo flag or report a component workflow as native reproduction.",
+    "missingEvidence": "Keep the complete Color conversion diagnostic and actual FFmpeg version. A successful signature/setup does not certify rendering; an author example path that is unavailable is an instruction defect, not a protection prohibition.",
+    "stylePreviewUrl": "https://media.openaicut.com/previews/626/0.2.9-open-beta-zh-11eae4868d37.mp4"
+  },
+  "consumerDiagnostics": {
+    "stages": "Signature, dependency setup, environment doctor, input validation, planning, preview and encoded export are separate results. A failure at one stage does not prove that this computer or the whole template is unsupported.",
+    "environment": "Use kinetic_bootstrap.py doctor; setup prepares declared external isolated dependencies only when missing. Preserve actual diagnostics and retry unchanged inputs with fresh output paths. Official personal packages use their separately verified helper.",
+    "recovery": "Read the actual error before choosing a recovery. Do not substitute author commands, manually unpack protected code, replace original media, silently change audio choices, or call a component preview a native reproduction. Preserve the old package, original Key, source media and editable projects.",
+    "feedback": "If still blocked, prepare the existing sanitized feedback draft with current verified version, failing stage, full bounded error and steps. Show the draft and obtain consent before submitting conversation or file excerpts. A prepared draft is not a submitted report."
+  },
+  "narratedStory": {
+    "guide": "NARRATED-STORY.md",
+    "operation": "compose --input <current-user.json> --out <fresh-user-ready.json>",
+    "captionTrack": "unchanged; continuous across visual cuts",
+    "newProductionDefaults": [
+      "follow-speech",
+      "balanced"
+    ],
+    "oldInputs": "unchanged",
+    "media": "scenes[].visuals: actual cue index + image/video file; no presenter required"
+  },
+  "contentHeader": {
+    "profile": "motiongit.content-header/1",
+    "input": "header.shortTitle",
+    "source": "header.source",
+    "assistant": "Derive a concise title from the actual current user script; preserve an already explicit user short title. Write header.shortTitle and source {kind:assistant-summary,field:<current script field>} in the normal public inputs. Do not ask users to fill technical fields, call a paid API, use template names/brands/PREVIEW as fallback, or add network work inside a renderer.",
+    "compatibility": "Normal legacy preview remains available when old inputs contain no wording; the receipt reports needs-current-copy. The assistant completes header.shortTitle from the current script before final delivery, without a new API charge or user technical form.",
+    "fallback": "Renderer may extract a verbatim complete sentence from already bound title/caption/copy fields and records bound-excerpt plus its field path. Preserve negation, numbers and units. Without current copy report needs-current-copy; do not invent.",
+    "legacy": "Existing packages and projects are preserved. Bind the header in a new revision; closed old HUD does not disable this independently managed content title."
+  },
+  "portraitPublishing": {
+    "profile": "motiongit.caption-publish-safe/1",
+    "defaultRatios": {
+      "bottomRatio": 0.24,
+      "leftRatio": 0.08,
+      "rightRatio": 0.16
+    },
+    "officialPlatformGuarantee": false,
+    "interfacesVary": true,
+    "guide": "CAPTIONS-EXPORT.md",
+    "sourceDistinction": "Identify template captions separately from burned-in source captions. DOM success never certifies source pixels.",
+    "assistant": "Reserve subtitle, subject/title, bottom description and right button regions in the existing layout. Inspect actual media frames, preserve essential visible content using contain/appropriate windowing, and re-layout only the conflicting region. Never crop important content automatically, erase source text, shrink/move everything, invent times, or ask the user for technical forms.",
+    "review": "Actual encoded whole/word captions, short/long cues, subject/photo/video; measured rectangles plus labelled variable-interface occlusion simulation.",
+    "visibleRectangle": {
+      "profile": "motiongit.caption-visible-inset/1",
+      "supported": "Rectangular CSS inset with axis-aligned positive 2D scale/translation",
+      "unsupported": "Conservative original bounds; never exempt unknown/rotated shapes",
+      "preservation": "Original layout, complete subject/text, media, word clocks and native capacity unchanged"
+    }
+  },
+  "narrationPurposeContract": {
+    "profile": "motiongit.narration-purpose-contract/1",
+    "values": [
+      "neutral-emphasis",
+      "neutral-list",
+      "ordered-process",
+      "real-comparison",
+      "provided-evidence",
+      "decision-rejection",
+      "confirmed-completion",
+      "outreach-support",
+      "summary",
+      "user-requested-action",
+      "software-project-workflow"
+    ],
+    "restrictedScenePurposes": {
+      "S05": [
+        "software-project-workflow"
+      ],
+      "S08": [
+        "decision-rejection"
+      ],
+      "S10": [
+        "real-comparison"
+      ],
+      "S13": [
+        "software-project-workflow"
+      ],
+      "S15": [
+        "ordered-process",
+        "real-comparison",
+        "confirmed-completion"
+      ],
+      "S16": [
+        "software-project-workflow",
+        "confirmed-completion"
+      ]
+    },
+    "controlRestriction": {
+      "controls": [
+        "stamp",
+        "check",
+        "checklist"
+      ],
+      "purposes": [
+        "confirmed-completion",
+        "user-requested-action"
+      ]
+    },
+    "source": [
+      "narration_alignment.py"
+    ],
+    "read": "NARRATION-MAP.md",
+    "instruction": "Choose from actual meaning. A listed enum is not permission to use any scene. Do not retry labels until validation passes, invent timing, or remove speech. Compose compatible expressions; semantic review remains required."
+  },
+  "portraitComposition": {
+    "default": "presenter-caption/2",
+    "guide": "PORTRAIT-COMPOSITION.md",
+    "scope": "Supplied-presenter B1-B4 portrait only",
+    "renderedCenter": {
+      "x": 540,
+      "y": 1040
+    },
+    "presenterSizeCropAndShape": "unchanged",
+    "captions": "Existing short-video defaults and measured text/media checks; frame rejected for new basic portrait. Preserve actual text and cue clocks.",
+    "history": "Previous small/right mapping was already present in several historical versions; not a recent two-version regression.",
+    "legacy": "Explicit portraitComposition=legacy keeps old source mapping; old packages and projects preserved.",
+    "nativeSourceGroupsAndLandscape": "Unchanged; not certified by the basic-expression preview."
+  },
+  "publicSourceEdition": {
+    "profile": "motiongit.public-source/1",
+    "guide": "PUBLIC-SOURCE.md",
+    "upstreamAuthorArchiveSha256": "740fde784be1a51bfcb2c6ff8ec583d9d57dfa7ec80c25676c7eb4044e499f2f",
+    "upstreamReleaseId": 736,
+    "credentialsIncluded": false,
+    "apiEnabled": false,
+    "runtimeAndMediaUnchanged": true,
+    "capabilitiesReadCommands": "Use publicReadPaths to read extracted root files directly. Inherited next.readSchemaCommand / next.readBasicCommand personal-helper arrays are not supplied by this public archive."
   }
 }

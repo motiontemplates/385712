@@ -52,6 +52,7 @@ const env = (t, a, b, di = .3, dout = .3) => Math.min(EZ.out(pr(t, a, a + di)), 
 function SC(s, e, bg, label, opt = {}) {
   const sc = new Scene(s, e, bg || BG, opt); sc.id=window.CURRENT_UNIT; sc.label = USER_INPUT.titles[sc.id] || "";
   sc.top = document.createElement('div'); sc.top.className = 'layer'; sc.top.style.display = 'none'; $('top').appendChild(sc.top);
+  sc.el.dataset.unit=sc.id;sc.el.dataset.nativeLayer='content';sc.top.dataset.unit=sc.id;sc.top.dataset.nativeLayer='overlay';
   if (!opt.noGrid) stageBG(sc, opt.gridOpt || {});
   return sc;
 }
@@ -69,7 +70,7 @@ function gridAt(sc, x = 0, y = 0) { if (sc.gridEl) sc.gridEl.style.transform = `
 
 const FXB = $('fxb').getContext('2d'), FXC = $('fxc').getContext('2d'), FXT = $('fxt').getContext('2d');
 const FXQ = [];                       
-function fxDraw(fn, top = false) { FXQ.push([fn, top]); }
+function fxDraw(fn, top = false) { FXQ.push([fn, top, window.ACTIVE_NATIVE_UNIT]); }
 
 
 function sparks(ctx, t, t0, x, y, opt = {}) {
@@ -97,21 +98,25 @@ function glow(ctx, x, y, r, col = '255,226,160', a = 1) {
 }
 
 function stars(ctx, t, n, o = 1, seed = 3, col = '90,150,255') {
+  if(USER_INPUT.layout==='portrait'){ctx.save();ctx.setTransform(1,0,0,1,0,0);}
   for (let i = 0; i < n; i++) {
-    const x = hash(i * 1.31 + seed) * 1920, y = hash(i * 2.77 + seed) * 1080, tw = .5 + .5 * Math.sin(t * (1.5 + hash(i) * 3) + i);
+    const x = hash(i * 1.31 + seed) * CONFIG.width, y = hash(i * 2.77 + seed) * CONFIG.height, tw = .5 + .5 * Math.sin(t * (1.5 + hash(i) * 3) + i);
     const r = 1 + hash(i * 5.3) * 2.2;
     ctx.fillStyle = `rgba(${col},${(o * tw * (.35 + hash(i * 4.1) * .65)).toFixed(3)})`; ctx.fillRect(x, y, r, r);
   }
+  if(USER_INPUT.layout==='portrait')ctx.restore();
 }
 
 function halftone(ctx, t, cx, cy, p, k = 1, col = '210,222,236', gap = 22) {
+  const portrait=USER_INPUT.layout==='portrait';if(portrait){const m=ctx.getTransform(),x=cx*m.a+cy*m.c+m.e,y=cx*m.b+cy*m.d+m.f;cx=x;cy=y;ctx.save();ctx.setTransform(1,0,0,1,0,0);}
   const R0 = lerp(0, 760, EZ.out(p)), R1 = R0 + 900;
-  for (let y = gap / 2; y < 1080; y += gap) for (let x = gap / 2; x < 1920; x += gap) {
+  for (let y = gap / 2; y < CONFIG.height; y += gap) for (let x = gap / 2; x < CONFIG.width; x += gap) {
     const d = Math.hypot(x - cx, (y - cy) * 1.25); if (d < R0 * .55 || d > R1) continue;
     const u = clamp((d - R0 * .55) / (R0 * .5 + 1)), v = 1 - clamp((d - R0) / 900);
     const r = gap * .42 * Math.min(u, v) * k; if (r < .4) continue;
     ctx.fillStyle = `rgba(${col},${(.85 * Math.min(u, v) * k).toFixed(3)})`; ctx.beginPath(); ctx.arc(x, y, r, 0, 6.2832); ctx.fill();
   }
+  if(portrait)ctx.restore();
 }
 
 
@@ -292,12 +297,7 @@ function tkRender(t, extra = {}) {
   if (s.o <= 0 || extra.o === 0) return;
   const tt = window.USER_OUTPUT_TIME;
   setFrame(e._img, talkSrc(tt));
-  const f = faceAt(tt);
-  const cover = Math.max(Wd / 720, Hd / 1280), want = (Hd * .44) / (f.h * 1280 * cover);
-  const z = lerp(1, clamp(want, 1, 2.2), round);
-  const iw = 720 * cover * z, ih = 1280 * cover * z;
-  const ox = clamp(Wd / 2 - f.cx * iw, Wd - iw, 0), oy = clamp(lerp(.5 * clamp(Hd * .40 - f.cy * ih, Hd - ih, 0), Hd * .58 - f.cy * ih, round), Hd - ih, 0);
-  e._img.style.cssText = `position:absolute;display:block;max-width:none;left:${ox.toFixed(1)}px;top:${oy.toFixed(1)}px;width:${iw.toFixed(1)}px;height:${ih.toFixed(1)}px`;
+  window.userPresenterFrame(e._img,tt,Wd,Hd,round);
 }
 
 
@@ -336,7 +336,7 @@ function tFlash(t0, a = .9, d = .25) { TRANS.push({ k: 'flash', t: t0 + d * .5, 
 function tCircle(t0, col, cx = 960, cy = 540, pre = .34, post = .42, ring = '#7DB2FF') { TRANS.push({ k: 'circle', t: t0, pre, post, col, cx, cy, ring, d: 0 }); }
 function tGlitch(t0, d = .3) { TRANS.push({ k: 'glitch', t: t0, d }); }
 function transRender(t) {
-  const c = $('trc').getContext('2d'); c.clearRect(0, 0, 1920, 1080);
+  const c=$('trc').getContext('2d'),PW=CONFIG.width,PH=CONFIG.height;c.clearRect(0,0,PW,PH);
   let fl = 0, gl = 0;
   for (const h of TRANS) {
     if (h.k === 'circle') continue;
@@ -345,9 +345,9 @@ function transRender(t) {
     if (h.k === 'glitch') gl = Math.max(gl, Math.sin(x * Math.PI));
     if (h.k === 'blocks') {
       const G = 48; c.fillStyle = h.col;
-      for (let gy = 0; gy < 1080 / G + 1; gy++) for (let gx = 0; gx < 1920 / G + 1; gx++) {
+      for (let gy = 0; gy < PH / G + 1; gy++) for (let gx = 0; gx < PW / G + 1; gx++) {
         const cx = gx * G + G / 2, cy = gy * G + G / 2;
-        let ramp = h.dir === 0 ? cx / 1920 : h.dir === 1 ? 1 - cx / 1920 : Math.hypot(cx - 960, cy - 540) / 1100;
+        let ramp = h.dir === 0 ? cx / PW : h.dir === 1 ? 1 - cx / PW : Math.hypot(cx - PW/2, cy - PH/2) / 1100;
         ramp = ramp * .72 + hash(gx * 31 + gy * 17) * .28;
         const s = x < .5 ? clamp((x / .5) * 1.8 - ramp * .8) : 1 - clamp(((x - .5) / .5) * 1.8 - (1 - ramp) * .8);
         if (s < .02) continue; const q = G * s;
@@ -358,12 +358,13 @@ function transRender(t) {
   }
   for (const h of TRANS) {
     if (h.k !== 'circle' || t < h.t - h.pre || t > h.t + h.post) continue;
-    const R1 = t < h.t ? EZ.in(pr(t, h.t - h.pre, h.t)) * 1250 : 1300;
-    const R2 = t < h.t ? 0 : EZ.out(pr(t, h.t, h.t + h.post)) * 1320;
-    c.beginPath(); c.arc(h.cx, h.cy, R1, 0, 6.2832); if (R2 > 0) c.arc(h.cx, h.cy, R2, 0, 6.2832, true);
+    const hx=USER_INPUT.layout==='portrait'?h.cx*1080/1920:h.cx,hy=USER_INPUT.layout==='portrait'?h.cy*1920/1080:h.cy,rf=USER_INPUT.layout==='portrait'?Math.max(1,Math.hypot(Math.max(hx,PW-hx),Math.max(hy,PH-hy))/1200):1;
+    const R1 = t < h.t ? EZ.in(pr(t, h.t - h.pre, h.t)) * 1250*rf : 1300*rf;
+    const R2 = t < h.t ? 0 : EZ.out(pr(t, h.t, h.t + h.post)) * 1320*rf;
+    c.beginPath(); c.arc(hx, hy, R1, 0, 6.2832); if (R2 > 0) c.arc(hx, hy, R2, 0, 6.2832, true);
     c.fillStyle = h.col; c.fill('evenodd');
-    if (R1 > 4) { c.lineWidth = 26; c.strokeStyle = h.ring; c.beginPath(); c.arc(h.cx, h.cy, Math.max(0, R1 - 13), 0, 6.2832); c.stroke(); }
-    if (R2 > 4) { c.lineWidth = 3; c.strokeStyle = 'rgba(255,255,255,.7)'; c.beginPath(); c.arc(h.cx, h.cy, R2, 0, 6.2832); c.stroke(); }
+    if (R1 > 4) { c.lineWidth = 26; c.strokeStyle = h.ring; c.beginPath(); c.arc(hx, hy, Math.max(0, R1 - 13), 0, 6.2832); c.stroke(); }
+    if (R2 > 4) { c.lineWidth = 3; c.strokeStyle = 'rgba(255,255,255,.7)'; c.beginPath(); c.arc(hx, hy, R2, 0, 6.2832); c.stroke(); }
   }
   $('flash').style.opacity = fl.toFixed(3);
   
@@ -379,8 +380,8 @@ function transRender(t) {
 window.SUBS_HIDE=[];window.SUB_Y=null;window.OVERLAY=()=>{};
 window.TK_EXTRA = null;
 window.GLOBAL = t => {
-  FXB.clearRect(0, 0, 1920, 1080); FXC.clearRect(0, 0, 1920, 1080); FXT.clearRect(0, 0, 1920, 1080);
-  for (const [fn, top] of FXQ.splice(0)) { const c = top === 'top' ? FXT : top ? FXC : FXB; c.save(); fn(c, t); c.restore(); }
+  FXB.clearRect(0,0,CONFIG.width,CONFIG.height);FXC.clearRect(0,0,CONFIG.width,CONFIG.height);FXT.clearRect(0,0,CONFIG.width,CONFIG.height);
+  for(const[fn,top,unit]of FXQ.splice(0)){const c=top==='top'?FXT:top?FXC:FXB;c.save();if(USER_INPUT.layout==='portrait')window.kineticPortraitFX(c,unit,fn,t);else fn(c,t);c.restore();}
   tkRender(t, window.TK_EXTRA ? window.TK_EXTRA(t) || {} : {});
   hudRender(t); transRender(t);
   $('grain').style.backgroundPosition = `${Math.floor(hash(Math.floor(t * 24)) * 256)}px ${Math.floor(hash(Math.floor(t * 24) + 5) * 256)}px`;
@@ -527,9 +528,11 @@ function termAt(e, t, lines) {
 
 
 function wall3d(parent, n, cols, tw, th, gap = 10) {
+  const PW=USER_INPUT.layout==='portrait'?1080:1920,PH=USER_INPUT.layout==='portrait'?1920:1080;
+  if(USER_INPUT.layout==='portrait')cols=Math.max(3,Math.round(cols*.45));
   const rows = Math.ceil(n / cols), W = cols * (tw + gap) - gap, H = rows * (th + gap) - gap;
-  const e = mk(parent, `<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;perspective:1400px;perspective-origin:50% 50%">
-     <div class="g3" style="position:absolute;left:${960 - W / 2}px;top:${540 - H / 2}px;width:${W}px;height:${H}px;transform-style:preserve-3d"></div></div>`, 0, 0);
+  const e = mk(parent, `<div style="position:absolute;left:0;top:0;width:${PW}px;height:${PH}px;perspective:1400px;perspective-origin:50% 50%">
+     <div class="g3" style="position:absolute;left:${PW/2 - W/2}px;top:${PH/2 - H/2}px;width:${W}px;height:${H}px;transform-style:preserve-3d"></div></div>`, 0, 0);
   const g = e.querySelector('.g3'), cells = [];
   for (let i = 0; i < n; i++) {
     const c = document.createElement('div');
@@ -553,13 +556,15 @@ function wallFrames(e, t, t0, map, vis) {
 
 function scanSweep(c, t, t0, d = .5, col = '125,178,255', vertical = false) {
   const p = pr(t, t0, t0 + d); if (p <= 0 || p >= 1) return;
-  const x = lerp(-100, (vertical ? 1080 : 1920) + 100, EZ.inout(p));
+  const portrait=USER_INPUT.layout==='portrait',PW=CONFIG.width,PH=CONFIG.height;
+  if(portrait){c.save();c.setTransform(1,0,0,1,0,0);}
+  const x=lerp(-100,(vertical?PH:PW)+100,EZ.inout(p));
   c.save(); c.globalCompositeOperation = 'lighter';
   const g = vertical ? c.createLinearGradient(0, x - 160, 0, x) : c.createLinearGradient(x - 220, 0, x, 0);
   g.addColorStop(0, `rgba(${col},0)`); g.addColorStop(1, `rgba(${col},.45)`);
-  c.fillStyle = g; vertical ? c.fillRect(0, x - 160, 1920, 160) : c.fillRect(x - 220, 0, 220, 1080);
-  c.fillStyle = 'rgba(255,255,255,.9)'; vertical ? c.fillRect(0, x, 1920, 2) : c.fillRect(x, 0, 2, 1080);
-  c.restore();
+  c.fillStyle = g; vertical ? c.fillRect(0,x-160,PW,160) : c.fillRect(x-220,0,220,PH);
+  c.fillStyle = 'rgba(255,255,255,.9)'; vertical ? c.fillRect(0,x,PW,2) : c.fillRect(x,0,2,PH);
+  c.restore();if(portrait)c.restore();
 }
 
 

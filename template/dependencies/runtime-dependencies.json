@@ -1,0 +1,28 @@
+{
+  "profile": "motiongit.kinetic-dependencies/1",
+  "preferredPython": [3, 13],
+  "supportedPython": "3.13",
+  "pythonPackages": {
+    "numpy": "2.2.6",
+    "scipy": "1.18.1",
+    "soundfile": "0.14.0",
+    "pyloudnorm": "0.2.0",
+    "jsonschema": "4.26.0",
+    "opencv-python-headless": "4.12.0.88",
+    "attrs": "26.1.0",
+    "cffi": "2.1.1",
+    "pycparser": "3.11",
+    "referencing": "0.37.0",
+    "rpds-py": "2026.9.1",
+    "jsonschema-specifications": "2025.9.1",
+    "typing_extensions": "4.16.0"
+  },
+  "nodeMinimum": 22,
+  "nodePackages": {"playwright-core": "1.64.0"},
+  "pythonLock": "requirements-runtime.lock.txt",
+  "nodeLock": "package-lock.json",
+  "installPolicy": "Standard-library bootstrap installs exact hashed Python wheels and the npm lock in the external MotionGit dependency cache. No global Python installation and no protected source copying.",
+  "hostTools": ["Node.js22+", "npm", "FFmpeg", "ffprobe", "existing Python3.13 or an existing uv-managed Python3.13"],
+  "browser": "Use an existing supported browser. Explicit setup may install the standard Playwright Chromium headless shell into its tool-default browser cache when absent.",
+  "platformEvidence": "Actual macOS execution is checked separately. Windows/Linux portability is not a native hardware acceptance claim."
+}

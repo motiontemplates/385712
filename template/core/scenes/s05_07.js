@@ -17,8 +17,8 @@ window.CURRENT_UNIT="S05";
   const tags = mk(D, `<div style="display:flex;gap:14px">${[RAW_TEXT("S05.text002"), RAW_TEXT("S05.text003"), RAW_TEXT("S05.text004")].map(s => `<span class="chip">${TEXT_GLOBAL(s)}</span>`).join('')}</div>`, 960, 700, { ax: .5, ay: .5 });
   const hdr = mk(D, `<div style="${MONO(22, BLUE2, 10)}">${TEXT("S05.text005")}</div>`, 960, 250, { ax: .5, ay: .5 });
   
-  const LAYERS = [['scenes.js', RAW_TEXT("S05.text006"), 'code', BLUE2], ['assets/', RAW_TEXT("S05.text007"), 'image', SILVER], ['motion.json', RAW_TEXT("S05.text008"), 'gear', GOLD], [RAW_TEXT("S05.text009"), RAW_TEXT("S05.text010"), 'mic', LAV]];
-  const file = motionFile(D, 520, 520, 230, { name: 'template.motion' });
+  const LAYERS = [[RAW_TEXT("S05.file001"), RAW_TEXT("S05.text006"), 'code', BLUE2], [RAW_TEXT("S05.file002"), RAW_TEXT("S05.text007"), 'image', SILVER], [RAW_TEXT("S05.file003"), RAW_TEXT("S05.text008"), 'gear', GOLD], [RAW_TEXT("S05.text009"), RAW_TEXT("S05.text010"), 'mic', LAV]];
+  const file = motionFile(D, 520, 520, 230, { name: RAW_TEXT("S05.file004") });
   const layers = LAYERS.map(([n, s, ic, col], i) => mk(D, `<div style="width:520px;height:96px;border-radius:14px;background:rgba(18,21,26,.94);border:1.5px solid ${col};display:flex;align-items:center;gap:20px;padding:0 24px;box-shadow:0 16px 40px rgba(0,0,0,.5)">
       <span style="color:${col}">${ICON(ic, 40, 1.8)}</span><div><div style="font:600 26px 'Geist Mono';color:${SILVER}">${TEXT_GLOBAL(n)}</div><div style="${ZH(19, DIM, 500)};margin-top:4px">${TEXT_GLOBAL(s)}</div></div><span style="margin-left:auto;${MONO(14, col, 3)}">${TEXT("S05.text011")}${i + 1}</span></div>`, 0, 0, { ax: .5, ay: .5 }));
   const editT = mk(D, `<div style="display:flex;flex-direction:column;gap:8px"><span style="${MONO(20, BLUE2, 6)}">${TEXT("S05.text012")}</span><span style="${HV(84, SILVER, 4)}"><span style="${BLUEF}">${TEXT("S05.text013")}</span>${TEXT("S05.text014")}</span></div>`, 150, 190, { ax: 0, ay: .5 });
@@ -37,7 +37,7 @@ window.CURRENT_UNIT="S05";
   const cursor = mk(D, `<svg width="44" height="44" viewBox="0 0 24 24"><path d="M4 2l15 11-6.5 1.2L9 21z" fill="#fff" stroke="#0A0B0D" stroke-width="1.4" stroke-linejoin="round"/></svg>`, 0, 0, { ax: .15, ay: .1 });
   const fileLab = mk(D, `<div style="${MONO(18, SILVER, 3)};text-transform:none">${TEXT("S05.text023")} <span style="color:${DIM}">${TEXT("S05.text024")}</span></div>`, 1240, 720, { ax: .5, ay: .5 });
   
-  const TABS = [RAW_TEXT("S05.text025"), RAW_TEXT("S05.text026"), RAW_TEXT("S05.text027"), 'Kimi', '…'];
+  const TABS = [RAW_TEXT("S05.text025"), RAW_TEXT("S05.text026"), RAW_TEXT("S05.text027"), RAW_TEXT("S05.toolLabel"), '…'];
   const chat = mk(D, `<div class="glass" style="position:relative;width:1180px;height:720px;border-radius:24px;overflow:hidden">
       <div style="height:64px;display:flex;align-items:center;gap:8px;padding:0 22px;border-bottom:1px solid rgba(233,236,239,.08)">
         ${TABS.map((n, i) => `<div class="tb" style="position:relative;padding:10px 20px;border-radius:10px;${ZH(22, DIM, 600)}">${TEXT_GLOBAL(n)}</div>`).join('')}
@@ -45,7 +45,7 @@ window.CURRENT_UNIT="S05";
       <div style="position:relative;padding:28px 34px">
         <div class="um" style="display:flex;flex-direction:column;align-items:flex-end;gap:12px">
           <div class="at" style="display:flex;gap:10px">
-            ${[['.m', 'template.motion', LAV], ['▶', RAW_TEXT("S05.text033"), BLUE2], ['≡', RAW_TEXT("S05.text034"), SILVER], ['▣', RAW_TEXT("S05.text035"), GOLD]].map(([ic, n, c]) => `<div class="ch" style="display:flex;align-items:center;gap:10px;padding:10px 16px;border-radius:12px;background:#1f232b;border:1px solid rgba(233,236,239,.12)"><span style="width:30px;height:30px;border-radius:7px;background:${c};display:flex;align-items:center;justify-content:center;font:800 14px 'Geist Mono';color:#0A0B0D">${TEXT_GLOBAL(ic)}</span><span style="font:500 18px 'Geist Mono','PingFang SC';color:${SILVER}">${TEXT_GLOBAL(n)}</span></div>`).join('')}</div>
+            ${[['.m', RAW_TEXT("S05.file004"), LAV], ['▶', RAW_TEXT("S05.text033"), BLUE2], ['≡', RAW_TEXT("S05.text034"), SILVER], ['▣', RAW_TEXT("S05.text035"), GOLD]].map(([ic, n, c]) => `<div class="ch" style="display:flex;align-items:center;gap:10px;padding:10px 16px;border-radius:12px;background:#1f232b;border:1px solid rgba(233,236,239,.12)"><span style="width:30px;height:30px;border-radius:7px;background:${c};display:flex;align-items:center;justify-content:center;font:800 14px 'Geist Mono';color:#0A0B0D">${TEXT_GLOBAL(ic)}</span><span style="font:500 18px 'Geist Mono','PingFang SC';color:${SILVER}">${TEXT_GLOBAL(n)}</span></div>`).join('')}</div>
           <div class="ut" style="max-width:760px;padding:16px 22px;border-radius:18px 18px 4px 18px;background:${BLUE};${ZH(26, '#fff', 600)}"></div></div>
         <div class="am" style="margin-top:22px;display:flex;gap:16px">
           <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#3a6fd8,#A78AFF);flex:none"></div>
@@ -68,7 +68,7 @@ window.CURRENT_UNIT="S05";
     const dotIn = pr(t, tDot - .05, tDot + .2);
     place(word, { o: clamp(r * 4) * (1 - rOut), s: (1 + (1 - EZ.out5(r)) * .5) * (1 - rOut * .3), y: 470 - rOut * 80 });
     if (t < tDot) { mw.style.textTransform = 'uppercase'; scrambleAt(mw, RAW_TEXT("S05.text046"), t, T0, .45); }
-    else { mw.style.textTransform = 'none'; setTxt(mw, 'motion'); }
+    else { mw.style.textTransform = 'none'; setTxt(mw, RAW_TEXT("S05.text001")); }
     dt.style.transform = `translateY(${((1 - EZ.out5(dotIn)) * -400).toFixed(1)}px) scale(${(dotIn > 0 ? 1 : 0)})`; dt.style.opacity = dotIn > 0 ? 1 : 0;
     show(tags, t, tDot + .25, { k: 'up', d: .45, out: BR.B[0] - .05, od: .05 });
     show(hdr, t, T0 + .4, { k: 'blur', d: .5, out: BR.B[0] - .05, od: .05 });
@@ -106,7 +106,7 @@ window.CURRENT_UNIT="S05";
     place(chat, { o: clamp(cin * 3) * (1 - cout), s: (.94 + .06 * EZ.out(cin)) * (1 - cout * .04), blur: (1 - cin) * 8 + cout * 6 });
     const wbT = NATIVE_CUE("cue-057"), act = t < wbT - .05 ? 0 : t < tAny - .05 ? 1 : Math.floor((t - tAny) / .18) % 4;
     tbs.forEach((b, i) => { const on = i === act; b.style.background = on ? 'rgba(125,178,255,.16)' : 'transparent'; b.style.color = on ? '#fff' : DIM; b.style.boxShadow = on ? `inset 0 -3px 0 ${BLUE2}` : 'none'; });
-    setTxt(an, RAW_TEXT("S05.text047") + [RAW_TEXT("S05.text048"), RAW_TEXT("S05.text049"), RAW_TEXT("S05.text050"), 'Kimi'][act]);
+    setTxt(an, RAW_TEXT("S05.text047") + [RAW_TEXT("S05.text048"), RAW_TEXT("S05.text049"), RAW_TEXT("S05.text050"), RAW_TEXT("S05.toolLabel")][act]);
     chs.forEach((c, i) => { const k = pr(t, tDl + .25 + i * .09, tDl + .5 + i * .09); c.style.opacity = k.toFixed(2); c.style.transform = `translateY(${((1 - EZ.spring(k)) * 24).toFixed(1)}px) scale(${(.85 + .15 * EZ.spring(k)).toFixed(3)})`; });
     typeAt(ut, RAW_TEXT("S05.text051"), t, tDb - .15, 18);
     ut.style.opacity = t > tDb - .2 ? 1 : 0;
@@ -157,7 +157,7 @@ window.CURRENT_UNIT="S06";
   const tSet = NATIVE_CUE("cue-059"), tCopy = NATIVE_CUE("cue-060"), tVo = NATIVE_CUE("cue-061"), tAny = NATIVE_CUE("cue-062"), tQ = NATIVE_CUE("cue-063"), tTop = NATIVE_CUE("cue-064"), tSo = NATIVE_CUE("cue-065"), tMine = NATIVE_CUE("cue-066");
   TKF.push([T0, 'R', .45, true], [tSo - .1, { x: 960, y: 470, w: 560, h: 760, r: 4 }, .7, true]);
   
-  const ROWS = [[RAW_TEXT("S06.text001"), '× 1', tSet], [RAW_TEXT("S06.text002"), RAW_TEXT("S06.text003"), tCopy], [RAW_TEXT("S06.text004"), RAW_TEXT("S06.text005"), tVo], [RAW_TEXT("S06.text006"), RAW_TEXT("S06.text007"), tAny]];
+  const ROWS = [[RAW_TEXT("S06.text001"), RAW_TEXT("S06.firstRowValue"), tSet], [RAW_TEXT("S06.text002"), RAW_TEXT("S06.text003"), tCopy], [RAW_TEXT("S06.text004"), RAW_TEXT("S06.text005"), tVo], [RAW_TEXT("S06.text006"), RAW_TEXT("S06.text007"), tAny]];
   const panel = mk(D, `<div style="width:520px">
       <div style="${MONO(20, GOLD, 6)};padding-bottom:10px;border-bottom:2px solid ${GOLD};display:inline-block">${TEXT("S06.text008")}</div>
       ${ROWS.map(([a, b]) => `<div class="rw" style="display:flex;justify-content:space-between;margin-top:22px;font:500 30px 'Geist Mono','PingFang SC';color:${SILVER}"><span>${TEXT_GLOBAL(a)}</span><span style="color:${BLUE2}">${TEXT_GLOBAL(b)}</span></div>`).join('')}
@@ -182,7 +182,7 @@ window.CURRENT_UNIT="S06";
     const out = pr(t, tSo - .3, tSo);
     place(panel, { o: pr(t, T0, T0 + .3) * (1 - out) });
     rws.forEach((r, i) => { const k = pr(t, ROWS[i][2] - .1, ROWS[i][2] + .2); r.style.opacity = k.toFixed(2); r.style.transform = `translateX(${((1 - EZ.out(k)) * -30).toFixed(1)}px)`; });
-    const qval = t < tQ ? 23 : lerp(23, 99.9, EZ.out5(pr(t, tQ, tTop + .2)));
+    const qval = t < tQ ? Number(RAW_TEXT("S06.text010")) : lerp(Number(RAW_TEXT("S06.text010")), Number(RAW_TEXT("S06.number001")), EZ.out5(pr(t, tQ, tTop + .2)));
     setTxt(qv, qval.toFixed(1));
     place(qTag, { o: pr(t, tQ, tQ + .2) * (1 - out) });
     place(boxSvg, { o: pr(t, tSet - .2, tSet + .2) * (1 - out), s: 1 + Math.sin(Math.PI * pr(t, tAny + .4, tAny + .8)) * .05 + beatPulse(t, true) * .015 });
@@ -195,7 +195,7 @@ window.CURRENT_UNIT="S06";
     place(topT, { s: 1 + (1 - EZ.out5(tp)) * 1.4, o: clamp(tp * 5) * (1 - out), blur: (1 - tp) * 12 });
     show(quiet, t, tMine - .1, { k: 'blur', d: .6, out: T1 - .1 });
     show(upW, t, tUp - .1, { k: 'mask', d: .45, out: T1 - .08, od: .08 });
-    { const n = Math.round(EZ.in(pr(t, tUp, T1)) * 500); setTxt(upPc, (n >= 500 ? '500+' : String(n).padStart(3, '0')) + RAW_TEXT("S06.text022")); }
+    { const n = Math.round(EZ.in(pr(t, tUp, T1)) * parseInt(RAW_TEXT("S06.text021"))); setTxt(upPc, (n >= parseInt(RAW_TEXT("S06.text021")) ? RAW_TEXT("S06.text021") : String(n).padStart(3, '0')) + RAW_TEXT("S06.text022")); }
   };
   sc.cam = t => { const [sx, sy] = shake(t, tTop, .35, 16); return { x: 960, y: 540, z: 1 + beatPulse(t, true) * .006 + (t > tMine ? .03 * pr(t, tMine, T1) : 0), sx, sy }; };
   const U = sc.update; sc.update = t => {
@@ -292,20 +292,20 @@ window.CURRENT_UNIT="S07";
     kwAt(k1, t, K1, K2); kwAt(k2, t, K2, K3); kwAt(k3, t, K3, K4);
     if (t >= K3 && t < K4) {
       
-      const rp = EZ.inout(pr(t, tRot + .3, tSmooth - .1)), w = lerp(720, 330, rp), h = lerp(405, 587, rp), cx = 960, cy = 610;
+      const rp = EZ.inout(pr(t, tRot + .3, tSmooth - .1)), w = lerp(720, 330, rp), h = lerp(405,587,rp),cx=USER_INPUT.layout==='portrait'?540:960,cy=USER_INPUT.layout==='portrait'?860:610;
       morph.style.left = (cx - w / 2).toFixed(1) + 'px'; morph.style.top = (cy - h / 2).toFixed(1) + 'px'; morph.style.width = w.toFixed(1) + 'px'; morph.style.height = h.toFixed(1) + 'px';
       morph.style.transform = `rotate(${(Math.sin(Math.PI * rp) * -8).toFixed(2)}deg)`;
       setFrame(mA, seqAt(PAIRS[0][0], 90, 30, t, K3)); setFrame(mB, seqAt(PAIRS[0][1], 90, 30, t, K3));
       mB.style.opacity = clamp((rp - .35) / .3).toFixed(2);
       rotL.textContent = rp > .5 ? '9:16' : '16:9'; rotL.style.left = (cx - 40).toFixed(1) + 'px'; rotL.style.top = (cy + h / 2 + 18).toFixed(1) + 'px';
       
-      [[PAIRS[1][0], 440, 248, 330, 610, 90], [PAIRS[2][1], 250, 444, 1600, 610, 90]].forEach(([dir, ww, hh, x, y, n], i) => {
+      [[PAIRS[1][0],440,248,330,USER_INPUT.layout==='portrait'?1350:610,90],[PAIRS[2][1],250,444,USER_INPUT.layout==='portrait'?830:1600,USER_INPUT.layout==='portrait'?1390:610,90]].forEach(([dir, ww, hh, x, y, n], i) => {
         const k = pr(t, tRot + .1 + i * .12, tRot + .45 + i * .12), d = side[i];
         d.el.style.left = (x - ww / 2).toFixed(1) + 'px'; d.el.style.top = (y - hh / 2 + (1 - EZ.spring(k)) * 60).toFixed(1) + 'px'; d.el.style.width = ww + 'px'; d.el.style.height = hh + 'px'; d.el.style.opacity = clamp(k * 3).toFixed(2);
         setFrame(d.img, seqAt(dir, n, 30, t, K3));
       });
       side[2].el.style.display = 'none';
-      rl.textContent = RAW_TEXT("S07.text036"); rl.style.left = '72px'; rl.style.top = '1000px';
+      rl.textContent = RAW_TEXT("S07.text036"); rl.style.left='72px';rl.style.top=USER_INPUT.layout==='portrait'?'1770px':'1000px';if(USER_INPUT.layout==='portrait')rl.style.fontSize='26px';
     }
     sc.hudO = t >= K1 && t < K4 ? 0 : 1;
     

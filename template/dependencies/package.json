@@ -1,0 +1,9 @@
+{
+  "name": "motiongit-kinetic-tech-consumer",
+  "version": "0.2.3",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "playwright-core": "1.64.0"
+  }
+}
